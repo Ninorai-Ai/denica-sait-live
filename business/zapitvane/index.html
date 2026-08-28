@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Запитване за апарат — HIFU by Denny Divine</title>
+<meta name="description" content="Поискайте оферта за HIFU или лазерен апарат за вашето студио. В офертата влизат обучението, документите и протоколите за работа.">
+<link rel="icon" href="../../assets/img/brand/logo-zlato-znak.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { font-size: 19px; scroll-behavior: smooth; }
+  body {
+    margin: 0; background: #3B2C21; color: #F8F4ED;
+    font-family: "Manrope", "Segoe UI", sans-serif; font-size: 1rem; line-height: 1.65;
+  }
+  img { display: block; }
+  h1, h2 { margin: 0; line-height: 1.05; text-wrap: balance; }
+  p { margin: 0; text-wrap: pretty; }
+  a { color: #E4C98F; text-decoration: none; }
+  a:hover { color: #E4C98F; }
+  @media (max-width: 900px) { html { font-size: 18px; } }
+
+  .obvivka { max-width: 62rem; margin: 0 auto; padding: 0 clamp(1.4rem, 4vw, 3.6rem); }
+
+  .shapka {
+    display: flex; align-items: center; justify-content: space-between; gap: 1.2rem;
+    padding: 1rem clamp(1.4rem, 4vw, 3.6rem);
+    border-bottom: 1px solid rgba(228,201,143,0.32);
+  }
+  .shapka img { height: 42px; width: auto; }
+  .shapka .telefon {
+    font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.35rem;
+    color: #F8F4ED; white-space: nowrap;
+  }
+
+  .nadslov {
+    display: flex; align-items: center; gap: 0.8rem;
+    font-size: 0.8rem; font-weight: 700; letter-spacing: 0.24em;
+    text-transform: uppercase; color: #E4C98F;
+  }
+  .nadslov::before {
+    content: ""; display: block; width: 2.4rem; height: 1px; background: #E4C98F;
+  }
+
+  h1 {
+    margin-top: 1.4rem;
+    font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400;
+    font-size: clamp(2.6rem, 6vw, 4.2rem); letter-spacing: -0.02em;
+  }
+  h1 em { font-style: italic; color: #E4C98F; }
+
+  .izbrano {
+    display: inline-flex; align-items: center; gap: 0.7rem; margin-top: 1.4rem;
+    padding: 0.6rem 1.2rem; border: 1px solid rgba(228,201,143,0.32); border-radius: 5px;
+    background: #2E231A; font-size: 1rem; color: #F8F4ED;
+  }
+  .izbrano b { font-weight: 600; }
+  .izbrano span { color: rgba(248,244,237,0.78); }
+
+  .uvod { margin-top: 1.5rem; max-width: 38rem; font-size: 1.1rem; color: rgba(248,244,237,0.78); }
+
+  .koloni { display: grid; gap: clamp(1.8rem, 4vw, 3rem); align-items: start; }
+  @media (min-width: 60rem) { .koloni { grid-template-columns: 1fr 1fr; } }
+
+  .karta {
+    padding: clamp(1.6rem, 3vw, 2.4rem);
+    background: #2E231A; border-top: 2px solid #E4C98F; border-radius: 5px;
+  }
+  .karta h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+  }
+
+  .redove { margin-top: 1.4rem; display: grid; gap: 1.1rem; }
+  .red { display: grid; gap: 0.2rem; }
+  .red .etiket {
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.2em;
+    text-transform: uppercase; color: #E4C98F;
+  }
+  .red .stojnost { font-size: 1.06rem; }
+  .red .stojnost a { color: #F8F4ED; }
+  .red .stojnost a:hover { color: #E4C98F; }
+
+  .goljam-telefon {
+    display: inline-flex; align-items: center; justify-content: center;
+    margin-top: 1.6rem; padding: 1.1rem 2.2rem; border-radius: 5px;
+    background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%);
+    color: #241017; font-size: 1rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    transition: filter 0.35s, transform 0.35s, box-shadow 0.35s;
+  }
+  .goljam-telefon:hover {
+    filter: brightness(1.1); transform: translateY(-2px);
+    box-shadow: 0 16px 34px rgba(138,107,63,0.4); color: #241017;
+  }
+
+  label { display: grid; gap: 0.45rem; font-size: 0.95rem; color: rgba(248,244,237,0.78); }
+  input, select, textarea {
+    width: 100%; padding: 0.85rem 1rem;
+    border: 1px solid rgba(228,201,143,0.32); border-radius: 5px;
+    background: #241C15; color: #F8F4ED;
+    font-family: inherit; font-size: 1rem;
+  }
+  input:focus, select:focus, textarea:focus {
+    outline: 2px solid #E4C98F; outline-offset: 1px;
+  }
+  textarea { min-height: 7rem; resize: vertical; }
+  form { margin-top: 1.4rem; display: grid; gap: 1.1rem; }
+  button {
+    padding: 1.05rem 2rem; border: 0; border-radius: 5px; cursor: pointer;
+    background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%);
+    color: #241017; font-family: inherit; font-size: 1rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    transition: filter 0.35s, transform 0.35s, box-shadow 0.35s;
+  }
+  button:hover {
+    filter: brightness(1.1); transform: translateY(-2px);
+    box-shadow: 0 16px 34px rgba(138,107,63,0.4);
+  }
+  .drebno { font-size: 0.92rem; color: rgba(248,244,237,0.78); }
+
+  .podval {
+    margin-top: clamp(3rem, 8vw, 5rem);
+    padding: 1.4rem clamp(1.4rem, 4vw, 3.6rem);
+    border-top: 1px solid rgba(228,201,143,0.32);
+    display: flex; flex-wrap: wrap; gap: 0.8rem 1.4rem;
+    font-size: 0.95rem; color: rgba(248,244,237,0.78);
+  }
+</style>
+</head>
+<body>
+
+<header class="shapka">
+  <a href="../"><img src="../../assets/img/logo.webp" alt="Denny Divine" style="filter: brightness(0) invert(1);"></a>
+  <a class="telefon" href="tel:+359888998556">+359 88 899 8556</a>
+</header>
+
+<main class="obvivka" style="padding-top: clamp(2.6rem, 7vw, 4.5rem);">
+
+  <p class="nadslov">Оферта за студио</p>
+  <h1>Поискайте <em>оферта</em></h1>
+  <p class="izbrano" id="izbrano" hidden><span>Питате за</span> <b id="izbrano-ime"></b></p>
+  <p class="uvod">Кажете ни какви услуги искате да предлагате и ще ви върнем оферта за подходящия апарат. В нея влизат обучението, сертификатът, удостоверението от МОН, протоколите за работа и двете години гаранция.</p>
+
+  <div class="koloni" style="margin-top: clamp(2.4rem, 6vw, 3.6rem);">
+
+    <section class="karta">
+      <h2>Обадете се</h2>
+      <p class="drebno" style="margin-top: 0.8rem;">
+        Най-бързият път. Вдигаме в работно време и се разбираме за час на място.
+      </p>
+      <a class="goljam-telefon" href="tel:+359888998556">+359 88 899 8556</a>
+
+      <div class="redove">
+        <div class="red">
+          <span class="etiket">Поща</span>
+          <span class="stojnost"><a href="mailto:info@hifubg.com">info@hifubg.com</a></span>
+        </div>
+        <div class="red">
+          <span class="etiket">Адрес</span>
+          <span class="stojnost">бул. „Свети Наум“ 70А, 1421 София</span>
+        </div>
+        <div class="red">
+          <span class="etiket">Работно време</span>
+          <span class="stojnost">вторник до събота</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="karta">
+      <h2>Или пишете</h2>
+      <p class="drebno" style="margin-top: 0.8rem;">
+        Попълнете полетата и бутонът отваря готово писмо до центъра.
+        Проверете го и го изпратете от своята поща.
+      </p>
+
+      <form id="forma">
+        <label>Име
+          <input type="text" name="ime" autocomplete="name" required>
+        </label>
+        <label>Телефон
+          <input type="tel" name="telefon" autocomplete="tel" required>
+        </label>
+        <label>Апарат, който ви интересува
+          <input type="text" name="predmet" id="predmet">
+        </label>
+        <label>Какво искате да ни кажете
+          <textarea name="belezhka" id="belezhka"></textarea>
+        </label>
+        <button type="submit">Поискайте офертата</button>
+      </form>
+    </section>
+
+  </div>
+</main>
+
+<footer class="podval obvivka" style="max-width: none;">
+  <span>бул. „Свети Наум“ 70А, 1421 София</span>
+  <span>·</span>
+  <a href="tel:+359888998556">+359 88 899 8556</a>
+  <span>·</span>
+  <a href="mailto:info@hifubg.com">info@hifubg.com</a>
+  <span>·</span>
+  <a href="../../procedures/zapazi-chas/">Час за процедура</a>
+</footer>
+
+<script>
+var IMENA = {
+  "aisia": "AISIA",
+  "akne": "Акне по лицето",
+  "akne-tqlo": "Акне по тялото",
+  "bedra": "Бедра",
+  "bedra-epilaciq": "Бедра",
+  "bqst": "Стягане на бюст",
+  "brahioplastika": "Ръце над лакътя",
+  "celi-kraka": "Цели крака",
+  "celi-race": "Цели ръце",
+  "chelo": "Чело",
+  "cqlo-lice": "Цяло лице с шията",
+  "dekolte": "Деколте",
+  "dolen-kontur": "Долен контур на лицето",
+  "dvojna-bradichka": "Двойна брадичка",
+  "emslim-cqlo-tqlo": "Цяло тяло",
+  "emslim-korem": "Корем",
+  "emslim-kraka": "Крака",
+  "emslim-race": "Ръце",
+  "emslim-sedalishte": "Седалище",
+  "epilaciq-intim": "Трайна епилация на интимната зона",
+  "epilaciya-kraka": "Крака",
+  "estella": "Estella Laser",
+  "fotopodmladqvane": "Фотоподмладяване",
+  "fotopodmladqvane-lice": "Фотоподмладяване на цяло лице",
+  "fotopodmladqvane-zona": "Фотоподмладяване на зона",
+  "foxy-eyes": "Foxy eyes",
+  "gardi-korem": "Гърди и корем",
+  "gnevna-brachka": "Гневна бръчка",
+  "gorna-ustna": "Горна устна",
+  "grab": "Гръб",
+  "grab-ramene": "Гръб и рамене",
+  "grim-ustni": "Перманентен грим на устни",
+  "hifu-13d": "HIFU 13D Ultraformer",
+  "hifu-3d": "HIFU 3D",
+  "hifu-5d": "HIFU 5D",
+  "hifu-7d": "HIFU Ultraformer 7D",
+  "hifu-cqlo-tqlo": "Цяло тяло",
+  "hifu-korem": "Корем",
+  "hifu-kraka": "Крака",
+  "hifu-lice": "Лице и шия",
+  "hifu-lice-shiya": "HIFU на лице и шия",
+  "hifu-race": "Ръце",
+  "hifu-sedalishte": "Седалище",
+  "hifu-tqlo": "Тяло",
+  "hiperhidroza": "Прекомерно изпотяване",
+  "inkontinenciq": "Инконтиненция",
+  "intim": "Интимна зона",
+  "intim-podmishnici": "Интимна зона и подмишници",
+  "intimno-podmladqvane": "Интимно подмладяване",
+  "intimno-zdrave": "Интимно здраве",
+  "kapilqri": "Разширени капилярчета",
+  "karbonov-piling": "Холивудски карбонов пилинг",
+  "klepach": "Повдигане на клепача",
+  "kolene": "Колене",
+  "korem": "Корем",
+  "lazer": "Лазерни процедури",
+  "marionetni": "Марионетни линии",
+  "maxlipo-13d": "13D MaxLipo Laser",
+  "nazolabialni": "Назолабиални линии",
+  "ochna-liniq": "Перманентна очна линия",
+  "okoloochen-kontur": "Околоочен контур",
+  "permanenten-grim": "Перманентен грим и микроблейдинг",
+  "petna-lice": "Пигментни петна по лицето",
+  "pigmentaciq": "Пигментация по подмишниците и интимните зони",
+  "pigmentaciq-intimni-zoni": "Пигментация по интимните зони",
+  "pigmentaciq-mishnici": "Пигментация по мишниците",
+  "podbedrici": "Подбедрици",
+  "podmishnici": "Подмишници",
+  "prasci": "Прасци",
+  "race": "Ръце",
+  "raztvarqne-filar": "Разтваряне на филър",
+  "rf-lice": "Стягане на лицето с радиофреквенция",
+  "santimetri": "Сантиметри в талията и бедрата",
+  "sedalishte": "Седалище",
+  "shiq": "Шия",
+  "skuli": "Скули",
+  "soprano": "Soprano Diode Laser",
+  "strii": "Стрии",
+  "tatuirovki": "Татуировки",
+  "tazovo-dano": "Тазово дъно",
+  "tesla-15": "Tesla 15 EMSLIM RF",
+  "tesla-21": "Tesla 21 EMSLIM Chair",
+  "tonus": "Стягане на корема и седалището",
+  "ustna-brada": "Горна устна и брада",
+  "vrat": "Врат",
+  "za-maje": "Процедури за мъже",
+  "zona-pubis": "Зона пубис"
+};
+
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var kljuch = params.get('aparat');
+  var ime = kljuch && IMENA[kljuch] ? IMENA[kljuch] : null;
+
+  if (ime) {
+    document.getElementById('izbrano-ime').textContent = ime;
+    document.getElementById('izbrano').hidden = false;
+    document.getElementById('predmet').value = ime;
+  }
+
+  document.getElementById('forma').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var d = new FormData(e.target);
+    var tqlo = [
+      'Име: ' + (d.get('ime') || ''),
+      'Телефон: ' + (d.get('telefon') || ''),
+      'Апарат, който ви интересува: ' + (d.get('predmet') || ''),
+      '',
+      d.get('belezhka') || ''
+    ].join('\n');
+    var predmet = 'Запитване за апарат' + (d.get('predmet') ? ' — ' + d.get('predmet') : '');
+    window.location.href = 'mailto:info@hifubg.com'
+      + '?subject=' + encodeURIComponent(predmet)
+      + '&body=' + encodeURIComponent(tqlo);
+  });
+})();
+</script>
+
+</body>
+</html>
