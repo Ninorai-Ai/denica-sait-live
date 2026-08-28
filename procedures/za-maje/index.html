@@ -26,6 +26,7 @@
   details[open] [data-caret] { transform: rotate(225deg) translateY(-2px); }
   @media (max-width: 900px) { html { font-size: 18px; } }
 </style>
+<link href="../../assets/css/sait.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
@@ -36,7 +37,7 @@
 <x-dc>
 <div style="position: relative; width: 100%; overflow-x: clip;">
 
-  <nav data-nav="" style="position: fixed; top: 0; left: 0; right: 0; z-index: 90; display: flex; align-items: center; justify-content: space-between; gap: 1.2rem; padding: 0.9rem clamp(1.2rem, 4vw, 3.6rem); background: #F8F4ED; border-bottom: 1px solid rgba(184,147,79,0.3); transition: background 0.45s, border-color 0.45s, box-shadow 0.45s;">
+  <nav data-nav="" style="position: fixed; top: 0; left: 0; right: 0; z-index: 90; display: flex; align-items: center; justify-content: space-between; gap: 1.2rem; padding: 0.9rem max(clamp(1.2rem, 4vw, 3.6rem), calc((100% - 1400px) / 2)); background: #F8F4ED; border-bottom: 1px solid rgba(184,147,79,0.3); transition: background 0.45s, border-color 0.45s, box-shadow 0.45s;">
     <a href="../" style="display: block; flex: none;"><img data-logo="" src="../../assets/img/logo.webp" alt="Denny Divine" style="height: 44px; width: auto;"></a>
     <div data-navpaths="" style="display: flex; align-items: center; gap: 1.5rem;">
       <a data-navlink="" href="../lice-shiq/" style="font-size: 0.96rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Лице и шия</a>
@@ -44,7 +45,7 @@
       <a data-navlink="" href="../lazer/" style="font-size: 0.96rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Лазер</a>
       <a data-navlink="" href="../intimno-zdrave/" style="font-size: 0.96rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Интимно</a>
       <a data-navlink-soft="" href="../za-nas/" style="font-size: 0.96rem; font-weight: 500; color: rgba(38,35,32,0.6); transition: color 0.35s ease;" style-hover="color: #8A6B3F;">За Деница</a>
-      <a href="../zapazi-chas/?usluga=za-maje" style="display: inline-flex; align-items: center; padding: 0.78rem 1.5rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #F8F4ED; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 14px 30px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-2px); letter-spacing: 0.2em;">Запазете час</a>
+      <a data-dd-btn="" href="../zapazi-chas/?usluga=za-maje" style="display: inline-flex; align-items: center; padding: 0.78rem 1.5rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #F8F4ED; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 14px 30px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-2px); letter-spacing: 0.2em;">Запазете час</a>
     </div>
     <button data-burger="" type="button" aria-label="Меню" onClick="{{ toggleMenu }}" style="display: none; width: 48px; height: 48px; flex: none; border: 1px solid rgba(184,147,79,0.7); background: rgba(184,147,79,0.12); border-radius: 5px; cursor: pointer; padding: 0; align-items: center; justify-content: center;">
       <span data-burger-bar="" style="display: block; width: 20px; height: 1.6px; background: #3B2C21; box-shadow: 0 -6px 0 #3B2C21, 0 6px 0 #3B2C21;"></span>
@@ -60,7 +61,7 @@
     <a href="#vaprosi" onClick="{{ toggleMenu }}" style="padding: 0.85rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2rem; color: #262320;">Въпроси</a>
     <a href="../" onClick="{{ toggleMenu }}" style="padding: 0.9rem 0; font-size: 1.02rem; color: #8A6B3F;">Всички групи процедури</a>
     <a href="../za-nas/" onClick="{{ toggleMenu }}" style="padding: 0.9rem 0; font-size: 1.02rem; color: #8A6B3F;">За Деница Войнова</a>
-    <a href="../zapazi-chas/?usluga=za-maje" style="align-self: flex-start; margin-top: 0.8rem; padding: 1rem 1.9rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #F8F4ED; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Запазете час</a>
+    <a data-dd-btn="" href="../zapazi-chas/?usluga=za-maje" style="align-self: flex-start; margin-top: 0.8rem; padding: 1rem 1.9rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #F8F4ED; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Запазете час</a>
   </div>
 
   <header id="top" data-hero="" data-screen-label="Херо" style="position: relative; height: 82svh; min-height: 660px; max-height: 840px; overflow: hidden; background: #262320;">
@@ -75,7 +76,7 @@
       
       </div>
       <div data-hero-cta="" style="display: flex; flex-wrap: wrap; align-items: center; column-gap: clamp(1.6rem, 3vw, 2.6rem); row-gap: 1.2rem; margin-top: clamp(2.4rem, 6vh, 3.4rem); pointer-events: auto;">
-        <a href="../zapazi-chas/?usluga=za-maje" style="display: inline-flex; align-items: center; padding: 1.05rem 2.1rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Безплатна консултация</a>
+        <a data-dd-btn="" href="../zapazi-chas/?usluga=za-maje" style="display: inline-flex; align-items: center; padding: 1.05rem 2.1rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Безплатна консултация</a>
         <a href="tel:+359888998556" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.6rem; color: #F8F4ED; transition: color 0.35s ease;" style-hover="color: #E4C98F;">+359 88 899 8556</a>
       </div>
     </div>
@@ -101,7 +102,7 @@
     </div>
   </section>
 
-  <section id="zoni" data-screen-label="Зоните" style="display: grid; gap: clamp(2.2rem, 5vh, 3.6rem); max-width: 94rem; margin: 0 auto; padding: clamp(3.6rem, 9vh, 6rem) clamp(1.8rem, 6vw, 6rem) clamp(3rem, 7vh, 5rem);">
+  <section id="zoni" data-screen-label="Зоните" style="display: grid; gap: clamp(2.2rem, 5vh, 3.6rem); max-width: 94rem; margin: 0 auto; padding: clamp(3.6rem, 9vh, 6rem) max(clamp(1.8rem, 6vw, 6rem), calc((100% - 1400px) / 2)) clamp(3rem, 7vh, 5rem);">
     <div data-reveal="" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 21rem), 1fr)); gap: clamp(1.4rem, 3vw, 3.4rem); align-items: end;">
       <div>
         <span style="display: inline-flex; align-items: center; gap: 0.9rem; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6B3F;"><span style="display: block; width: 2.6rem; height: 2px; background: linear-gradient(90deg, #B8934F, rgba(184,147,79,0));"></span>Зоните в групата</span>
@@ -185,7 +186,7 @@
             </div>
           </div>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.3rem;">
-            <a href="../zapazi-chas/?usluga=skuli" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
+            <a data-dd-btn="" href="../zapazi-chas/?usluga=skuli" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
           </div>
         </article>
 
@@ -208,7 +209,7 @@
             </div>
           </div>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.3rem;">
-            <a href="../zapazi-chas/?usluga=vrat" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
+            <a data-dd-btn="" href="../zapazi-chas/?usluga=vrat" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
           </div>
         </article>
 
@@ -231,7 +232,7 @@
             </div>
           </div>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.3rem;">
-            <a href="../zapazi-chas/?usluga=podmishnici" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
+            <a data-dd-btn="" href="../zapazi-chas/?usluga=podmishnici" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
           </div>
         </article>
 
@@ -254,7 +255,7 @@
             </div>
           </div>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.3rem;">
-            <a href="../zapazi-chas/?usluga=gardi-korem" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
+            <a data-dd-btn="" href="../zapazi-chas/?usluga=gardi-korem" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
           </div>
         </article>
 
@@ -277,7 +278,7 @@
             </div>
           </div>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.3rem;">
-            <a href="../zapazi-chas/?usluga=grab-ramene" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
+            <a data-dd-btn="" href="../zapazi-chas/?usluga=grab-ramene" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
           </div>
         </article>
 
@@ -300,7 +301,7 @@
             </div>
           </div>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.3rem;">
-            <a href="../zapazi-chas/?usluga=celi-race" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
+            <a data-dd-btn="" href="../zapazi-chas/?usluga=celi-race" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
           </div>
         </article>
 
@@ -323,7 +324,7 @@
             </div>
           </div>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.3rem;">
-            <a href="../zapazi-chas/?usluga=fotopodmladqvane-zona" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
+            <a data-dd-btn="" href="../zapazi-chas/?usluga=fotopodmladqvane-zona" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
           </div>
         </article>
 
@@ -346,7 +347,7 @@
             </div>
           </div>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.3rem;">
-            <a href="../zapazi-chas/?usluga=fotopodmladqvane-lice" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
+            <a data-dd-btn="" href="../zapazi-chas/?usluga=fotopodmladqvane-lice" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
           </div>
         </article>
 
@@ -369,7 +370,7 @@
             </div>
           </div>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.3rem;">
-            <a href="../zapazi-chas/?usluga=rf-lice" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
+            <a data-dd-btn="" href="../zapazi-chas/?usluga=rf-lice" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
           </div>
         </article>
 
@@ -392,7 +393,7 @@
             </div>
           </div>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.3rem;">
-            <a href="../zapazi-chas/?usluga=pigmentaciq-mishnici" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
+            <a data-dd-btn="" href="../zapazi-chas/?usluga=pigmentaciq-mishnici" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
           </div>
         </article>
 
@@ -415,7 +416,7 @@
             </div>
           </div>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.3rem;">
-            <a href="../zapazi-chas/?usluga=pigmentaciq-intimni-zoni" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
+            <a data-dd-btn="" href="../zapazi-chas/?usluga=pigmentaciq-intimni-zoni" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
           </div>
         </article>
 
@@ -438,7 +439,7 @@
             </div>
           </div>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.3rem;">
-            <a href="../zapazi-chas/?usluga=epilaciya-kraka" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
+            <a data-dd-btn="" href="../zapazi-chas/?usluga=epilaciya-kraka" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
           </div>
         </article>
 
@@ -461,7 +462,7 @@
             </div>
           </div>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.3rem;">
-            <a href="../zapazi-chas/?usluga=emslim-korem" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
+            <a data-dd-btn="" href="../zapazi-chas/?usluga=emslim-korem" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
           </div>
         </article>
 
@@ -484,7 +485,7 @@
             </div>
           </div>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.3rem;">
-            <a href="../zapazi-chas/?usluga=emslim-race" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
+            <a data-dd-btn="" href="../zapazi-chas/?usluga=emslim-race" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
           </div>
         </article>
 
@@ -507,7 +508,7 @@
             </div>
           </div>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.3rem;">
-            <a href="../zapazi-chas/?usluga=emslim-kraka" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
+            <a data-dd-btn="" href="../zapazi-chas/?usluga=emslim-kraka" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
           </div>
         </article>
 
@@ -530,7 +531,7 @@
             </div>
           </div>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.3rem;">
-            <a href="../zapazi-chas/?usluga=emslim-sedalishte" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
+            <a data-dd-btn="" href="../zapazi-chas/?usluga=emslim-sedalishte" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
           </div>
         </article>
 
@@ -553,7 +554,7 @@
             </div>
           </div>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.3rem;">
-            <a href="../zapazi-chas/?usluga=emslim-cqlo-tqlo" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
+            <a data-dd-btn="" href="../zapazi-chas/?usluga=emslim-cqlo-tqlo" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
           </div>
         </article>
 
@@ -576,7 +577,7 @@
             </div>
           </div>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.3rem;">
-            <a href="../zapazi-chas/?usluga=hifu-lice-shiya" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
+            <a data-dd-btn="" href="../zapazi-chas/?usluga=hifu-lice-shiya" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
           </div>
         </article>
 
@@ -599,7 +600,7 @@
             </div>
           </div>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.3rem;">
-            <a href="../zapazi-chas/?usluga=hifu-korem" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
+            <a data-dd-btn="" href="../zapazi-chas/?usluga=hifu-korem" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
           </div>
         </article>
 
@@ -622,7 +623,7 @@
             </div>
           </div>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.3rem;">
-            <a href="../zapazi-chas/?usluga=hifu-race" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
+            <a data-dd-btn="" href="../zapazi-chas/?usluga=hifu-race" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
           </div>
         </article>
 
@@ -645,7 +646,7 @@
             </div>
           </div>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.3rem;">
-            <a href="../zapazi-chas/?usluga=hifu-kraka" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
+            <a data-dd-btn="" href="../zapazi-chas/?usluga=hifu-kraka" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
           </div>
         </article>
 
@@ -668,7 +669,7 @@
             </div>
           </div>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.3rem;">
-            <a href="../zapazi-chas/?usluga=hifu-sedalishte" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
+            <a data-dd-btn="" href="../zapazi-chas/?usluga=hifu-sedalishte" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
           </div>
         </article>
 
@@ -691,20 +692,32 @@
             </div>
           </div>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 0.3rem;">
-            <a href="../zapazi-chas/?usluga=hifu-cqlo-tqlo" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
+            <a data-dd-btn="" href="../zapazi-chas/?usluga=hifu-cqlo-tqlo" style="display: inline-flex; align-items: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
           </div>
         </article>
 
       </div>
     </div>
-    <aside data-reveal="" style="position: relative; display: grid; gap: 1rem; padding: clamp(1.8rem, 3.4vw, 2.8rem) clamp(1.8rem, 4vw, 3.4rem); background: #3B2C21; color: #F8F4ED;">
-            <span style="display: inline-flex; align-items: center; gap: 0.9rem; font-size: 0.84rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #E4C98F;"><span style="display: block; width: 2.6rem; height: 2px; background: linear-gradient(90deg, #E4C98F, rgba(228,201,143,0));"></span>Не знаете коя зона</span>
-      <p style="max-width: 44rem; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 300; font-size: clamp(1.4rem, 2.4vw, 2.1rem); line-height: 1.35;">На консултацията разглеждаме зоната, обясняваме какво може да се направи и ако случаят е за лекар, ви насочваме към лекар.</p>
-      <a href="../zapazi-chas/?usluga=za-maje" style="justify-self: start; padding: 0.9rem 1.7rem; border: 1px solid rgba(228,201,143,0.7); border-radius: 5px; color: #F8F4ED; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: background 0.4s ease, color 0.4s ease;" style-hover="background: #E4C98F; color: #262320;">Безплатна консултация</a>
-    </aside>
+    </section>
+  <!-- същата покана като в края на страницата -->
+  <section style="padding: clamp(3.6rem, 9vh, 6rem) max(clamp(1.8rem, 6vw, 6rem), calc((100% - 1400px) / 2)); background: #262320; color: #F8F4ED;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: clamp(2rem, 5vw, 4rem); align-items: center; max-width: 94rem; margin: 0 auto;">
+      <div>
+        <span style="display: inline-flex; align-items: center; gap: 0.9rem; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #E4C98F;"><span style="display: block; width: 2.6rem; height: 2px; background: linear-gradient(90deg, #E4C98F, rgba(228,201,143,0));"></span>Следваща стъпка</span>
+        <h2 style="margin-top: 1.2rem; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 300; font-size: clamp(2rem, 4vw, 3.3rem);">Запазете си час за <em style="font-style: italic; color: #E4C98F;">безплатна консултация.</em></h2>
+        <p style="margin-top: 1.3rem; max-width: 32rem; font-size: 1.04rem; color: rgba(248,244,237,0.82);">На консултацията разглеждаме зоната, обясняваме какво може да се направи и ако случаят е за лекар, ви насочваме към лекар. Излизате с ясен план, без да започвате същия ден.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 1.1rem;">
+        <a data-dd-btn="" href="../zapazi-chas/?usluga=za-maje" style="display: inline-flex; align-items: center; justify-content: center; padding: 1.15rem 2.2rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
+        <a href="tel:+359888998556" style="display: inline-flex; align-items: center; justify-content: center; padding: 1.05rem 2.2rem; border: 1px solid rgba(228,201,143,0.7); border-radius: 5px; color: #F8F4ED; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.5rem; transition: background 0.4s ease, border-color 0.4s ease, color 0.4s ease;" style-hover="background: #E4C98F; border-color: #E4C98F; color: #262320;">+359 88 899 8556</a>
+        <a href="../" style="align-self: center; font-size: 0.98rem; color: #E4C98F; transition: color 0.35s ease;" style-hover="color: #F8F4ED;">Вижте всички процедури</a>
+        <p style="font-size: 0.94rem; color: rgba(248,244,237,0.6); text-align: center;">бул. „Свети Наум“ 70А, 1421 София · вторник до събота</p>
+      </div>
+    </div>
   </section>
 
-  <section id="rezultati" data-ba-section="" data-screen-label="Преди и след" style="padding: clamp(3.6rem, 9vh, 6rem) clamp(1.8rem, 6vw, 6rem); background: #ECDFCC; border-top: 1px solid rgba(184,147,79,0.6); border-bottom: 1px solid rgba(184,147,79,0.6);">
+
+  <section id="rezultati" data-ba-section="" data-screen-label="Преди и след" style="padding: clamp(3.6rem, 9vh, 6rem) max(clamp(1.8rem, 6vw, 6rem), calc((100% - 1400px) / 2)); background: #ECDFCC; border-top: 1px solid rgba(184,147,79,0.6); border-bottom: 1px solid rgba(184,147,79,0.6);">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: clamp(2rem, 5vw, 4rem); align-items: center; max-width: 94rem; margin: 0 auto;">
       <div data-reveal="">
         <span style="display: inline-flex; align-items: center; gap: 0.9rem; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6B3F;"><span style="display: block; width: 2.6rem; height: 2px; background: linear-gradient(90deg, #B8934F, rgba(184,147,79,0));"></span>Преди и след</span>
@@ -788,7 +801,7 @@
     </div>
   </section>
 
-  <section id="kak" data-screen-label="Как протича" style="padding: clamp(3.6rem, 9vh, 6rem) clamp(1.8rem, 6vw, 6rem);">
+  <section id="kak" data-screen-label="Как протича" style="padding: clamp(3.6rem, 9vh, 6rem) max(clamp(1.8rem, 6vw, 6rem), calc((100% - 1400px) / 2));">
     <div style="display: grid; gap: clamp(2rem, 4vw, 3.2rem); max-width: 94rem; margin: 0 auto;">
       <div data-reveal="" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 21rem), 1fr)); gap: clamp(1.4rem, 3vw, 3.4rem); align-items: end;">
         <div>
@@ -822,7 +835,7 @@
           <span style="display: inline-flex; align-items: center; gap: 0.9rem; font-size: 0.84rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #E4C98F;"><span style="display: block; width: 2.6rem; height: 2px; background: linear-gradient(90deg, #E4C98F, rgba(228,201,143,0));"></span>След процедурата</span>
         <p style="max-width: 44rem; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 300; font-size: clamp(1.5rem, 2.8vw, 2.4rem); line-height: 1.3;">Снимаме зоната преди и след процедурата, винаги от един и същ ъгъл.</p>
         <div style="display: flex; flex-wrap: wrap; align-items: center; column-gap: clamp(1.4rem, 3vw, 2.4rem); row-gap: 1rem; margin-top: 0.5rem;">
-          <a href="../zapazi-chas/" style="display: inline-flex; align-items: center; justify-content: center; padding: 1.05rem 2.1rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); color: #262320; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; transition: filter 0.35s ease;" style-hover="filter: brightness(1.08);">Запазете безплатна консултация</a>
+          <a data-dd-btn="" href="../zapazi-chas/" style="display: inline-flex; align-items: center; justify-content: center; padding: 1.05rem 2.1rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); color: #262320; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; transition: filter 0.35s ease;" style-hover="filter: brightness(1.08);">Запазете безплатна консултация</a>
           <a href="tel:+359888998556" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.5rem, 2.2vw, 1.9rem); color: #F8F4ED; transition: color 0.35s ease;" style-hover="color: #E4C98F;">+359 88 899 8556</a>
         </div>
       </aside>
@@ -833,7 +846,7 @@
 
   <!-- място за секцията с отзиви -->
 
-  <section id="vaprosi" data-screen-label="Въпроси" style="padding: clamp(3.6rem, 9vh, 6rem) clamp(1.8rem, 6vw, 6rem);">
+  <section id="vaprosi" data-screen-label="Въпроси" style="padding: clamp(3.6rem, 9vh, 6rem) max(clamp(1.8rem, 6vw, 6rem), calc((100% - 1400px) / 2));">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: clamp(1.8rem, 4vw, 3.6rem); max-width: 94rem; margin: 0 auto;">
       <div data-reveal="">
         <span style="display: inline-flex; align-items: center; gap: 0.9rem; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6B3F;"><span style="display: block; width: 2.6rem; height: 2px; background: linear-gradient(90deg, #B8934F, rgba(184,147,79,0));"></span>Честите въпроси</span>
@@ -901,7 +914,7 @@
     </div>
   </section>
 
-  <section data-screen-label="Следваща стъпка" style="padding: clamp(3.6rem, 9vh, 6rem) clamp(1.8rem, 6vw, 6rem); background: #262320; color: #F8F4ED;">
+  <section data-screen-label="Следваща стъпка" style="padding: clamp(3.6rem, 9vh, 6rem) max(clamp(1.8rem, 6vw, 6rem), calc((100% - 1400px) / 2)); background: #262320; color: #F8F4ED;">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: clamp(2rem, 5vw, 4rem); align-items: center; max-width: 94rem; margin: 0 auto;">
       <div>
         <span style="display: inline-flex; align-items: center; gap: 0.9rem; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #E4C98F;"><span style="display: block; width: 2.6rem; height: 2px; background: linear-gradient(90deg, #E4C98F, rgba(228,201,143,0));"></span>Следваща стъпка</span>
@@ -909,7 +922,7 @@
         <p style="margin-top: 1.3rem; max-width: 32rem; font-size: 1.04rem; color: rgba(248,244,237,0.82);">На консултацията разглеждаме зоната, обясняваме какво може да се направи и ако случаят е за лекар, ви насочваме към лекар. Излизате с ясен план, без да започвате същия ден.</p>
       </div>
       <div style="display: flex; flex-direction: column; gap: 1.1rem;">
-        <a href="../zapazi-chas/?usluga=za-maje" style="display: inline-flex; align-items: center; justify-content: center; padding: 1.15rem 2.2rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
+        <a data-dd-btn="" href="../zapazi-chas/?usluga=za-maje" style="display: inline-flex; align-items: center; justify-content: center; padding: 1.15rem 2.2rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Запазете час</a>
         <a href="tel:+359888998556" style="display: inline-flex; align-items: center; justify-content: center; padding: 1.05rem 2.2rem; border: 1px solid rgba(228,201,143,0.7); border-radius: 5px; color: #F8F4ED; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.5rem; transition: background 0.4s ease, border-color 0.4s ease, color 0.4s ease;" style-hover="background: #E4C98F; border-color: #E4C98F; color: #262320;">+359 88 899 8556</a>
         <a href="../" style="align-self: center; font-size: 0.98rem; color: #E4C98F; transition: color 0.35s ease;" style-hover="color: #F8F4ED;">Вижте всички процедури</a>
         <p style="font-size: 0.94rem; color: rgba(248,244,237,0.6); text-align: center;">бул. „Свети Наум“ 70А, 1421 София · вторник до събота</p>
@@ -917,10 +930,9 @@
     </div>
   </section>
 
-  <footer style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.6rem; padding: 2.2rem clamp(1.8rem, 6vw, 6rem); background: #ECDFCC; border-top: 1px solid rgba(184,147,79,0.55); font-size: 0.96rem; color: rgba(38,35,32,0.68);">
+  <footer style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.6rem; padding: 2.2rem max(clamp(1.8rem, 6vw, 6rem), calc((100% - 1400px) / 2)); background: #ECDFCC; border-top: 1px solid rgba(184,147,79,0.55); font-size: 0.96rem; color: rgba(38,35,32,0.68);">
     <img src="../../assets/img/logo.webp" alt="Denny Divine" style="height: 38px; width: auto; filter: brightness(.42) saturate(1.2);">
     <span>бул. „Свети Наум“ 70А, 1421 София · <a href="mailto:info@hifubg.com" style="color: #8A6B3F;">info@hifubg.com</a></span>
-    <span><a href="../../business/" style="color: #8A6B3F;">Апарати за студиа</a></span>
     <span>© 2026 Denny Divine Cosmetology</span>
   </footer>
 </div>

@@ -1,0 +1,121 @@
+/* ═══════════════════════════════════════════════════════════════
+   Общ слой върху страниците.
+
+   Страниците идват с оформление в самите елементи (style="…"), затова
+   правилата тук носят !important. Без него всеки ред щеше да отстъпи
+   пред стила в елемента. Пипаме само това, което трябва да се промени.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Картите се подреждат една под друга ─────────────────────────
+   Досега това го решаваше само скриптът, при зареждане и при промяна
+   на размера. Докато той се обади, картата стоеше на две колони и на
+   телефон снимката се свиваше до петдесет пиксела, покрита от текста.
+   Тук същото стои в CSS, затова е вярно от първия кадър и когато
+   скриптът закъснее. */
+@media (max-width: 1100px) {
+
+  [data-spread] {
+    grid-template-columns: 1fr !important;
+  }
+
+  [data-spread] > [data-media] {
+    position: relative !important;
+    top: auto !important;
+    order: 0 !important;
+    align-self: stretch !important;
+    height: clamp(15rem, 40vh, 22rem) !important;
+    min-height: 0 !important;
+  }
+
+  [data-spread] > [data-body] {
+    order: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+/* ── Телефон ─────────────────────────────────────────────────── */
+@media (max-width: 760px) {
+
+  /* Бутоните минават от край до край. На тесен екран златният бутон
+     стоеше свит вляво и се уцелваше трудно с палец. */
+  [data-dd-btn] {
+    display: flex !important;
+    width: 100% !important;
+    max-width: none !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Обвивките около бутона също се разпъват, иначе бутонът пълни
+     контейнер, който сам се е свил до текста си. */
+  *:has(> [data-dd-btn]) {
+    width: 100% !important;
+    align-self: stretch !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Редът с бутоните става колона, за да не се смачкват един до друг. */
+  [data-hero-cta],
+  *:has(> * > [data-dd-btn]) {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  /* Телефонният номер до бутона също заема целия ред. */
+  [data-hero-cta] > a[href^="tel:"],
+  [data-hero-cta-phone] {
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  /* Текстът върху снимката в картите беше колкото на десктоп и на
+     триста пиксела ширина изяждаше кадъра. */
+  [data-media] b {
+    font-size: 1.45rem !important;
+  }
+
+  [data-media] span {
+    font-size: 0.66rem !important;
+    letter-spacing: 0.12em !important;
+  }
+
+  /* Лентата с номера и името сяда по-плътно до ръба. */
+  [data-media] > span[style*="position: absolute"][style*="bottom"] {
+    padding: 0.6rem 0.9rem !important;
+    gap: 0.5rem !important;
+  }
+
+  /* Значките в горния ъгъл на картата. */
+  [data-media] > span[style*="position: absolute"][style*="top"] {
+    padding: 0.35rem 0.7rem !important;
+  }
+}
+
+/* ── Широк екран ─────────────────────────────────────────────────
+   Таванът на ширината седи в самите секции (padding: max(…)), за да
+   остане фонът от край до край.
+
+   Две места нямат странично поле в маркъпа и затова оставаха
+   разпънати: текстът в херото, който е закачен абсолютно, и лентата
+   с трите числа под него. Тук получават същия таван. */
+
+[data-hero-content] {
+  left: max(clamp(1.8rem, 6vw, 6rem), calc((100% - 1400px) / 2)) !important;
+  right: max(clamp(1.8rem, 6vw, 6rem), calc((100% - 1400px) / 2)) !important;
+}
+
+[data-promise] {
+  padding-left: max(0px, calc((100% - 1400px) / 2)) !important;
+  padding-right: max(0px, calc((100% - 1400px) / 2)) !important;
+}
+
+/* Менюто е закачено най-горе и се подравнява със същата колона. */
+@media (min-width: 1600px) {
+  [data-navpanel] > div {
+    max-width: 1400px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
