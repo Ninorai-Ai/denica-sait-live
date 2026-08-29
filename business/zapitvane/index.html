@@ -53,8 +53,6 @@
   }
   h1 em { font-style: italic; color: #8A6B3F; }
 
-  .uvod { margin-top: 1.5rem; max-width: 38rem; font-size: 1.1rem; color: rgba(38,35,32,0.72); }
-
   .koloni { display: grid; gap: clamp(1.8rem, 4vw, 3rem); align-items: start; }
   @media (min-width: 60rem) { .koloni { grid-template-columns: 1fr 1fr; } }
 
@@ -103,26 +101,39 @@
 
   label { display: grid; gap: 0.45rem; font-size: 0.95rem; color: rgba(38,35,32,0.72); }
   input, select, textarea {
-    width: 100%; padding: 0.85rem 1rem;
+    display: block; width: 100%; max-width: 100%; min-width: 0;
+    padding: 0.85rem 1rem; min-height: 3.1rem;
     border: 1px solid rgba(184,147,79,0.4); border-radius: 5px;
     background: #FFFFFF; color: #262320;
     font-family: inherit; font-size: 1rem;
   }
+
+  /* Падащият списък.
+
+     Стрелката е тънка птичка, нарисувана веднъж като SVG. Преди беше два
+     наклонени градиента, които на телефон изглеждаха като черно триъгълниче
+     и се разминаваха с рамката.
+
+     Дългите имена на апаратите не бива да разпъват полето: ellipsis реже
+     текста вместо да избута страницата настрани. Списъкът, който се отваря
+     при цъкане, е на операционната система и винаги се побира в екрана. */
   select {
     appearance: none;
-    background-image: linear-gradient(45deg, transparent 50%, #B8934F 50%),
-                      linear-gradient(135deg, #B8934F 50%, transparent 50%);
-    background-position: calc(100% - 1.15rem) 55%, calc(100% - 0.8rem) 55%;
-    background-size: 0.35rem 0.35rem, 0.35rem 0.35rem;
+    padding-right: 2.6rem;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%23B8934F' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    padding-right: 2.4rem;
+    background-position: right 1rem center;
+    background-size: 0.72rem auto;
+    cursor: pointer;
   }
+  select:invalid { color: rgba(38,35,32,0.72); }
+
   input:focus, select:focus, textarea:focus {
     outline: 2px solid #B8934F; outline-offset: 1px;
   }
   textarea { min-height: 6.5rem; resize: vertical; }
   form { margin-top: 1.4rem; display: grid; gap: 1.1rem; }
-  .drebno { font-size: 0.92rem; color: rgba(38,35,32,0.72); }
 
   .podval {
     margin-top: clamp(3rem, 8vw, 5rem);
@@ -144,13 +155,11 @@
 
   <p class="nadslov">Оферта за студио</p>
   <h1>Поискайте <em>оферта</em></h1>
-  <p class="uvod">Казвате какви услуги искате да предлагате и получавате оферта за апарата, който ги покрива. В нея влизат обучението, удостоверението от МОН, протоколите за работа и двете години гаранция, за да отворите кабинет, който работи от първия ден.</p>
 
   <div class="koloni" style="margin-top: clamp(2.4rem, 6vw, 3.6rem);">
 
     <section class="karta">
       <h2>Обадете се</h2>
-      <p class="drebno" style="margin-top: 0.8rem;">Най-бързият път. Казвате какви услуги искате да предлагате и веднага ви казваме кой апарат ги покрива.</p>
       <a class="nomer" href="tel:+359888998556">+359 88 899 8556</a>
       <a class="buton" href="tel:+359888998556">Обадете се</a>
 
@@ -171,8 +180,7 @@
     </section>
 
     <section class="karta">
-      <h2>Или оставете телефон</h2>
-      <p class="drebno" style="margin-top: 0.8rem;">Ако сега не ви е удобно да говорите, попълнете полетата и ще ви потърсим ние. Бутонът отваря готово писмо от вашата поща, проверявате го и го пращате.</p>
+      <h2>Направете запитване</h2>
 
       <form id="forma">
         <label>Име
@@ -194,7 +202,7 @@
         <option value="Soprano Diode Laser">Soprano Diode Laser</option>
         <option value="Estella Laser">Estella Laser</option>
         <option value="AISIA">AISIA</option>
-        <option value="Още не съм решил">Още не съм решил</option>
+        <option value="Още не знам">Още не знам</option>
           </select>
         </label>
         <label>Какво искате да предлагате
