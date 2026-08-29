@@ -23,11 +23,12 @@
   a:hover { color: #B8934F; }
   @media (max-width: 900px) { html { font-size: 18px; } }
 
-  .obvivka { max-width: 62rem; margin: 0 auto; padding: 0 clamp(1.4rem, 4vw, 3.6rem); }
+  /* Същата колона като на останалите страници. */
+  .obvivka { max-width: 1200px; margin: 0 auto; padding: 0 clamp(1.4rem, 4vw, 3.6rem); }
 
   .shapka {
     display: flex; align-items: center; justify-content: space-between; gap: 1.2rem;
-    padding: 1rem clamp(1.4rem, 4vw, 3.6rem);
+    padding: 1rem max(clamp(1.4rem, 4vw, 3.6rem), calc((100% - 1200px) / 2));
     border-bottom: 1px solid rgba(184,147,79,0.4);
   }
   .shapka img { height: 42px; width: auto; }
@@ -52,14 +53,6 @@
   }
   h1 em { font-style: italic; color: #8A6B3F; }
 
-  .izbrano {
-    display: inline-flex; align-items: center; gap: 0.7rem; margin-top: 1.4rem;
-    padding: 0.6rem 1.2rem; border: 1px solid rgba(184,147,79,0.4); border-radius: 5px;
-    background: #FFFFFF; font-size: 1rem; color: #262320;
-  }
-  .izbrano b { font-weight: 600; }
-  .izbrano span { color: rgba(38,35,32,0.72); }
-
   .uvod { margin-top: 1.5rem; max-width: 38rem; font-size: 1.1rem; color: rgba(38,35,32,0.72); }
 
   .koloni { display: grid; gap: clamp(1.8rem, 4vw, 3rem); align-items: start; }
@@ -74,7 +67,16 @@
     font-size: clamp(1.8rem, 3vw, 2.4rem);
   }
 
-  .redove { margin-top: 1.4rem; display: grid; gap: 1.1rem; }
+  /* Телефонът се чете преди всичко останало в картата. */
+  .nomer {
+    display: block; margin-top: 1.2rem;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(2rem, 4vw, 2.6rem); line-height: 1.1;
+    color: #262320; white-space: nowrap;
+  }
+  .nomer:hover { color: #8A6B3F; }
+
+  .redove { margin-top: 1.6rem; display: grid; gap: 1.1rem; }
   .red { display: grid; gap: 0.2rem; }
   .red .etiket {
     font-size: 0.78rem; font-weight: 700; letter-spacing: 0.2em;
@@ -84,17 +86,19 @@
   .red .stojnost a { color: #262320; }
   .red .stojnost a:hover { color: #B8934F; }
 
-  .goljam-telefon {
-    display: inline-flex; align-items: center; justify-content: center;
-    margin-top: 1.6rem; padding: 1.1rem 2.2rem; border-radius: 5px;
+  /* Двата бутона са еднакви и минават от край до край на картата. */
+  .buton, button {
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    width: 100%; margin-top: 1.4rem;
+    padding: 1.05rem 1rem; border: 0; border-radius: 5px; cursor: pointer;
     background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%);
-    color: #F8F4ED; font-size: 1rem; font-weight: 700;
+    color: #241A12; font-family: inherit; font-size: 1rem; font-weight: 700;
     letter-spacing: 0.14em; text-transform: uppercase;
     transition: filter 0.35s, transform 0.35s, box-shadow 0.35s;
   }
-  .goljam-telefon:hover {
+  .buton:hover, button:hover {
     filter: brightness(1.1); transform: translateY(-2px);
-    box-shadow: 0 16px 34px rgba(138,107,63,0.4); color: #F8F4ED;
+    box-shadow: 0 16px 34px rgba(138,107,63,0.4); color: #241A12;
   }
 
   label { display: grid; gap: 0.45rem; font-size: 0.95rem; color: rgba(38,35,32,0.72); }
@@ -104,27 +108,25 @@
     background: #FFFFFF; color: #262320;
     font-family: inherit; font-size: 1rem;
   }
+  select {
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #B8934F 50%),
+                      linear-gradient(135deg, #B8934F 50%, transparent 50%);
+    background-position: calc(100% - 1.15rem) 55%, calc(100% - 0.8rem) 55%;
+    background-size: 0.35rem 0.35rem, 0.35rem 0.35rem;
+    background-repeat: no-repeat;
+    padding-right: 2.4rem;
+  }
   input:focus, select:focus, textarea:focus {
     outline: 2px solid #B8934F; outline-offset: 1px;
   }
-  textarea { min-height: 7rem; resize: vertical; }
+  textarea { min-height: 6.5rem; resize: vertical; }
   form { margin-top: 1.4rem; display: grid; gap: 1.1rem; }
-  button {
-    padding: 1.05rem 2rem; border: 0; border-radius: 5px; cursor: pointer;
-    background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%);
-    color: #F8F4ED; font-family: inherit; font-size: 1rem; font-weight: 700;
-    letter-spacing: 0.14em; text-transform: uppercase;
-    transition: filter 0.35s, transform 0.35s, box-shadow 0.35s;
-  }
-  button:hover {
-    filter: brightness(1.1); transform: translateY(-2px);
-    box-shadow: 0 16px 34px rgba(138,107,63,0.4);
-  }
   .drebno { font-size: 0.92rem; color: rgba(38,35,32,0.72); }
 
   .podval {
     margin-top: clamp(3rem, 8vw, 5rem);
-    padding: 1.4rem clamp(1.4rem, 4vw, 3.6rem);
+    padding: 1.4rem max(clamp(1.4rem, 4vw, 3.6rem), calc((100% - 1200px) / 2));
     border-top: 1px solid rgba(184,147,79,0.4);
     display: flex; flex-wrap: wrap; gap: 0.8rem 1.4rem;
     font-size: 0.95rem; color: rgba(38,35,32,0.72);
@@ -142,17 +144,15 @@
 
   <p class="nadslov">Безплатна консултация</p>
   <h1>Запазете <em>час</em></h1>
-  <p class="izbrano" id="izbrano" hidden><span>Идвате за</span> <b id="izbrano-ime"></b></p>
-  <p class="uvod">Обадете се или оставете телефона си и ще ви потърсим. Първата консултация е безплатна, разглеждаме зоната заедно и излизате с ясен план, без да започвате същия ден.</p>
+  <p class="uvod">Един разговор стига, за да знаете какво ви чака: коя зона се работи, колко посещения са нужни и в какъв интервал. Консултацията е безплатна и си тръгвате с плана, без да започвате същия ден.</p>
 
   <div class="koloni" style="margin-top: clamp(2.4rem, 6vw, 3.6rem);">
 
     <section class="karta">
       <h2>Обадете се</h2>
-      <p class="drebno" style="margin-top: 0.8rem;">
-        Най-бързият път. Вдигаме в работно време и се разбираме за час на място.
-      </p>
-      <a class="goljam-telefon" href="tel:+359888998556">+359 88 899 8556</a>
+      <p class="drebno" style="margin-top: 0.8rem;">Най-бързият път. Вдигаме вторник до събота и се разбираме за часа, докато сте на телефона.</p>
+      <a class="nomer" href="tel:+359888998556">+359 88 899 8556</a>
+      <a class="buton" href="tel:+359888998556">Обадете се</a>
 
       <div class="redove">
         <div class="red">
@@ -171,11 +171,8 @@
     </section>
 
     <section class="karta">
-      <h2>Или пишете</h2>
-      <p class="drebno" style="margin-top: 0.8rem;">
-        Попълнете полетата и бутонът отваря готово писмо до центъра.
-        Проверете го и го изпратете от своята поща.
-      </p>
+      <h2>Или оставете телефон</h2>
+      <p class="drebno" style="margin-top: 0.8rem;">Ако сега не ви е удобно да говорите, попълнете полетата и ще ви потърсим ние. Бутонът отваря готово писмо от вашата поща, проверявате го и го пращате.</p>
 
       <form id="forma">
         <label>Име
@@ -185,19 +182,27 @@
           <input type="tel" name="telefon" autocomplete="tel" required>
         </label>
         <label>Зона, която ви интересува
-          <input type="text" name="predmet" id="predmet">
+          <select name="predmet" id="predmet">
+        <option value="">Изберете зона</option>
+        <option value="Лице и шия">Лице и шия</option>
+        <option value="Тяло">Тяло</option>
+        <option value="Лазерни процедури">Лазерни процедури</option>
+        <option value="Интимно здраве">Интимно здраве</option>
+        <option value="Процедури за мъже">Процедури за мъже</option>
+        <option value="Още не съм решила">Още не съм решила</option>
+          </select>
         </label>
         <label>Какво искате да ни кажете
           <textarea name="belezhka" id="belezhka"></textarea>
         </label>
-        <button type="submit">Изпратете запитването</button>
+        <button type="submit">Изпрати</button>
       </form>
     </section>
 
   </div>
 </main>
 
-<footer class="podval obvivka" style="max-width: none;">
+<footer class="podval">
   <span>бул. „Свети Наум“ 70А, 1421 София</span>
   <span>·</span>
   <a href="tel:+359888998556">+359 88 899 8556</a>
@@ -301,11 +306,21 @@ var IMENA = {
   var params = new URLSearchParams(window.location.search);
   var kljuch = params.get('usluga');
   var ime = kljuch && IMENA[kljuch] ? IMENA[kljuch] : null;
+  var spisak = document.getElementById('predmet');
 
   if (ime) {
-    document.getElementById('izbrano-ime').textContent = ime;
-    document.getElementById('izbrano').hidden = false;
-    document.getElementById('predmet').value = ime;
+    var ima = Array.prototype.some.call(spisak.options, function (o) {
+      return o.value === ime;
+    });
+    if (!ima) {
+      // Страницата, от която идва човекът, може да е за по-тясна зона,
+      // отколкото стои в списъка. Тогава тя влиза като своя стойност.
+      var nova = document.createElement('option');
+      nova.value = ime;
+      nova.textContent = ime;
+      spisak.insertBefore(nova, spisak.options[1] || null);
+    }
+    spisak.value = ime;
   }
 
   document.getElementById('forma').addEventListener('submit', function (e) {
@@ -314,11 +329,11 @@ var IMENA = {
     var tqlo = [
       'Име: ' + (d.get('ime') || ''),
       'Телефон: ' + (d.get('telefon') || ''),
-      'Зона, която ви интересува: ' + (d.get('predmet') || ''),
+      'Зона, която ви интересува: ' + (d.get('predmet') || 'не е посочено'),
       '',
       d.get('belezhka') || ''
     ].join('\n');
-    var predmet = 'Запазване на час' + (d.get('predmet') ? ' — ' + d.get('predmet') : '');
+    var predmet = 'Запазване на час' + (d.get('predmet') ? ', ' + d.get('predmet') : '');
     window.location.href = 'mailto:info@hifubg.com'
       + '?subject=' + encodeURIComponent(predmet)
       + '&body=' + encodeURIComponent(tqlo);
