@@ -28,7 +28,7 @@
   details[open] [data-caret] { transform: rotate(225deg) translateY(-2px); }
   @media (max-width: 900px) { html { font-size: 18px; } }
 </style>
-<link href="../assets/css/sait.css?v=269007cc" rel="stylesheet">
+<link href="../assets/css/sait.css?v=ac06908f" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
@@ -243,131 +243,7 @@
       </div>
     </article>
 
-    <section data-ba-section="" style="padding: clamp(2.2rem, 4vw, 3.6rem); background: #ECDFCC; border-top: 2px solid #D8BE93; border-radius: 5px;">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; max-width: 94rem; margin: 0 auto;">
-      <div data-reveal="">
-        <span style="display: inline-flex; align-items: center; gap: 0.9rem; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6B3F;"><span style="display: block; width: 2.6rem; height: 2px; background: linear-gradient(90deg, #B8934F, rgba(184,147,79,0));"></span>Преди и след</span>
-        <h2 style="margin-top: 1.2rem; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(2rem, 3.6vw, 3.1rem);">Вижте <em style="font-style: italic; color: #8A6B3F;">трансформациите.</em></h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 2rem;">
-          <button data-tab="" type="button" onClick="{{ showCase }}" data-i="0" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: #B8934F; color: #F8F4ED; font-family: inherit; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.3s, color 0.3s;">ГНЕВНА БРЪЧКА</button>
-          <button data-tab="" type="button" onClick="{{ showCase }}" data-i="1" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.3s, color 0.3s;">Около устните</button>
-          <button data-tab="" type="button" onClick="{{ showCase }}" data-i="2" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.3s, color 0.3s;">ДВОЙНА БРАДИЧКА</button>
-          <button data-tab="" type="button" onClick="{{ showCase }}" data-i="3" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.3s, color 0.3s;">Корем</button>
-          <button data-tab="" type="button" onClick="{{ showCase }}" data-i="4" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.3s, color 0.3s;">Талия</button>
-          <button data-tab="" type="button" onClick="{{ showCase }}" data-i="5" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.3s, color 0.3s;">Кръст</button>
-          <button data-tab="" type="button" onClick="{{ showCase }}" data-i="6" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.3s, color 0.3s;">Епилация</button>
-          <button data-tab="" type="button" onClick="{{ showCase }}" data-i="7" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.3s, color 0.3s;">Мускули</button>
-        </div>
-      </div>
-      <div data-reveal="">
-        <div style="position: relative;">
-          <div data-case="" style="display: block;">
-            <div data-ba-stage="" style="position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 5px; background: #DCCBB4; cursor: ew-resize; touch-action: none; box-shadow: 0 20px 48px rgba(160,140,125,0.3);">
-              <image-slot id="v2-case1-after" shape="rect" src="../assets/img/transformacii/pairs/chelo-05-sled.webp" fit="cover" placeholder="Гневна бръчка: снимка СЛЕД" style="position: absolute; inset: 0; transform: translate(-9.99%, 2.35%) scale(1.220); transform-origin: 50% 50%;"></image-slot>
-              <div data-ba-before="" style="position: absolute; inset: 0; clip-path: inset(0 50% 0 0); opacity: 0.95;">
-                <image-slot id="v2-case1-before" shape="rect" src="../assets/img/transformacii/pairs/chelo-05-predi.webp" fit="cover" placeholder="Гневна бръчка: снимка ПРЕДИ" style="position: absolute; inset: 0; transform: scale(1.176); transform-origin: 50% 50%;"></image-slot>
-              </div>
-              <span style="position: absolute; top: 1rem; left: 1rem; padding: 0.4rem 0.95rem; background: rgba(38,35,32,0.72); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">Преди</span>
-              <span style="position: absolute; top: 1rem; right: 1rem; padding: 0.4rem 0.95rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">След</span>
-              <div data-ba-handle="" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #F8F4ED; pointer-events: none;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 46px; height: 46px; border-radius: 50%; background: #B8934F; color: #F8F4ED; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; box-shadow: 0 6px 18px rgba(38,35,32,0.3);">↔</span></div>
-            </div>
-            <p style="margin-top: 0.9rem; font-size: 1rem; color: rgba(38,35,32,0.75);"><b style="color: rgb(38, 35, 32);">Гневна бръчка между веждите.</b> Гънката се отпуска и изражението спира да изглежда сърдито, когато сте спокойна.</p>
-          </div>
-          <div data-case="" style="display: none;">
-            <div data-ba-stage="" style="position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 5px; background: #DCCBB4; cursor: ew-resize; touch-action: none; box-shadow: 0 20px 48px rgba(160,140,125,0.3);">
-              <image-slot id="v2-case2-after" shape="rect" src="../assets/img/transformacii/pairs/lice-01-sled.webp" fit="cover" placeholder="Устни: снимка СЛЕД" style="position: absolute; inset: 0;"></image-slot>
-              <div data-ba-before="" style="position: absolute; inset: 0; clip-path: inset(0 50% 0 0); opacity: 0.95;">
-                <image-slot id="v2-case2-before" shape="rect" src="../assets/img/transformacii/pairs/lice-01-predi.webp" fit="cover" placeholder="Устни: снимка ПРЕДИ" style="position: absolute; inset: 0;"></image-slot>
-              </div>
-              <span style="position: absolute; top: 1rem; left: 1rem; padding: 0.4rem 0.95rem; background: rgba(38,35,32,0.72); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">Преди</span>
-              <span style="position: absolute; top: 1rem; right: 1rem; padding: 0.4rem 0.95rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">След</span>
-              <div data-ba-handle="" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #F8F4ED; pointer-events: none;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 46px; height: 46px; border-radius: 50%; background: #B8934F; color: #F8F4ED; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; box-shadow: 0 6px 18px rgba(38,35,32,0.3);">↔</span></div>
-            </div>
-            <p style="margin-top: 0.9rem; font-size: 1rem; color: rgba(38,35,32,0.75);"><b style="color: #262320;">Бръчки около устните.</b> Гримът спира да се събира в линиите и усмивката изглежда по-спокойна.</p>
-          </div>
-          <div data-case="" style="display: none;">
-            <div data-ba-stage="" style="position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 5px; background: #DCCBB4; cursor: ew-resize; touch-action: none; box-shadow: 0 20px 48px rgba(160,140,125,0.3);">
-              <image-slot id="v2-case3-after" shape="rect" src="../assets/img/transformacii/pairs/podbradnik-02-sled.webp" fit="cover" placeholder="Двойна брадичка: снимка СЛЕД" style="position: absolute; inset: 0; transform: translate(0.00%, 8.85%) scale(1.197); transform-origin: 50% 50%;"></image-slot>
-              <div data-ba-before="" style="position: absolute; inset: 0; clip-path: inset(0 50% 0 0); opacity: 0.95;">
-                <image-slot id="v2-case3-before" shape="rect" src="../assets/img/transformacii/pairs/podbradnik-02-predi.webp" fit="cover" placeholder="Двойна брадичка: снимка ПРЕДИ" style="position: absolute; inset: 0; transform: scale(1.041); transform-origin: 50% 50%;"></image-slot>
-              </div>
-              <span style="position: absolute; top: 1rem; left: 1rem; padding: 0.4rem 0.95rem; background: rgba(38,35,32,0.72); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">Преди</span>
-              <span style="position: absolute; top: 1rem; right: 1rem; padding: 0.4rem 0.95rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">След</span>
-              <div data-ba-handle="" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #F8F4ED; pointer-events: none;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 46px; height: 46px; border-radius: 50%; background: #B8934F; color: #F8F4ED; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; box-shadow: 0 6px 18px rgba(38,35,32,0.3);">↔</span></div>
-            </div>
-            <p style="margin-top: 0.9rem; font-size: 1rem; color: rgba(38,35,32,0.75);"><b style="color: #262320;">Двойна брадичка.</b> Зоната под брадичката се прибира и линията на челюстта се вижда отново.</p>
-          </div>
-          <div data-case="" style="display: none;">
-            <div data-ba-stage="" style="position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 5px; background: #DCCBB4; cursor: ew-resize; touch-action: none; box-shadow: 0 20px 48px rgba(160,140,125,0.3);">
-              <image-slot id="v2-case4-after" shape="rect" src="../assets/img/transformacii/pairs/korem-01-sled.webp" fit="cover" placeholder="Корем: снимка СЛЕД" style="position: absolute; inset: 0; transform: translate(0.52%, 0.52%) scale(1.030); transform-origin: 50% 50%;"></image-slot>
-              <div data-ba-before="" style="position: absolute; inset: 0; clip-path: inset(0 50% 0 0); opacity: 0.95;">
-                <image-slot id="v2-case4-before" shape="rect" src="../assets/img/transformacii/pairs/korem-01-predi.webp" fit="cover" placeholder="Корем: снимка ПРЕДИ" style="position: absolute; inset: 0; transform: scale(1.030); transform-origin: 50% 50%;"></image-slot>
-              </div>
-              <span style="position: absolute; top: 1rem; left: 1rem; padding: 0.4rem 0.95rem; background: rgba(38,35,32,0.72); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">Преди</span>
-              <span style="position: absolute; top: 1rem; right: 1rem; padding: 0.4rem 0.95rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">След</span>
-              <div data-ba-handle="" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #F8F4ED; pointer-events: none;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 46px; height: 46px; border-radius: 50%; background: #B8934F; color: #F8F4ED; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; box-shadow: 0 6px 18px rgba(38,35,32,0.3);">↔</span></div>
-            </div>
-            <p style="margin-top: 0.9rem; font-size: 1rem; color: rgba(38,35,32,0.75);"><b style="color: #262320;">Коремът след курс от няколко посещения.</b> Кожата се стяга, вместо да увисне, и роклята се закопчава по-лесно.</p>
-          </div>
-          <div data-case="" style="display: none;">
-            <div data-ba-stage="" style="position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 5px; background: #DCCBB4; cursor: ew-resize; touch-action: none; box-shadow: 0 20px 48px rgba(160,140,125,0.3);">
-              <image-slot id="v2-case5-after" shape="rect" src="../assets/img/transformacii/pairs/talia-01-sled.webp" fit="cover" placeholder="Талия: снимка СЛЕД" style="position: absolute; inset: 0;"></image-slot>
-              <div data-ba-before="" style="position: absolute; inset: 0; clip-path: inset(0 50% 0 0); opacity: 0.95;">
-                <image-slot id="v2-case5-before" shape="rect" src="../assets/img/transformacii/pairs/talia-01-predi.webp" fit="cover" placeholder="Талия: снимка ПРЕДИ" style="position: absolute; inset: 0;"></image-slot>
-              </div>
-              <span style="position: absolute; top: 1rem; left: 1rem; padding: 0.4rem 0.95rem; background: rgba(38,35,32,0.72); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">Преди</span>
-              <span style="position: absolute; top: 1rem; right: 1rem; padding: 0.4rem 0.95rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">След</span>
-              <div data-ba-handle="" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #F8F4ED; pointer-events: none;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 46px; height: 46px; border-radius: 50%; background: #B8934F; color: #F8F4ED; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; box-shadow: 0 6px 18px rgba(38,35,32,0.3);">↔</span></div>
-            </div>
-            <p style="margin-top: 0.9rem; font-size: 1rem; color: rgba(38,35,32,0.75);"><b style="color: #262320;">Талия отстрани.</b> Гънката над колана се изглажда и панталонът сяда по-чисто.</p>
-          </div>
-          <div data-case="" style="display: none;">
-            <div data-ba-stage="" style="position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 5px; background: #DCCBB4; cursor: ew-resize; touch-action: none; box-shadow: 0 20px 48px rgba(160,140,125,0.3);">
-              <image-slot id="v2-case6-after" shape="rect" src="../assets/img/transformacii/pairs/krast-01-sled.webp" fit="cover" placeholder="Кръст: снимка СЛЕД" style="position: absolute; inset: 0;"></image-slot>
-              <div data-ba-before="" style="position: absolute; inset: 0; clip-path: inset(0 50% 0 0); opacity: 0.95;">
-                <image-slot id="v2-case6-before" shape="rect" src="../assets/img/transformacii/pairs/krast-01-predi.webp" fit="cover" placeholder="Кръст: снимка ПРЕДИ" style="position: absolute; inset: 0;"></image-slot>
-              </div>
-              <span style="position: absolute; top: 1rem; left: 1rem; padding: 0.4rem 0.95rem; background: rgba(38,35,32,0.72); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">Преди</span>
-              <span style="position: absolute; top: 1rem; right: 1rem; padding: 0.4rem 0.95rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">След</span>
-              <div data-ba-handle="" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #F8F4ED; pointer-events: none;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 46px; height: 46px; border-radius: 50%; background: #B8934F; color: #F8F4ED; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; box-shadow: 0 6px 18px rgba(38,35,32,0.3);">↔</span></div>
-            </div>
-            <p style="margin-top: 0.9rem; font-size: 1rem; color: rgba(38,35,32,0.75);"><b style="color: #262320;">Кръст и гръб.</b> Гънките над кръста се изглаждат и тениската не се набира.</p>
-          </div>
-          <div data-case="" style="display: none;">
-            <div data-ba-stage="" style="position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 5px; background: #DCCBB4; cursor: ew-resize; touch-action: none; box-shadow: 0 20px 48px rgba(160,140,125,0.3);">
-              <image-slot id="v2-case7-after" shape="rect" src="../assets/img/transformacii/pairs/epilaciq-podmishnici-01-sled.webp" fit="cover" placeholder="Епилация: снимка СЛЕД" style="position: absolute; inset: 0; transform: translate(-2.07%, -2.07%) scale(1.061); transform-origin: 50% 50%;"></image-slot>
-              <div data-ba-before="" style="position: absolute; inset: 0; clip-path: inset(0 50% 0 0); opacity: 0.95;">
-                <image-slot id="v2-case7-before" shape="rect" src="../assets/img/transformacii/pairs/epilaciq-podmishnici-01-predi.webp" fit="cover" placeholder="Епилация: снимка ПРЕДИ" style="position: absolute; inset: 0; transform: scale(1.036); transform-origin: 50% 50%;"></image-slot>
-              </div>
-              <span style="position: absolute; top: 1rem; left: 1rem; padding: 0.4rem 0.95rem; background: rgba(38,35,32,0.72); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">Преди</span>
-              <span style="position: absolute; top: 1rem; right: 1rem; padding: 0.4rem 0.95rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">След</span>
-              <div data-ba-handle="" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #F8F4ED; pointer-events: none;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 46px; height: 46px; border-radius: 50%; background: #B8934F; color: #F8F4ED; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; box-shadow: 0 6px 18px rgba(38,35,32,0.3);">↔</span></div>
-            </div>
-            <p style="margin-top: 0.9rem; font-size: 1rem; color: rgba(38,35,32,0.75);"><b style="color: #262320;">Лазерна епилация, подмишници.</b> За трайна епилация са нужни 6 до 8 процедури, а зоната остава чиста между тях.</p>
-          </div>
-          <div data-case="" style="display: none;">
-            <div data-ba-stage="" style="position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 5px; background: #DCCBB4; cursor: ew-resize; touch-action: none; box-shadow: 0 20px 48px rgba(160,140,125,0.3);">
-              <image-slot id="v2-case8-after" shape="rect" src="../assets/img/transformacii/pairs/tesla-korem-01-sled.webp" fit="cover" placeholder="Мускули: снимка СЛЕД" style="position: absolute; inset: 0; transform: translate(-1.20%, -3.00%) scale(1.080); transform-origin: 50% 50%;"></image-slot>
-              <div data-ba-before="" style="position: absolute; inset: 0; clip-path: inset(0 50% 0 0); opacity: 0.95;">
-                <image-slot id="v2-case8-before" shape="rect" src="../assets/img/transformacii/pairs/tesla-korem-01-predi.webp" fit="cover" placeholder="Мускули: снимка ПРЕДИ" style="position: absolute; inset: 0; transform: scale(1.200); transform-origin: 50% 50%;"></image-slot>
-              </div>
-              <span style="position: absolute; top: 1rem; left: 1rem; padding: 0.4rem 0.95rem; background: rgba(38,35,32,0.72); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">Преди</span>
-              <span style="position: absolute; top: 1rem; right: 1rem; padding: 0.4rem 0.95rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">След</span>
-              <div data-ba-handle="" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #F8F4ED; pointer-events: none;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 46px; height: 46px; border-radius: 50%; background: #B8934F; color: #F8F4ED; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; box-shadow: 0 6px 18px rgba(38,35,32,0.3);">↔</span></div>
-            </div>
-            <p style="margin-top: 0.9rem; font-size: 1rem; color: rgba(38,35,32,0.75);"><b style="color: #262320;">Мускулна стимулация на корема.</b> Коремът се държи по-стегнат и стойката е по-изправена.</p>
-          </div>
-        </div>
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1rem;">
-          <div style="display: flex; gap: 0.5rem;">
-            <button type="button" aria-label="Предишна история" onClick="{{ prevCase }}" style="width: 46px; height: 46px; border: 1px solid #A08C7D; background: transparent; color: #3B2C21; font-family: inherit; font-size: 1.1rem; cursor: pointer;" style-hover="background: #B8934F; border-color: #B8934F; color: #F8F4ED;">←</button>
-            <button type="button" aria-label="Следваща история" onClick="{{ nextCase }}" style="width: 46px; height: 46px; border: 1px solid #A08C7D; background: transparent; color: #3B2C21; font-family: inherit; font-size: 1.1rem; cursor: pointer;" style-hover="background: #B8934F; border-color: #B8934F; color: #F8F4ED;">→</button>
-          </div>
-          <span data-counter="" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.4rem; color: #8A6B3F;">01 / 08</span>
-        </div>
-      </div>
-    </div>
-    </section>
+    
 
     <article data-card="" data-spread="" data-screen-label="Лазер" id="lazer" style="position: relative; display: grid; grid-template-columns: 0.94fr 1.06fr; align-items: start; scroll-margin-top: 104px;">
       <div data-media="" style="position: relative; align-self: stretch; min-height: clamp(24rem, 54vh, 40rem); background: #262320; overflow: hidden;">
@@ -582,6 +458,133 @@
       </div>
     </div>
   </section>
+
+
+  <section id="rezultati" data-ba-section="" data-screen-label="Преди и след" style="padding: clamp(3.6rem, 9vh, 6rem) max(clamp(1.8rem, 6vw, 6rem), calc((100% - 1200px) / 2)); background: #ECDFCC; border-top: 1px solid rgba(184,147,79,0.6); border-bottom: 1px solid rgba(184,147,79,0.6);">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; max-width: 94rem; margin: 0 auto;">
+      <div data-reveal="">
+        <span style="display: inline-flex; align-items: center; gap: 0.9rem; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6B3F;"><span style="display: block; width: 2.6rem; height: 2px; background: linear-gradient(90deg, #B8934F, rgba(184,147,79,0));"></span>Преди и след</span>
+        <h2 style="margin-top: 1.2rem; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(2rem, 3.6vw, 3.1rem);">Вижте <em style="font-style: italic; color: #8A6B3F;">трансформациите.</em></h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 2rem;">
+          <button data-tab="" type="button" onClick="{{ showCase }}" data-i="0" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: #B8934F; color: #F8F4ED; font-family: inherit; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.3s, color 0.3s;">ГНЕВНА БРЪЧКА</button>
+          <button data-tab="" type="button" onClick="{{ showCase }}" data-i="1" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.3s, color 0.3s;">Около устните</button>
+          <button data-tab="" type="button" onClick="{{ showCase }}" data-i="2" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.3s, color 0.3s;">ДВОЙНА БРАДИЧКА</button>
+          <button data-tab="" type="button" onClick="{{ showCase }}" data-i="3" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.3s, color 0.3s;">Корем</button>
+          <button data-tab="" type="button" onClick="{{ showCase }}" data-i="4" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.3s, color 0.3s;">Талия</button>
+          <button data-tab="" type="button" onClick="{{ showCase }}" data-i="5" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.3s, color 0.3s;">Кръст</button>
+          <button data-tab="" type="button" onClick="{{ showCase }}" data-i="6" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.3s, color 0.3s;">Епилация</button>
+          <button data-tab="" type="button" onClick="{{ showCase }}" data-i="7" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.3s, color 0.3s;">Мускули</button>
+        </div>
+      </div>
+      <div data-reveal="">
+        <div style="position: relative;">
+          <div data-case="" style="display: block;">
+            <div data-ba-stage="" style="position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 5px; background: #DCCBB4; cursor: ew-resize; touch-action: none; box-shadow: 0 20px 48px rgba(160,140,125,0.3);">
+              <image-slot id="v2-case1-after" shape="rect" src="../assets/img/transformacii/pairs/chelo-05-sled.webp" fit="cover" placeholder="Гневна бръчка: снимка СЛЕД" style="position: absolute; inset: 0; transform: translate(-9.99%, 2.35%) scale(1.220); transform-origin: 50% 50%;"></image-slot>
+              <div data-ba-before="" style="position: absolute; inset: 0; clip-path: inset(0 50% 0 0); opacity: 0.95;">
+                <image-slot id="v2-case1-before" shape="rect" src="../assets/img/transformacii/pairs/chelo-05-predi.webp" fit="cover" placeholder="Гневна бръчка: снимка ПРЕДИ" style="position: absolute; inset: 0; transform: scale(1.176); transform-origin: 50% 50%;"></image-slot>
+              </div>
+              <span style="position: absolute; top: 1rem; left: 1rem; padding: 0.4rem 0.95rem; background: rgba(38,35,32,0.72); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">Преди</span>
+              <span style="position: absolute; top: 1rem; right: 1rem; padding: 0.4rem 0.95rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">След</span>
+              <div data-ba-handle="" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #F8F4ED; pointer-events: none;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 46px; height: 46px; border-radius: 50%; background: #B8934F; color: #F8F4ED; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; box-shadow: 0 6px 18px rgba(38,35,32,0.3);">↔</span></div>
+            </div>
+            <p style="margin-top: 0.9rem; font-size: 1rem; color: rgba(38,35,32,0.75);"><b style="color: rgb(38, 35, 32);">Гневна бръчка между веждите.</b> Гънката се отпуска и изражението спира да изглежда сърдито, когато сте спокойна.</p>
+          </div>
+          <div data-case="" style="display: none;">
+            <div data-ba-stage="" style="position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 5px; background: #DCCBB4; cursor: ew-resize; touch-action: none; box-shadow: 0 20px 48px rgba(160,140,125,0.3);">
+              <image-slot id="v2-case2-after" shape="rect" src="../assets/img/transformacii/pairs/lice-01-sled.webp" fit="cover" placeholder="Устни: снимка СЛЕД" style="position: absolute; inset: 0;"></image-slot>
+              <div data-ba-before="" style="position: absolute; inset: 0; clip-path: inset(0 50% 0 0); opacity: 0.95;">
+                <image-slot id="v2-case2-before" shape="rect" src="../assets/img/transformacii/pairs/lice-01-predi.webp" fit="cover" placeholder="Устни: снимка ПРЕДИ" style="position: absolute; inset: 0;"></image-slot>
+              </div>
+              <span style="position: absolute; top: 1rem; left: 1rem; padding: 0.4rem 0.95rem; background: rgba(38,35,32,0.72); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">Преди</span>
+              <span style="position: absolute; top: 1rem; right: 1rem; padding: 0.4rem 0.95rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">След</span>
+              <div data-ba-handle="" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #F8F4ED; pointer-events: none;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 46px; height: 46px; border-radius: 50%; background: #B8934F; color: #F8F4ED; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; box-shadow: 0 6px 18px rgba(38,35,32,0.3);">↔</span></div>
+            </div>
+            <p style="margin-top: 0.9rem; font-size: 1rem; color: rgba(38,35,32,0.75);"><b style="color: #262320;">Бръчки около устните.</b> Гримът спира да се събира в линиите и усмивката изглежда по-спокойна.</p>
+          </div>
+          <div data-case="" style="display: none;">
+            <div data-ba-stage="" style="position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 5px; background: #DCCBB4; cursor: ew-resize; touch-action: none; box-shadow: 0 20px 48px rgba(160,140,125,0.3);">
+              <image-slot id="v2-case3-after" shape="rect" src="../assets/img/transformacii/pairs/podbradnik-02-sled.webp" fit="cover" placeholder="Двойна брадичка: снимка СЛЕД" style="position: absolute; inset: 0; transform: translate(0.00%, 8.85%) scale(1.197); transform-origin: 50% 50%;"></image-slot>
+              <div data-ba-before="" style="position: absolute; inset: 0; clip-path: inset(0 50% 0 0); opacity: 0.95;">
+                <image-slot id="v2-case3-before" shape="rect" src="../assets/img/transformacii/pairs/podbradnik-02-predi.webp" fit="cover" placeholder="Двойна брадичка: снимка ПРЕДИ" style="position: absolute; inset: 0; transform: scale(1.041); transform-origin: 50% 50%;"></image-slot>
+              </div>
+              <span style="position: absolute; top: 1rem; left: 1rem; padding: 0.4rem 0.95rem; background: rgba(38,35,32,0.72); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">Преди</span>
+              <span style="position: absolute; top: 1rem; right: 1rem; padding: 0.4rem 0.95rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">След</span>
+              <div data-ba-handle="" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #F8F4ED; pointer-events: none;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 46px; height: 46px; border-radius: 50%; background: #B8934F; color: #F8F4ED; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; box-shadow: 0 6px 18px rgba(38,35,32,0.3);">↔</span></div>
+            </div>
+            <p style="margin-top: 0.9rem; font-size: 1rem; color: rgba(38,35,32,0.75);"><b style="color: #262320;">Двойна брадичка.</b> Зоната под брадичката се прибира и линията на челюстта се вижда отново.</p>
+          </div>
+          <div data-case="" style="display: none;">
+            <div data-ba-stage="" style="position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 5px; background: #DCCBB4; cursor: ew-resize; touch-action: none; box-shadow: 0 20px 48px rgba(160,140,125,0.3);">
+              <image-slot id="v2-case4-after" shape="rect" src="../assets/img/transformacii/pairs/korem-01-sled.webp" fit="cover" placeholder="Корем: снимка СЛЕД" style="position: absolute; inset: 0; transform: translate(0.52%, 0.52%) scale(1.030); transform-origin: 50% 50%;"></image-slot>
+              <div data-ba-before="" style="position: absolute; inset: 0; clip-path: inset(0 50% 0 0); opacity: 0.95;">
+                <image-slot id="v2-case4-before" shape="rect" src="../assets/img/transformacii/pairs/korem-01-predi.webp" fit="cover" placeholder="Корем: снимка ПРЕДИ" style="position: absolute; inset: 0; transform: scale(1.030); transform-origin: 50% 50%;"></image-slot>
+              </div>
+              <span style="position: absolute; top: 1rem; left: 1rem; padding: 0.4rem 0.95rem; background: rgba(38,35,32,0.72); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">Преди</span>
+              <span style="position: absolute; top: 1rem; right: 1rem; padding: 0.4rem 0.95rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">След</span>
+              <div data-ba-handle="" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #F8F4ED; pointer-events: none;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 46px; height: 46px; border-radius: 50%; background: #B8934F; color: #F8F4ED; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; box-shadow: 0 6px 18px rgba(38,35,32,0.3);">↔</span></div>
+            </div>
+            <p style="margin-top: 0.9rem; font-size: 1rem; color: rgba(38,35,32,0.75);"><b style="color: #262320;">Коремът след курс от няколко посещения.</b> Кожата се стяга, вместо да увисне, и роклята се закопчава по-лесно.</p>
+          </div>
+          <div data-case="" style="display: none;">
+            <div data-ba-stage="" style="position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 5px; background: #DCCBB4; cursor: ew-resize; touch-action: none; box-shadow: 0 20px 48px rgba(160,140,125,0.3);">
+              <image-slot id="v2-case5-after" shape="rect" src="../assets/img/transformacii/pairs/talia-01-sled.webp" fit="cover" placeholder="Талия: снимка СЛЕД" style="position: absolute; inset: 0;"></image-slot>
+              <div data-ba-before="" style="position: absolute; inset: 0; clip-path: inset(0 50% 0 0); opacity: 0.95;">
+                <image-slot id="v2-case5-before" shape="rect" src="../assets/img/transformacii/pairs/talia-01-predi.webp" fit="cover" placeholder="Талия: снимка ПРЕДИ" style="position: absolute; inset: 0;"></image-slot>
+              </div>
+              <span style="position: absolute; top: 1rem; left: 1rem; padding: 0.4rem 0.95rem; background: rgba(38,35,32,0.72); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">Преди</span>
+              <span style="position: absolute; top: 1rem; right: 1rem; padding: 0.4rem 0.95rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">След</span>
+              <div data-ba-handle="" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #F8F4ED; pointer-events: none;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 46px; height: 46px; border-radius: 50%; background: #B8934F; color: #F8F4ED; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; box-shadow: 0 6px 18px rgba(38,35,32,0.3);">↔</span></div>
+            </div>
+            <p style="margin-top: 0.9rem; font-size: 1rem; color: rgba(38,35,32,0.75);"><b style="color: #262320;">Талия отстрани.</b> Гънката над колана се изглажда и панталонът сяда по-чисто.</p>
+          </div>
+          <div data-case="" style="display: none;">
+            <div data-ba-stage="" style="position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 5px; background: #DCCBB4; cursor: ew-resize; touch-action: none; box-shadow: 0 20px 48px rgba(160,140,125,0.3);">
+              <image-slot id="v2-case6-after" shape="rect" src="../assets/img/transformacii/pairs/krast-01-sled.webp" fit="cover" placeholder="Кръст: снимка СЛЕД" style="position: absolute; inset: 0;"></image-slot>
+              <div data-ba-before="" style="position: absolute; inset: 0; clip-path: inset(0 50% 0 0); opacity: 0.95;">
+                <image-slot id="v2-case6-before" shape="rect" src="../assets/img/transformacii/pairs/krast-01-predi.webp" fit="cover" placeholder="Кръст: снимка ПРЕДИ" style="position: absolute; inset: 0;"></image-slot>
+              </div>
+              <span style="position: absolute; top: 1rem; left: 1rem; padding: 0.4rem 0.95rem; background: rgba(38,35,32,0.72); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">Преди</span>
+              <span style="position: absolute; top: 1rem; right: 1rem; padding: 0.4rem 0.95rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">След</span>
+              <div data-ba-handle="" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #F8F4ED; pointer-events: none;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 46px; height: 46px; border-radius: 50%; background: #B8934F; color: #F8F4ED; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; box-shadow: 0 6px 18px rgba(38,35,32,0.3);">↔</span></div>
+            </div>
+            <p style="margin-top: 0.9rem; font-size: 1rem; color: rgba(38,35,32,0.75);"><b style="color: #262320;">Кръст и гръб.</b> Гънките над кръста се изглаждат и тениската не се набира.</p>
+          </div>
+          <div data-case="" style="display: none;">
+            <div data-ba-stage="" style="position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 5px; background: #DCCBB4; cursor: ew-resize; touch-action: none; box-shadow: 0 20px 48px rgba(160,140,125,0.3);">
+              <image-slot id="v2-case7-after" shape="rect" src="../assets/img/transformacii/pairs/epilaciq-podmishnici-01-sled.webp" fit="cover" placeholder="Епилация: снимка СЛЕД" style="position: absolute; inset: 0; transform: translate(-2.07%, -2.07%) scale(1.061); transform-origin: 50% 50%;"></image-slot>
+              <div data-ba-before="" style="position: absolute; inset: 0; clip-path: inset(0 50% 0 0); opacity: 0.95;">
+                <image-slot id="v2-case7-before" shape="rect" src="../assets/img/transformacii/pairs/epilaciq-podmishnici-01-predi.webp" fit="cover" placeholder="Епилация: снимка ПРЕДИ" style="position: absolute; inset: 0; transform: scale(1.036); transform-origin: 50% 50%;"></image-slot>
+              </div>
+              <span style="position: absolute; top: 1rem; left: 1rem; padding: 0.4rem 0.95rem; background: rgba(38,35,32,0.72); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">Преди</span>
+              <span style="position: absolute; top: 1rem; right: 1rem; padding: 0.4rem 0.95rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">След</span>
+              <div data-ba-handle="" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #F8F4ED; pointer-events: none;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 46px; height: 46px; border-radius: 50%; background: #B8934F; color: #F8F4ED; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; box-shadow: 0 6px 18px rgba(38,35,32,0.3);">↔</span></div>
+            </div>
+            <p style="margin-top: 0.9rem; font-size: 1rem; color: rgba(38,35,32,0.75);"><b style="color: #262320;">Лазерна епилация, подмишници.</b> За трайна епилация са нужни 6 до 8 процедури, а зоната остава чиста между тях.</p>
+          </div>
+          <div data-case="" style="display: none;">
+            <div data-ba-stage="" style="position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 5px; background: #DCCBB4; cursor: ew-resize; touch-action: none; box-shadow: 0 20px 48px rgba(160,140,125,0.3);">
+              <image-slot id="v2-case8-after" shape="rect" src="../assets/img/transformacii/pairs/tesla-korem-01-sled.webp" fit="cover" placeholder="Мускули: снимка СЛЕД" style="position: absolute; inset: 0; transform: translate(-1.20%, -3.00%) scale(1.080); transform-origin: 50% 50%;"></image-slot>
+              <div data-ba-before="" style="position: absolute; inset: 0; clip-path: inset(0 50% 0 0); opacity: 0.95;">
+                <image-slot id="v2-case8-before" shape="rect" src="../assets/img/transformacii/pairs/tesla-korem-01-predi.webp" fit="cover" placeholder="Мускули: снимка ПРЕДИ" style="position: absolute; inset: 0; transform: scale(1.200); transform-origin: 50% 50%;"></image-slot>
+              </div>
+              <span style="position: absolute; top: 1rem; left: 1rem; padding: 0.4rem 0.95rem; background: rgba(38,35,32,0.72); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">Преди</span>
+              <span style="position: absolute; top: 1rem; right: 1rem; padding: 0.4rem 0.95rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">След</span>
+              <div data-ba-handle="" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #F8F4ED; pointer-events: none;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 46px; height: 46px; border-radius: 50%; background: #B8934F; color: #F8F4ED; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; box-shadow: 0 6px 18px rgba(38,35,32,0.3);">↔</span></div>
+            </div>
+            <p style="margin-top: 0.9rem; font-size: 1rem; color: rgba(38,35,32,0.75);"><b style="color: #262320;">Мускулна стимулация на корема.</b> Коремът се държи по-стегнат и стойката е по-изправена.</p>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1rem;">
+          <div style="display: flex; gap: 0.5rem;">
+            <button type="button" aria-label="Предишна история" onClick="{{ prevCase }}" style="width: 46px; height: 46px; border: 1px solid #A08C7D; background: transparent; color: #3B2C21; font-family: inherit; font-size: 1.1rem; cursor: pointer;" style-hover="background: #B8934F; border-color: #B8934F; color: #F8F4ED;">←</button>
+            <button type="button" aria-label="Следваща история" onClick="{{ nextCase }}" style="width: 46px; height: 46px; border: 1px solid #A08C7D; background: transparent; color: #3B2C21; font-family: inherit; font-size: 1.1rem; cursor: pointer;" style-hover="background: #B8934F; border-color: #B8934F; color: #F8F4ED;">→</button>
+          </div>
+          <span data-counter="" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.4rem; color: #8A6B3F;">01 / 08</span>
+        </div>
+      </div>
+    </div>
+    </section>
 
 
   <section id="kak" data-screen-label="Посещението" style="padding: clamp(3.6rem, 9vh, 6rem) max(clamp(1.8rem, 6vw, 6rem), calc((100% - 1200px) / 2));">

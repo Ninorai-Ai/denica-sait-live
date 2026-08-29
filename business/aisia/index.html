@@ -26,7 +26,7 @@
   @keyframes pulseGlow { 0%, 100% { opacity: 0.7; transform: scale(1); } 50% { opacity: 1; transform: scale(1.06); } }
   @keyframes zoomSoft { 0% { transform: scale(1); } 100% { transform: scale(1.06); } }
 </style>
-<link href="../../assets/css/sait.css?v=269007cc" rel="stylesheet">
+<link href="../../assets/css/sait.css?v=ac06908f" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
@@ -45,6 +45,7 @@
       <a data-navlink="" href="#zoni-analiz" style="font-size: 0.96rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Зони за анализ</a>
       <a data-navlink="" href="#parametri" style="font-size: 0.96rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Параметри</a>
       <a data-navlink="" href="#paket" style="font-size: 0.96rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Какво получавате</a>
+      <a data-navlink-soft="" href="../za-nas/" style="font-size: 0.96rem; font-weight: 500; color: rgba(38,35,32,0.6); transition: color 0.35s ease;" style-hover="color: #8A6B3F;">За Деница</a>
       <a data-dd-btn="" href="../zapitvane/?aparat=aisia" style="display: inline-flex; align-items: center; padding: 0.78rem 1.5rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 14px 30px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-2px); letter-spacing: 0.2em;">Запитване</a>
     </div>
     <button data-burger="" type="button" aria-label="Меню" onClick="{{ toggleMenu }}" style="display: none; width: 48px; height: 48px; flex: none; border: 1px solid rgba(184,147,79,0.7); background: rgba(184,147,79,0.12); border-radius: 5px; cursor: pointer; padding: 0; align-items: center; justify-content: center;">
@@ -232,16 +233,16 @@
         <p style="margin-top: 1.3rem; max-width: 26rem; font-size: 1.02rem; color: rgba(38,35,32,0.78);">Данните са по спецификация на производителя.</p>
         </div>
       <ul data-reveal="" data-parametri-list="" style="display: grid; border-top: 1px solid rgba(160,140,125,0.42);">
-        <li style="display: grid; grid-template-columns: 1fr auto; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(160,140,125,0.42);"><span style="font-size: 1rem; color: rgba(38,35,32,0.75);">Технология</span><b style="font-weight: 600; text-align: right; color: #262320;">изкуствен интелект и Deep Learning</b></li>
-        <li style="display: grid; grid-template-columns: 1fr auto; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(160,140,125,0.42);"><span style="font-size: 1rem; color: rgba(38,35,32,0.75);">Разпознаване</span><b style="font-weight: 600; text-align: right; color: #262320;">AI Face Recognition</b></li>
-        <li style="display: grid; grid-template-columns: 1fr auto; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(160,140,125,0.42);"><span style="font-size: 1rem; color: rgba(38,35,32,0.75);">Обхват на заснемане</span><b style="font-weight: 600; text-align: right; color: #262320;">180 градуса, фронтално и от двете страни</b></li>
-        <li style="display: grid; grid-template-columns: 1fr auto; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(160,140,125,0.42);"><span style="font-size: 1rem; color: rgba(38,35,32,0.75);">Спектрални режими</span><b style="font-weight: 600; text-align: right; color: #262320;">RGB · поляризирана · UV 365 nm · UV Blue 405 nm · Wood’s · композитен</b></li>
-        <li style="display: grid; grid-template-columns: 1fr auto; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(160,140,125,0.42);"><span style="font-size: 1rem; color: rgba(38,35,32,0.75);">Количествени показатели</span><b style="font-weight: 600; color: #262320;">19</b></li>
-        <li style="display: grid; grid-template-columns: 1fr auto; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(160,140,125,0.42);"><span style="font-size: 1rem; color: rgba(38,35,32,0.75);">Прогноза</span><b style="font-weight: 600; text-align: right; color: #262320;">Skin Prediction за процесите на стареене</b></li>
-        <li style="display: grid; grid-template-columns: 1fr auto; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(160,140,125,0.42);"><span style="font-size: 1rem; color: rgba(38,35,32,0.75);">Проследяване</span><b style="font-weight: 600; text-align: right; color: #262320;">Before и After с показатели</b></li>
-        <li style="display: grid; grid-template-columns: 1fr auto; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(160,140,125,0.42);"><span style="font-size: 1rem; color: rgba(38,35,32,0.75);">Архив</span><b style="font-weight: 600; text-align: right; color: #262320;">анализите се съхраняват по клиентка</b></li>
-        <li style="display: grid; grid-template-columns: 1fr auto; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(160,140,125,0.42);"><span style="font-size: 1rem; color: rgba(38,35,32,0.75);">Доклад</span><b style="font-weight: 600; text-align: right; color: #262320;">дигитален, с QR код или принтиран</b></li>
-        <li style="display: grid; grid-template-columns: 1fr auto; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(160,140,125,0.42);"><span style="font-size: 1rem; color: rgba(38,35,32,0.75);">Препоръки</span><b style="font-weight: 600; text-align: right; color: #262320;">продуктови, в самия доклад</b></li>
+        <li style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(160,140,125,0.42);"><span style="font-size: 1rem; color: rgba(38,35,32,0.75);">Технология</span><b style="font-weight: 600; text-align: right; color: #262320;">изкуствен интелект и Deep Learning</b></li>
+        <li style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(160,140,125,0.42);"><span style="font-size: 1rem; color: rgba(38,35,32,0.75);">Разпознаване</span><b style="font-weight: 600; text-align: right; color: #262320;">AI Face Recognition</b></li>
+        <li style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(160,140,125,0.42);"><span style="font-size: 1rem; color: rgba(38,35,32,0.75);">Обхват на заснемане</span><b style="font-weight: 600; text-align: right; color: #262320;">180 градуса, фронтално и от двете страни</b></li>
+        <li style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(160,140,125,0.42);"><span style="font-size: 1rem; color: rgba(38,35,32,0.75);">Спектрални режими</span><b style="font-weight: 600; text-align: right; color: #262320;">RGB · поляризирана · UV 365 nm · UV Blue 405 nm · Wood’s · композитен</b></li>
+        <li style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(160,140,125,0.42);"><span style="font-size: 1rem; color: rgba(38,35,32,0.75);">Количествени показатели</span><b style="font-weight: 600; color: #262320;">19</b></li>
+        <li style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(160,140,125,0.42);"><span style="font-size: 1rem; color: rgba(38,35,32,0.75);">Прогноза</span><b style="font-weight: 600; text-align: right; color: #262320;">Skin Prediction за процесите на стареене</b></li>
+        <li style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(160,140,125,0.42);"><span style="font-size: 1rem; color: rgba(38,35,32,0.75);">Проследяване</span><b style="font-weight: 600; text-align: right; color: #262320;">Before и After с показатели</b></li>
+        <li style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(160,140,125,0.42);"><span style="font-size: 1rem; color: rgba(38,35,32,0.75);">Архив</span><b style="font-weight: 600; text-align: right; color: #262320;">анализите се съхраняват по клиентка</b></li>
+        <li style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(160,140,125,0.42);"><span style="font-size: 1rem; color: rgba(38,35,32,0.75);">Доклад</span><b style="font-weight: 600; text-align: right; color: #262320;">дигитален, с QR код или принтиран</b></li>
+        <li style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(160,140,125,0.42);"><span style="font-size: 1rem; color: rgba(38,35,32,0.75);">Препоръки</span><b style="font-weight: 600; text-align: right; color: #262320;">продуктови, в самия доклад</b></li>
               </ul>
     </div>
   </section>
@@ -328,21 +329,21 @@
       </div>
       <div data-reveal="" style="border-top: 1px solid rgba(160,140,125,0.42);">
         <details data-acc="" style="border-bottom: 1px solid rgba(160,140,125,0.42);">
-          <summary style="display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; padding: 1.15rem 0; cursor: pointer; list-style: none;">
+          <summary style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem; padding: 1.15rem 0; cursor: pointer; list-style: none;">
             <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.3rem, 1.8vw, 1.6rem);">AISIA прави ли процедури</span>
             <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: rotate(45deg) translateY(-2px); transition: transform 0.35s;"></span></span>
           </summary>
           <p style="padding: 0 0 1.4rem; font-size: 1.02rem; color: rgba(38,35,32,0.8);">Не. AISIA е апарат за анализ. Тя измерва състоянието на кожата, прогнозира и проследява резултатите от вашите процедури, независимо с какви апарати и продукти работите.</p>
         </details>
         <details data-acc="" style="border-bottom: 1px solid rgba(160,140,125,0.42);">
-          <summary style="display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; padding: 1.15rem 0; cursor: pointer; list-style: none;">
+          <summary style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem; padding: 1.15rem 0; cursor: pointer; list-style: none;">
             <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.3rem, 1.8vw, 1.6rem);">Как AISIA помага на кабинета</span>
             <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: rotate(45deg) translateY(-2px); transition: transform 0.35s;"></span></span>
           </summary>
           <p style="padding: 0 0 1.4rem; font-size: 1.02rem; color: rgba(38,35,32,0.8);">Клиентката вижда кожата си в числа и картина, вижда и прогнозата. Оттам разговорът за курс процедури и за домашна грижа върви от само себе си, а след терапиите резултатът се доказва с ново измерване. Самият анализ с доклад може да се предлага и като платена консултация.</p>
         </details>
         <details data-acc="" style="border-bottom: 1px solid rgba(160,140,125,0.42);">
-          <summary style="display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; padding: 1.15rem 0; cursor: pointer; list-style: none;">
+          <summary style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem; padding: 1.15rem 0; cursor: pointer; list-style: none;">
             <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.3rem, 1.8vw, 1.6rem);">Трябва ли ми медицинско образование</span>
             <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: rotate(45deg) translateY(-2px); transition: transform 0.35s;"></span></span>
           </summary>
@@ -350,14 +351,14 @@
         </details>
         
         <details data-acc="" style="border-bottom: 1px solid rgba(160,140,125,0.42);">
-          <summary style="display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; padding: 1.15rem 0; cursor: pointer; list-style: none;">
+          <summary style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem; padding: 1.15rem 0; cursor: pointer; list-style: none;">
             <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.3rem, 1.8vw, 1.6rem);">Какво получава клиентката накрая</span>
             <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: rotate(45deg) translateY(-2px); transition: transform 0.35s;"></span></span>
           </summary>
           <p style="padding: 0 0 1.4rem; font-size: 1.02rem; color: rgba(38,35,32,0.8);">Персонализиран доклад с резултатите от анализа, който може да се визуализира на екран, да се сподели с QR код или да се принтира.</p>
         </details>
         <details data-acc="" style="border-bottom: 1px solid rgba(160,140,125,0.42);">
-          <summary style="display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; padding: 1.15rem 0; cursor: pointer; list-style: none;">
+          <summary style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem; padding: 1.15rem 0; cursor: pointer; list-style: none;">
             <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.3rem, 1.8vw, 1.6rem);">Може ли да видя апарата, преди да купя</span>
             <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: rotate(45deg) translateY(-2px); transition: transform 0.35s;"></span></span>
           </summary>

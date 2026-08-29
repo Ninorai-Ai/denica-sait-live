@@ -26,8 +26,12 @@
   /* Същата колона като на останалите страници. */
   .obvivka { max-width: 1200px; margin: 0 auto; padding: 0 clamp(1.4rem, 4vw, 3.6rem); }
 
+  /* Лентата горе е и навигация: от формата се излизаше само с бутона назад
+     на браузъра. Логото води към хъба, а до него стоят двете страници, до
+     които човек стига оттук. */
   .shapka {
-    display: flex; align-items: center; justify-content: space-between; gap: 1.2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1rem 1.4rem; flex-wrap: wrap;
     padding: 1rem max(clamp(1.4rem, 4vw, 3.6rem), calc((100% - 1200px) / 2));
     border-bottom: 1px solid rgba(184,147,79,0.4);
   }
@@ -35,6 +39,18 @@
   .shapka .telefon {
     font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.35rem;
     color: #262320; white-space: nowrap;
+  }
+  .patish { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+  .patish a {
+    font-size: 0.96rem; font-weight: 500; color: #262320;
+    transition: color 0.35s ease;
+  }
+  .patish a:hover { color: #8A6B3F; }
+
+  @media (max-width: 700px) {
+    .shapka { justify-content: center; text-align: center; }
+    .patish { order: 3; width: 100%; justify-content: center; gap: 1.1rem; }
+    .patish a { font-size: 0.9rem; }
   }
 
   .nadslov {
@@ -102,10 +118,10 @@
   label { display: grid; gap: 0.45rem; font-size: 0.95rem; color: rgba(38,35,32,0.72); }
   input, select, textarea {
     display: block; width: 100%; max-width: 100%; min-width: 0;
-    padding: 0.85rem 1rem; min-height: 3.1rem;
+    padding: 0.85rem 1rem;
     border: 1px solid rgba(184,147,79,0.4); border-radius: 5px;
-    background: #FFFFFF; color: #262320;
-    font-family: inherit; font-size: 1rem;
+    background-color: #FFFFFF; color: #262320;
+    font-family: inherit; font-size: 1rem; line-height: 1.4;
   }
 
   /* Падащият списък.
@@ -114,18 +130,24 @@
      наклонени градиента, които на телефон изглеждаха като черно триъгълниче
      и се разминаваха с рамката.
 
-     Дългите имена на апаратите не бива да разпъват полето: ellipsis реже
-     текста вместо да избута страницата настрани. Списъкът, който се отваря
-     при цъкане, е на операционната система и винаги се побира в екрана. */
+     Полето няма overflow и text-overflow: върху <select> те чупят рисуването
+     на избрания текст на част от телефонните браузъри. Дългите имена и без
+     тях се побират, а списъкът, който се отваря при цъкане, е на
+     операционната система и винаги влиза в екрана. */
   select {
-    appearance: none;
+    -webkit-appearance: none; -moz-appearance: none; appearance: none;
     padding-right: 2.6rem;
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%23B8934F' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 1rem center;
     background-size: 0.72rem auto;
     cursor: pointer;
+  }
+  /* Полето трябва да е поне 16px, иначе iPhone увеличава страницата при
+     цъкане върху него и тя вече не се побира в екрана. При html 18px
+     1rem е 18, но при по-малък шрифт на системата пазим долна граница. */
+  @media (max-width: 900px) {
+    input, select, textarea { font-size: max(1rem, 16px); }
   }
   select:invalid { color: rgba(38,35,32,0.72); }
 
@@ -148,6 +170,10 @@
 
 <header class="shapka">
   <a href="../"><img src="../../assets/img/logo.webp" alt="Denny Divine"></a>
+  <nav class="patish">
+    <a href="../">Процедури</a>
+    <a href="../za-nas/">За Деница Войнова</a>
+  </nav>
   <a class="telefon" href="tel:+359888998556">+359 88 899 8556</a>
 </header>
 
