@@ -6,6 +6,22 @@
    пред стила в елемента. Пипаме само това, което трябва да се промени.
    ═══════════════════════════════════════════════════════════════ */
 
+/* ════════════════════════════════════════════════════════════════
+   Ширината на колоната със съдържание, на едно място.
+
+   1200px e обичайната ширина за сайт с текст и снимки: на екран 1600
+   остават по 200px от двете страни, на 1920 по 360px. При 1400px редовете
+   стигаха почти до ръба и окото нямаше къде да се опре.
+
+   Стойността се пише САМО тук. Страничните полета в секциите ги
+   пише oformlenie.py при строежа, но счита с var(--shirina), затова числото
+   не се повтаря на второ място.
+   ════════════════════════════════════════════════════════════════ */
+
+:root {
+  --shirina: 1200px;
+}
+
 /* ── Картите се подреждат една под друга ─────────────────────────
    Досега това го решаваше само скриптът, при зареждане и при промяна
    на размера. Докато той се обади, картата стоеше на две колони и на
@@ -45,6 +61,12 @@
     justify-content: center !important;
     text-align: center !important;
     box-sizing: border-box !important;
+    /* Пълната ширина прави широкото странично поле излишно, а то
+       буташе дългите надписи на втори ред: „ЗАПАЗЕТЕ ЧАС ОНЛАЙН"
+       и „БЕЗПЛАТНА КОНСУЛТАЦИЯ" се чупеха на два. С 1rem от двете
+       страни най-дългият надпис (265px) се побира в един ред. */
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
 
   /* Обвивките около бутона също се разпъват, иначе бутонът пълни
@@ -60,6 +82,26 @@
   *:has(> * > [data-dd-btn]) {
     flex-direction: column !important;
     align-items: stretch !important;
+  }
+
+  /* ── Менюто остава на един ред ──────────────────────
+     Горните две правила говорят за обвивките около златния бутон.
+     Златният бутон стои и в менюто, вътре в [data-navpaths], затова
+     <nav> също се връщаше колона: логото отгоре, а бургерът под него
+     вляво. Тук менюто си връща реда: лого вляво, бургер вдясно. */
+  [data-nav] {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: auto !important;
+  }
+
+  /* Бургерът се залепя за десния ръб, дори ако скритият
+     [data-navpaths] между двата реши да заеме място. */
+  [data-nav] > [data-burger] {
+    margin-left: auto !important;
+    flex: 0 0 auto !important;
+    width: 48px !important;
   }
 
   /* Телефонният номер до бутона също заема целия ред. */
@@ -102,20 +144,11 @@
    с трите числа под него. Тук получават същия таван. */
 
 [data-hero-content] {
-  left: max(clamp(1.8rem, 6vw, 6rem), calc((100% - 1400px) / 2)) !important;
-  right: max(clamp(1.8rem, 6vw, 6rem), calc((100% - 1400px) / 2)) !important;
+  left: max(clamp(1.8rem, 6vw, 6rem), calc((100% - var(--shirina)) / 2)) !important;
+  right: max(clamp(1.8rem, 6vw, 6rem), calc((100% - var(--shirina)) / 2)) !important;
 }
 
 [data-promise] {
-  padding-left: max(0px, calc((100% - 1400px) / 2)) !important;
-  padding-right: max(0px, calc((100% - 1400px) / 2)) !important;
-}
-
-/* Менюто е закачено най-горе и се подравнява със същата колона. */
-@media (min-width: 1600px) {
-  [data-navpanel] > div {
-    max-width: 1400px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
+  padding-left: max(0px, calc((100% - var(--shirina)) / 2)) !important;
+  padding-right: max(0px, calc((100% - var(--shirina)) / 2)) !important;
 }
