@@ -26,7 +26,7 @@
   details[open] [data-caret] { transform: rotate(225deg) translateY(-2px); }
   @media (max-width: 900px) { html { font-size: 18px; } }
 </style>
-<link href="../../assets/css/sait.css?v=ac06908f" rel="stylesheet">
+<link href="../../assets/css/sait.css?v=f68525e9" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
@@ -85,7 +85,7 @@
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); max-width: 94rem; margin: 0 auto; padding: 0 clamp(0.6rem, 4vw, 3.4rem);">
       <div style="display: flex; flex-direction: column; gap: 0.7rem; padding: clamp(1.7rem, 3vw, 2.7rem) clamp(1.3rem, 2.4vw, 2.4rem);">
         <span style="display: flex; align-items: center; gap: 0.7rem; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.24em; color: #B8934F;">I<span style="display: block; width: 6px; height: 6px; background: #D8BE93; transform: rotate(45deg);"></span></span>
-        <b style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(2.3rem, 3.8vw, 3.3rem); line-height: 1; color: #3B2C21;">Същия ден</b>
+        <b style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(2.3rem, 3.8vw, 3.3rem); line-height: 1; color: #3B2C21;">0 дни</b>
         <span style="font-size: 0.98rem; color: rgba(38,35,32,0.72);">се връщате към работата си. Обличате се и излизате веднага.</span>
       </div>
       <div style="display: flex; flex-direction: column; gap: 0.7rem; padding: clamp(1.7rem, 3vw, 2.7rem) clamp(1.3rem, 2.4vw, 2.4rem); border-left: 1px solid rgba(184,147,79,0.45);">
@@ -359,33 +359,6 @@
       </aside>
     </div>
   </section>
-
-  <section id="chestno" data-screen-label="Преди да започнем" style="padding: clamp(3.6rem, 9vh, 6rem) max(clamp(1.8rem, 6vw, 6rem), calc((100% - 1200px) / 2)); background: #ECDFCC; border-top: 1px solid rgba(184,147,79,0.6); border-bottom: 1px solid rgba(184,147,79,0.6);">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: clamp(1.4rem, 3vw, 2.4rem); max-width: 94rem; margin: 0 auto;">
-      <div data-reveal="" style="display: flex; flex-direction: column; gap: 1.2rem; padding: clamp(1.9rem, 3.2vw, 2.8rem); background: #F8F4ED; border-top: 3px solid #B8934F; border-radius: 5px;">
-        <span style="font-size: 0.84rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #8A6B3F;">Колко посещения</span>
-        <h3 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(1.7rem, 2.4vw, 2.1rem);">Нужни са няколко процедури, не едно посещение.</h3>
-        <p style="font-size: 1.02rem; color: rgba(38,35,32,0.8);">Броят процедури зависи от това колко се е отпуснала тъканта и от колко време е така. Планът се определя след прегледа и не се променя след това.</p>
-      </div>
-      <div data-reveal="" style="display: flex; flex-direction: column; gap: 1.2rem; padding: clamp(1.9rem, 3.2vw, 2.8rem); background: #F8F4ED; border-top: 3px solid #B8934F; border-radius: 5px;">
-        <span style="font-size: 0.84rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #8A6B3F;">Кога не започваме</span>
-        <h3 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(1.7rem, 2.4vw, 2.1rem);">В някои случаи ви насочваме към лекар.</h3>
-        <ul style="display: grid; gap: 0.75rem;">
-          <li style="display: grid; grid-template-columns: auto 1fr; gap: 0.8rem; font-size: 1rem; color: rgba(38,35,32,0.8);"><span style="margin-top: 0.6rem; width: 6px; height: 6px; background: #B8934F; transform: rotate(45deg);"></span>Не започваме по време на бременност и докато кърмите.</li>
-          <li style="display: grid; grid-template-columns: auto 1fr; gap: 0.8rem; font-size: 1rem; color: rgba(38,35,32,0.8);"><span style="margin-top: 0.6rem; width: 6px; height: 6px; background: #B8934F; transform: rotate(45deg);"></span>Не работим при активна инфекция или възпаление в зоната.</li>
-          <li style="display: grid; grid-template-columns: auto 1fr; gap: 0.8rem; font-size: 1rem; color: rgba(38,35,32,0.8);"><span style="margin-top: 0.6rem; width: 6px; height: 6px; background: #B8934F; transform: rotate(45deg);"></span>При пролапс, силно изпускане или болка, за която не знаете откъде идва, първо отидете при лекар.</li>
-          <li style="display: grid; grid-template-columns: auto 1fr; gap: 0.8rem; font-size: 1rem; color: rgba(38,35,32,0.8);"><span style="margin-top: 0.6rem; width: 6px; height: 6px; background: #B8934F; transform: rotate(45deg);"></span>След скорошна операция в зоната изчакваме лекарят да даде разрешение.</li>
-        </ul>
-        <p style="font-size: 0.98rem; color: rgba(38,35,32,0.72);">Ние не заместваме гинеколога. Когато случаят е за лекар, ви насочваме към лекар.</p>
-      </div>
-      <div data-reveal="" style="display: flex; flex-direction: column; gap: 1.2rem; padding: clamp(1.9rem, 3.2vw, 2.8rem); background: #F8F4ED; border: 1px solid #B8934F; border-radius: 5px;">
-        <span style="font-size: 0.84rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #8A6B3F;">Между процедурите</span>
-        <p style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(1.35rem, 1.9vw, 1.75rem); line-height: 1.4;">След процедурата няколко дни минават без басейн, сауна и гореща вана, а бельото е по-добре да не притиска. Останалото от деня ви върви както обикновено.</p>
-        
-      </div>
-    </div>
-  </section>
-
   <!-- място за секцията с отзиви -->
 
   <section id="vaprosi" data-screen-label="Въпроси" style="padding: clamp(3.6rem, 9vh, 6rem) max(clamp(1.8rem, 6vw, 6rem), calc((100% - 1200px) / 2));">
