@@ -272,3 +272,60 @@
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   }
 }
+
+/* ── Редовете „название · стойност“ на телефон ────────────────────
+   Тези редове са решетка от три или две клетки: точица, название и
+   стойност вдясно. Стойността е `auto`, тоест взима каквото ѝ трябва,
+   а названието е `1fr`. На телефон мястото не стига, `1fr` пада до
+   нула и названието се изписва върху стойността: точно припокриването
+   от снимката. Затова на телефон стойността слиза под названието и
+   тръгва отляво, вместо да се бори за същия ред. */
+@media (max-width: 760px) {
+
+  [style*="grid-template-columns: auto 1fr auto"] {
+    grid-template-columns: auto minmax(0, 1fr) !important;
+    align-items: start !important;
+    row-gap: 0.3rem !important;
+  }
+
+  [style*="grid-template-columns: auto 1fr auto"] > :last-child {
+    grid-column: 2 !important;
+    text-align: left !important;
+  }
+
+  /* Пипне ли скрипт кое да е поле от style, браузърът пренаписва целия
+     атрибут в своя запис и `minmax(0, 1fr)` става `minmax(0px, 1fr)`.
+     Затова тук стоят и двата изписа: иначе правилото хваща едните редове,
+     а другите остават счупени, според това по кой ред е минал скриптът. */
+  [style*="grid-template-columns: minmax(0, 1fr) auto"],
+  [style*="grid-template-columns: minmax(0px, 1fr) auto"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+    row-gap: 0.3rem !important;
+  }
+
+  [style*="grid-template-columns: minmax(0, 1fr) auto"] > :last-child,
+  [style*="grid-template-columns: minmax(0px, 1fr) auto"] > :last-child {
+    text-align: left !important;
+  }
+}
+
+/* ── Лентата с числата иска поле и на телефон ─────────────────────
+   Горе ѝ махнахме страничното поле, за да седне на същата линия като
+   заглавията на голям екран. На телефон обаче таванът е нула и текстът
+   опира до самия ръб на екрана, а едрите числа изглеждат отрязани.
+   Тук лентата си връща същото поле, с което вървят всички секции. */
+@media (max-width: 760px) {
+  [data-promise] {
+    padding-left: clamp(1.8rem, 6vw, 6rem) !important;
+    padding-right: clamp(1.8rem, 6vw, 6rem) !important;
+  }
+
+  [data-promise] > div > * {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  [data-promise] > div > * + * {
+    border-top: 1px solid rgba(184,147,79,0.32) !important;
+  }
+}

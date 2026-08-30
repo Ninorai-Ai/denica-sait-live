@@ -21,7 +21,7 @@
   ul { margin: 0; padding: 0; list-style: none; }
   @media (max-width: 900px) { html { font-size: 18px; } }
 </style>
-<link href="../../assets/css/sait.css?v=f68525e9" rel="stylesheet">
+<link href="../../assets/css/sait.css?v=5b8ccf5f" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="../../assets/js/dc-runtime.js"></script>
@@ -33,11 +33,12 @@
   <nav data-nav="" style="position: fixed; top: 0; left: 0; right: 0; z-index: 90; display: flex; align-items: center; justify-content: space-between; gap: 1.2rem; padding: 0.9rem max(clamp(1.2rem, 4vw, 3.6rem), calc((100% - 1200px) / 2)); background: #F8F4ED; border-bottom: 1px solid rgba(184,147,79,0.3); transition: box-shadow 0.45s, border-color 0.45s;">
     <a href="../" style="display: block; flex: none;"><img src="../../assets/img/logo.webp" alt="Denny Divine" style="height: 44px; width: auto; filter: brightness(.42) saturate(1.2);"></a>
     <div data-navpaths="" style="display: flex; align-items: center; gap: 1.5rem;">
-      <a data-navlink="" href="#nachaloto" style="font-size: 0.96rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Началото</a>
-      <a data-navlink="" href="#patyat" style="font-size: 0.96rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Пътят</a>
-      <a data-navlink="" href="#znanieto" style="font-size: 0.96rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Образование</a>
-      <a data-navlink="" href="#dnes" style="font-size: 0.96rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Днес</a>
-      <a data-navlink-soft="" href="../" style="font-size: 0.96rem; font-weight: 500; color: rgba(38,35,32,0.6); transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Апарати за студиа</a>
+      <a data-navlink="" href="../#hifu-13d" style="font-size: 0.96rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">HIFU</a>
+      <a data-navlink="" href="../#tesla-15" style="font-size: 0.96rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Тяло и мускули</a>
+      <a data-navlink="" href="../#maxlipo-13d" style="font-size: 0.96rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Лазери</a>
+      <a data-navlink="" href="../#aisia" style="font-size: 0.96rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Анализ на кожата</a>
+      <a data-navlink-soft="" href="../../procedures/" style="font-size: 0.96rem; font-weight: 500; color: rgba(38,35,32,0.6); transition: color 0.35s ease;" style-hover="color: #8A6B3F;">За клиенти</a>
+      <a data-navlink-soft="" href="./" style="font-size: 0.96rem; font-weight: 500; color: rgba(38,35,32,0.6); transition: color 0.35s ease;" style-hover="color: #8A6B3F;">За Деница</a>
       <a data-dd-btn="" href="../zapitvane/" style="display: inline-flex; align-items: center; padding: 0.78rem 1.5rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 14px 30px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-2px); letter-spacing: 0.2em;">Поискайте оферта</a>
     </div>
     <button data-burger="" type="button" aria-label="Меню" onClick="{{ toggleMenu }}" style="display: none; width: 48px; height: 48px; flex: none; border: 1px solid rgba(184,147,79,0.7); background: rgba(184,147,79,0.12); border-radius: 5px; cursor: pointer; padding: 0; align-items: center; justify-content: center;">
@@ -47,12 +48,14 @@
 
   <div data-mmenu="" style="position: fixed; inset: 0; z-index: 95; display: none; flex-direction: column; justify-content: center; gap: 0.2rem; padding: 5.5rem clamp(1.4rem, 7vw, 3rem) 2.5rem; background: #F8F4ED;">
     <button type="button" aria-label="Затвори" onClick="{{ toggleMenu }}" style="position: absolute; top: 1.1rem; right: 1.2rem; width: 48px; height: 48px; border: 1px solid rgba(184,147,79,0.7); background: transparent; color: #3B2C21; font-size: 1.6rem; cursor: pointer;">×</button>
-    <p style="font-size: 0.86rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6B3F;">Деница Войнова</p>
-    <a href="#nachaloto" onClick="{{ toggleMenu }}" style="padding: 0.85rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2rem; color: #262320;">Началото</a>
-    <a href="#patyat" onClick="{{ toggleMenu }}" style="padding: 0.85rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2rem; color: #262320;">Пътят</a>
-    <a href="#znanieto" onClick="{{ toggleMenu }}" style="padding: 0.85rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2rem; color: #262320;">Знанието</a>
-    <a href="#dnes" onClick="{{ toggleMenu }}" style="padding: 0.85rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2rem; color: #262320;">Днес</a>
-    <a href="../" onClick="{{ toggleMenu }}" style="padding: 0.9rem 0; font-size: 1.02rem; color: #8A6B3F;">Апарати за студиа</a>
+    <p style="font-size: 0.86rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6B3F;">За салони и студиа</p>
+    <a href="../#obuchenie" onClick="{{ toggleMenu }}" style="padding: 0.85rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2rem; color: #262320;">Обучение</a>
+    <a href="../#hifu-13d" onClick="{{ toggleMenu }}" style="padding: 0.85rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2rem; color: #262320;">HIFU апарати</a>
+    <a href="../#tesla-15" onClick="{{ toggleMenu }}" style="padding: 0.85rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2rem; color: #262320;">Тяло и мускули</a>
+    <a href="../#maxlipo-13d" onClick="{{ toggleMenu }}" style="padding: 0.85rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2rem; color: #262320;">Лазери</a>
+    <a href="../#aisia" onClick="{{ toggleMenu }}" style="padding: 0.85rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2rem; color: #262320;">Анализ на кожата</a>
+    <a href="../../procedures/" style="padding: 0.9rem 0; font-size: 1.02rem; color: #8A6B3F;">Процедури за клиенти</a>
+    <a href="./" onClick="{{ toggleMenu }}" style="padding: 0.9rem 0; font-size: 1.02rem; color: #8A6B3F;">За Деница Войнова</a>
     <a data-dd-btn="" href="../zapitvane/" style="align-self: flex-start; margin-top: 0.8rem; padding: 1rem 1.9rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Поискайте оферта</a>
   </div>
 
@@ -124,17 +127,12 @@
 
   <section id="patyat" data-screen-label="Пътят" style="padding: clamp(3.6rem, 9vh, 6rem) max(clamp(1.8rem, 6vw, 6rem), calc((100% - 1200px) / 2));">
     <div style="max-width: 88rem; margin: 0 auto;">
-      <div data-path-head="" style="display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; margin-bottom: clamp(2.2rem, 5vh, 3.4rem);">
-      <div data-reveal="" style="max-width: 1100px; width: 100%">
+      <div data-path-head="" style="display: grid; grid-template-columns: minmax(0, 1fr); margin-bottom: clamp(2.2rem, 5vh, 3.4rem);">
+      <div data-reveal="" style="width: 100%">
         <span style="display: inline-flex; align-items: center; gap: 0.9rem; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6B3F;"><span style="display: block; width: 2.6rem; height: 2px; background: linear-gradient(90deg, #B8934F, rgba(184,147,79,0));"></span>Пътят</span>
-        <h2 style="margin-top: 1.2rem; max-width: min(70rem, 100%); font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(2rem, 3.6vw, 3rem)">Как едно решение<em style="font-style: italic; color: rgb(138, 107, 63); max-width: 32.69rem">води до следващото.</em></h2>
+        <h2 style="margin-top: 1.2rem; max-width: min(70rem, 100%); font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(2rem, 3.6vw, 3rem)">Как едно решение <em style="font-style: italic; color: rgb(138, 107, 63); max-width: 32.69rem">води до следващото.</em></h2>
         <p style="margin-top: 1.3rem; font-size: 1.04rem; line-height: 1.75; color: rgba(38,35,32,0.78); width: 100%; max-width: min(70rem, 100%)">Развитието следва естествена последователност: първият салон, необходимостта от повече знания, новите технологии, научната работа, обученията, собствената апаратура и международните партньорства.</p>
       </div>
-      <figure data-reveal="" style="margin: 0; position: relative;">
-        
-        
-        
-      </figure>
       </div>
       <ul data-steps="" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(1rem, 2vw, 1.6rem);">
         <li data-step="" style="display: flex; flex-direction: column; gap: 0.7rem; padding: clamp(1.4rem, 2.2vw, 1.9rem); background: #ECDFCC; border-top: 2px solid #D8BE93; border-radius: 5px;">
@@ -363,7 +361,9 @@ class Component extends DCLogic {
     const salon = document.querySelector('[data-salon]');
     if (salon) salon.style.gridTemplateColumns = stack ? '1fr' : '1fr 1fr';
     const pathHead = document.querySelector('[data-path-head]');
-    if (pathHead) pathHead.style.gridTemplateColumns = stack ? '1fr' : '1.05fr 0.95fr';
+    /* снимката вдясно от заглавието вече я няма: заглавието и уводът
+       заемат целия ред, вместо да се свиват до половин екран */
+    if (pathHead) pathHead.style.gridTemplateColumns = 'minmax(0, 1fr)';
     const nachalo = document.querySelector('[data-nachalo]');
     const nachaloMedia = document.querySelector('[data-nachalo-media]');
     if (nachalo) nachalo.style.gridTemplateColumns = stack ? '1fr' : '1.05fr 0.95fr';
