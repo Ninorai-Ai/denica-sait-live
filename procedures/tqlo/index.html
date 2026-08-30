@@ -23,7 +23,7 @@
   ul, ol { margin: 0; padding: 0; list-style: none; }
   summary::-webkit-details-marker { display: none; }
   summary::marker { content: ""; }
-  details[open] [data-caret] { transform: rotate(225deg) translateY(-2px); }
+  details[open] [data-caret] { transform: translateY(2.8px) rotate(225deg); }
   @media (max-width: 900px) { html { font-size: 18px; } }
 </style>
 <link href="../../assets/css/sait.css?v=3235d41d" rel="stylesheet">
@@ -421,6 +421,7 @@
           <button data-tab="" type="button" onClick="{{ showCase }}" data-i="1" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.84rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: background 0.35s ease, color 0.35s ease;">Талия и страни</button>
           <button data-tab="" type="button" onClick="{{ showCase }}" data-i="2" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.84rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: background 0.35s ease, color 0.35s ease;">Кожа след отслабване</button>
           <button data-tab="" type="button" onClick="{{ showCase }}" data-i="3" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.84rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: background 0.35s ease, color 0.35s ease;">Седалище</button>
+        <button data-tab="" type="button" onClick="{{ showCase }}" data-i="4" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.84rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: background 0.35s ease, color 0.35s ease;">Бедра</button>
           
           <button data-tab="" type="button" onClick="{{ showCase }}" data-i="5" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.84rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: background 0.35s ease, color 0.35s ease;">Кръст и гърб</button>
           <button data-tab="" type="button" onClick="{{ showCase }}" data-i="6" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.84rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: background 0.35s ease, color 0.35s ease;">Лакти</button>
@@ -584,42 +585,42 @@
         <details data-acc="" style="border-bottom: 1px solid rgba(160,140,125,0.42);">
           <summary style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem; padding: 1.15rem 0; cursor: pointer; list-style: none;">
             <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.3rem, 1.8vw, 1.6rem);">Боли ли и трябва ли анестезия</span>
-            <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: rotate(45deg) translateY(-2px); transition: transform 0.35s;"></span></span>
+            <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: translateY(-2.8px) rotate(45deg); transition: transform 0.35s;"></span></span>
           </summary>
           <p style="padding: 0 0 1.4rem; font-size: 1.02rem; color: rgba(38,35,32,0.8);">Усещането зависи от технологията: топлина в дълбочина или ритмична мускулна стимулация. Не е необходима упойка и настройките се съобразяват с вашия комфорт.</p>
         </details>
         <details data-acc="" style="border-bottom: 1px solid rgba(160,140,125,0.42);">
           <summary style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem; padding: 1.15rem 0; cursor: pointer; list-style: none;">
             <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.3rem, 1.8vw, 1.6rem);">Ще отслабна ли от процедурите</span>
-            <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: rotate(45deg) translateY(-2px); transition: transform 0.35s;"></span></span>
+            <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: translateY(-2.8px) rotate(45deg); transition: transform 0.35s;"></span></span>
           </summary>
           <p style="padding: 0 0 1.4rem; font-size: 1.02rem; color: rgba(38,35,32,0.8);">Процедурите са насочени към намаляване на обиколките, стягане на кожата и оформяне на силуета. Те не заместват балансираното хранене и движението.</p>
         </details>
         <details data-acc="" style="border-bottom: 1px solid rgba(160,140,125,0.42);">
           <summary style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem; padding: 1.15rem 0; cursor: pointer; list-style: none;">
             <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.3rem, 1.8vw, 1.6rem);">Как ще разбера, че има резултат</span>
-            <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: rotate(45deg) translateY(-2px); transition: transform 0.35s;"></span></span>
+            <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: translateY(-2.8px) rotate(45deg); transition: transform 0.35s;"></span></span>
           </summary>
           <p style="padding: 0 0 1.4rem; font-size: 1.02rem; color: rgba(38,35,32,0.8);">Проследяваме обиколките със стандартно измерване и снимки от един и същ ъгъл, за да сравняваме резултатите във времето.</p>
         </details>
         <details data-acc="" style="border-bottom: 1px solid rgba(160,140,125,0.42);">
           <summary style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem; padding: 1.15rem 0; cursor: pointer; list-style: none;">
             <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.3rem, 1.8vw, 1.6rem);">Трябва ли да променя храненето и движението</span>
-            <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: rotate(45deg) translateY(-2px); transition: transform 0.35s;"></span></span>
+            <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: translateY(-2.8px) rotate(45deg); transition: transform 0.35s;"></span></span>
           </summary>
           <p style="padding: 0 0 1.4rem; font-size: 1.02rem; color: rgba(38,35,32,0.8);">Не е необходим специален хранителен режим. Добрата хидратация и редовното движение подпомагат поддържането на резултата.</p>
         </details>
         <details data-acc="" style="border-bottom: 1px solid rgba(160,140,125,0.42);">
           <summary style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem; padding: 1.15rem 0; cursor: pointer; list-style: none;">
             <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.3rem, 1.8vw, 1.6rem);">Може ли, ако имам спирала или импланти</span>
-            <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: rotate(45deg) translateY(-2px); transition: transform 0.35s;"></span></span>
+            <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: translateY(-2.8px) rotate(45deg); transition: transform 0.35s;"></span></span>
           </summary>
           <p style="padding: 0 0 1.4rem; font-size: 1.02rem; color: rgba(38,35,32,0.8);">Кажете ни предварително за метални елементи или импланти и тяхното разположение. Според зоната избираме подходящ и безопасен подход.</p>
         </details>
         <details data-acc="" style="border-bottom: 1px solid rgba(160,140,125,0.42);">
           <summary style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem; padding: 1.15rem 0; cursor: pointer; list-style: none;">
             <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.3rem, 1.8vw, 1.6rem);">Може ли да дойда само на консултация</span>
-            <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: rotate(45deg) translateY(-2px); transition: transform 0.35s;"></span></span>
+            <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: translateY(-2.8px) rotate(45deg); transition: transform 0.35s;"></span></span>
           </summary>
           <p style="padding: 0 0 1.4rem; font-size: 1.02rem; color: rgba(38,35,32,0.8);">Да. Консултацията е безплатна и не ви задължава да започнете процедура същия ден. Получавате ясен план според вашите цели.</p>
         </details>
@@ -734,7 +735,7 @@ class Component extends DCLogic {
       acc.dataset.wired = '1';
       acc.addEventListener('toggle', () => {
         const caret = acc.querySelector('[data-caret]');
-        if (caret) caret.style.transform = acc.open ? 'rotate(225deg) translateY(-2px)' : 'rotate(45deg) translateY(-2px)';
+        if (caret) caret.style.transform = acc.open ? 'translateY(2.8px) rotate(225deg)' : 'translateY(-2.8px) rotate(45deg)';
         if (window.ScrollTrigger) requestAnimationFrame(() => window.ScrollTrigger.refresh());
         if (!acc.open || this.props.singleOpen === false) return;
         const scope = acc.closest('section') || document;

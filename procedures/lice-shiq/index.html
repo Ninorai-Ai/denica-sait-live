@@ -23,7 +23,7 @@
   ul, ol { margin: 0; padding: 0; list-style: none; }
   summary::-webkit-details-marker { display: none; }
   summary::marker { content: ""; }
-  details[open] [data-caret] { transform: rotate(225deg) translateY(-2px); }
+  details[open] [data-caret] { transform: translateY(2.8px) rotate(225deg); }
   @media (max-width: 900px) { html { font-size: 18px; } }
 </style>
 <link href="../../assets/css/sait.css?v=3235d41d" rel="stylesheet">
@@ -497,7 +497,7 @@
           <button data-tab="" type="button" onClick="{{ showCase }}" data-i="2" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.84rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: background 0.35s ease, color 0.35s ease;">Околоочен контур</button>
           <button data-tab="" type="button" onClick="{{ showCase }}" data-i="3" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.84rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: background 0.35s ease, color 0.35s ease;">Двойна брадичка</button>
           
-          <button data-tab="" type="button" onClick="{{ showCase }}" data-i="5" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.84rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: background 0.35s ease, color 0.35s ease;">Бръчки на челото</button>
+          <button data-tab="" type="button" onClick="{{ showCase }}" data-i="4" style="padding: 0.7rem 1.3rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.84rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: background 0.35s ease, color 0.35s ease;">Бръчки на челото</button>
         </div>
         <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1.6rem;">
           <button type="button" aria-label="Предишен случай" onClick="{{ prevCase }}" style="width: 46px; height: 46px; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-size: 1.1rem; cursor: pointer; transition: background 0.35s ease, color 0.35s ease;" style-hover="background: #B8934F; color: #F8F4ED;">‹</button>
@@ -554,18 +554,7 @@
           </div>
           <p style="margin-top: 0.9rem; font-size: 1rem; color: rgba(38,35,32,0.75);"><b style="color: #262320;">Двойна брадичка.</b> Зоната под брадичката се прибира.</p>
         </div>
-        <div data-case="" style="display: none;">
-          <div data-ba-stage="" style="position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 5px; background: #DCCBB4; cursor: ew-resize; touch-action: none; box-shadow: 0 20px 48px rgba(160,140,125,0.28);">
-            <image-slot id="lice-zone4-after" shape="rect" src="../../assets/img/transformacii/pairs/podbradnik-02-sled.webp" fit="cover" placeholder="Челюстна линия: снимка СЛЕД" style="position: absolute; inset: 0; transform: translate(0.00%, 8.85%) scale(1.197); transform-origin: 50% 50%;"></image-slot>
-            <div data-ba-before="" style="position: absolute; inset: 0; clip-path: inset(0 50% 0 0);">
-              <image-slot id="lice-zone4-before" shape="rect" src="../../assets/img/transformacii/pairs/podbradnik-02-predi.webp" fit="cover" placeholder="Челюстна линия: снимка ПРЕДИ" style="position: absolute; inset: 0; transform: scale(1.041); transform-origin: 50% 50%;"></image-slot>
-            </div>
-            <span style="position: absolute; top: 1rem; left: 1rem; padding: 0.4rem 0.95rem; background: rgba(38,35,32,0.72); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;">Преди</span>
-            <span style="position: absolute; top: 1rem; right: 1rem; padding: 0.4rem 0.95rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;">След</span>
-            <div data-ba-handle="" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #F8F4ED; pointer-events: none;"><span style="position: absolute; top: 50%; left: 50%; display: flex; align-items: center; justify-content: center; width: 46px; height: 46px; margin: -23px 0 0 -23px; border-radius: 50%; background: #B8934F; color: #F8F4ED; font-size: 0.9rem;">‹ ›</span></div>
-          </div>
-          <p style="margin-top: 0.9rem; font-size: 1rem; color: rgba(38,35,32,0.75);"><b style="color: #262320;">Челюстна линия.</b> Линията на челюстта се очертава.</p>
-        </div>
+        
         <div data-case="" style="display: none;">
           <div data-ba-stage="" style="position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 5px; background: #DCCBB4; cursor: ew-resize; touch-action: none; box-shadow: 0 20px 48px rgba(160,140,125,0.28);">
             <image-slot id="lice-zone5-after" shape="rect" src="../../assets/img/transformacii/pairs/chelo-01-sled.webp" fit="cover" placeholder="Бръчки на челото: снимка СЛЕД" style="position: absolute; inset: 0;"></image-slot>
@@ -646,42 +635,42 @@
         <details data-acc="" style="border-bottom: 1px solid rgba(160,140,125,0.42);">
           <summary style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem; padding: 1.15rem 0; cursor: pointer; list-style: none;">
             <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.3rem, 1.8vw, 1.6rem);">Боли ли и трябва ли анестезия</span>
-            <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: rotate(45deg) translateY(-2px); transition: transform 0.35s;"></span></span>
+            <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: translateY(-2.8px) rotate(45deg); transition: transform 0.35s;"></span></span>
           </summary>
           <p style="padding: 0 0 1.4rem; font-size: 1.02rem; color: rgba(38,35,32,0.8);">Усеща се топлина в дълбочина и понякога леко потрепване в по-костните участъци. Не е необходима упойка и настройките се съобразяват с комфорта ви.</p>
         </details>
         <details data-acc="" style="border-bottom: 1px solid rgba(160,140,125,0.42);">
           <summary style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem; padding: 1.15rem 0; cursor: pointer; list-style: none;">
             <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.3rem, 1.8vw, 1.6rem);">Ще се вижда ли, че съм правила нещо</span>
-            <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: rotate(45deg) translateY(-2px); transition: transform 0.35s;"></span></span>
+            <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: translateY(-2.8px) rotate(45deg); transition: transform 0.35s;"></span></span>
           </summary>
           <p style="padding: 0 0 1.4rem; font-size: 1.02rem; color: rgba(38,35,32,0.8);">Не са необходими превръзки или възстановителен период. Възможно е леко краткотрайно зачервяване, след което можете да се гримирате и да продължите деня си.</p>
         </details>
         <details data-acc="" style="border-bottom: 1px solid rgba(160,140,125,0.42);">
           <summary style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem; padding: 1.15rem 0; cursor: pointer; list-style: none;">
             <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.3rem, 1.8vw, 1.6rem);">Как ще разбера, че има резултат</span>
-            <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: rotate(45deg) translateY(-2px); transition: transform 0.35s;"></span></span>
+            <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: translateY(-2.8px) rotate(45deg); transition: transform 0.35s;"></span></span>
           </summary>
           <p style="padding: 0 0 1.4rem; font-size: 1.02rem; color: rgba(38,35,32,0.8);">Проследяваме зоната със снимки от един и същ ъгъл, за да сравняваме промяната обективно във времето.</p>
         </details>
         <details data-acc="" style="border-bottom: 1px solid rgba(160,140,125,0.42);">
           <summary style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem; padding: 1.15rem 0; cursor: pointer; list-style: none;">
             <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.3rem, 1.8vw, 1.6rem);">Мога ли, ако съм правила филър или ботокс</span>
-            <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: rotate(45deg) translateY(-2px); transition: transform 0.35s;"></span></span>
+            <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: translateY(-2.8px) rotate(45deg); transition: transform 0.35s;"></span></span>
           </summary>
           <p style="padding: 0 0 1.4rem; font-size: 1.02rem; color: rgba(38,35,32,0.8);">Кажете ни какви процедури с филър или ботулинов токсин сте правили и кога. Според зоната и периода определяме дали може да се работи веднага или е необходимо изчакване.</p>
         </details>
         <details data-acc="" style="border-bottom: 1px solid rgba(160,140,125,0.42);">
           <summary style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem; padding: 1.15rem 0; cursor: pointer; list-style: none;">
             <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.3rem, 1.8vw, 1.6rem);">На каква възраст има смисъл</span>
-            <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: rotate(45deg) translateY(-2px); transition: transform 0.35s;"></span></span>
+            <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: translateY(-2.8px) rotate(45deg); transition: transform 0.35s;"></span></span>
           </summary>
           <p style="padding: 0 0 1.4rem; font-size: 1.02rem; color: rgba(38,35,32,0.8);">Подходящият момент се определя от състоянието на кожата, а не от конкретна възраст. При по-млада кожа целта често е поддържане, а при по-зряла подобряване на тонуса и контура.</p>
         </details>
         <details data-acc="" style="border-bottom: 1px solid rgba(160,140,125,0.42);">
           <summary style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem; padding: 1.15rem 0; cursor: pointer; list-style: none;">
             <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.3rem, 1.8vw, 1.6rem);">Може ли да дойда само на консултация</span>
-            <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: rotate(45deg) translateY(-2px); transition: transform 0.35s;"></span></span>
+            <span style="display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border: 1px solid rgba(184,147,79,0.6); border-radius: 50%;"><span data-caret="" style="display: block; width: 8px; height: 8px; border-right: 1.5px solid #B8934F; border-bottom: 1.5px solid #B8934F; transform: translateY(-2.8px) rotate(45deg); transition: transform 0.35s;"></span></span>
           </summary>
           <p style="padding: 0 0 1.4rem; font-size: 1.02rem; color: rgba(38,35,32,0.8);">Да. Консултацията е безплатна и не ви задължава да започнете процедура същия ден. Получавате ясен план според вашите цели.</p>
         </details>
@@ -796,7 +785,7 @@ class Component extends DCLogic {
       acc.dataset.wired = '1';
       acc.addEventListener('toggle', () => {
         const caret = acc.querySelector('[data-caret]');
-        if (caret) caret.style.transform = acc.open ? 'rotate(225deg) translateY(-2px)' : 'rotate(45deg) translateY(-2px)';
+        if (caret) caret.style.transform = acc.open ? 'translateY(2.8px) rotate(225deg)' : 'translateY(-2.8px) rotate(45deg)';
         if (window.ScrollTrigger) requestAnimationFrame(() => window.ScrollTrigger.refresh());
         if (!acc.open || this.props.singleOpen === false) return;
         const scope = acc.closest('section') || document;
