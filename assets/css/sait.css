@@ -282,13 +282,17 @@
    тръгва отляво, вместо да се бори за същия ред. */
 @media (max-width: 760px) {
 
-  [style*="grid-template-columns: auto 1fr auto"] {
+  /* Само `li`. Същата решетка носи и редове, чиято последна клетка е
+     стрелка: „›“ в бутоните на списъците и кръгчето в разгъващите се
+     заглавия. Слезе ли и тя на нов ред, стрелката увисва под текста,
+     вместо да стои до него. Стойност за сваляне има само в `li`. */
+  li[style*="grid-template-columns: auto 1fr auto"] {
     grid-template-columns: auto minmax(0, 1fr) !important;
     align-items: start !important;
     row-gap: 0.3rem !important;
   }
 
-  [style*="grid-template-columns: auto 1fr auto"] > :last-child {
+  li[style*="grid-template-columns: auto 1fr auto"] > :last-child {
     grid-column: 2 !important;
     text-align: left !important;
   }
@@ -297,14 +301,14 @@
      атрибут в своя запис и `minmax(0, 1fr)` става `minmax(0px, 1fr)`.
      Затова тук стоят и двата изписа: иначе правилото хваща едните редове,
      а другите остават счупени, според това по кой ред е минал скриптът. */
-  [style*="grid-template-columns: minmax(0, 1fr) auto"],
-  [style*="grid-template-columns: minmax(0px, 1fr) auto"] {
+  li[style*="grid-template-columns: minmax(0, 1fr) auto"],
+  li[style*="grid-template-columns: minmax(0px, 1fr) auto"] {
     grid-template-columns: minmax(0, 1fr) !important;
     row-gap: 0.3rem !important;
   }
 
-  [style*="grid-template-columns: minmax(0, 1fr) auto"] > :last-child,
-  [style*="grid-template-columns: minmax(0px, 1fr) auto"] > :last-child {
+  li[style*="grid-template-columns: minmax(0, 1fr) auto"] > :last-child,
+  li[style*="grid-template-columns: minmax(0px, 1fr) auto"] > :last-child {
     text-align: left !important;
   }
 }

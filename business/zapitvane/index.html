@@ -31,31 +31,73 @@
     padding-right: max(clamp(1.4rem, 4vw, 3.6rem), calc((100% - 1200px) / 2));
   }
 
-  /* Лентата горе е и навигация: от формата се излизаше само с бутона назад
-     на браузъра. Логото води към хъба, а до него стоят двете страници, до
-     които човек стига оттук. */
+  /* Лентата горе е менюто на сайта, същото като на всяка друга страница:
+     логото вляво, страниците в средата, златният бутон вдясно. На телефон
+     редът се свива до лого и бургер, а страниците минават в цял екран. */
   .shapka {
-    display: flex; align-items: center; justify-content: space-between;
-    gap: 1rem 1.4rem; flex-wrap: wrap;
-    padding: 1rem max(clamp(1.4rem, 4vw, 3.6rem), calc((100% - 1200px) / 2));
+    position: sticky; top: 0; z-index: 90;
+    display: flex; align-items: center; justify-content: space-between; gap: 1.2rem;
+    padding: 0.9rem max(clamp(1.4rem, 4vw, 3.6rem), calc((100% - 1200px) / 2));
+    background: #F8F4ED;
     border-bottom: 1px solid rgba(184,147,79,0.4);
   }
-  .shapka img { height: 42px; width: auto; }
-  .shapka .telefon {
-    font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.35rem;
-    color: #262320; white-space: nowrap;
+  .shapka .znak { flex: none; display: block; }
+  /* същият филтър като на другите страници: логото е светло и на
+     кремавия фон се губи без него */
+  .shapka img {
+    height: 44px; width: auto; display: block;
+    filter: brightness(.42) saturate(1.2);
   }
-  .patish { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+  .patish { display: flex; align-items: center; gap: 1.5rem; }
   .patish a {
     font-size: 0.96rem; font-weight: 500; color: #262320;
-    transition: color 0.35s ease;
+    white-space: nowrap; transition: color 0.35s ease;
   }
   .patish a:hover { color: #8A6B3F; }
 
-  @media (max-width: 700px) {
-    .shapka { justify-content: center; text-align: center; }
-    .patish { order: 3; width: 100%; justify-content: center; gap: 1.1rem; }
-    .patish a { font-size: 0.9rem; }
+  .buton-gore {
+    padding: 0.78rem 1.5rem; border-radius: 5px;
+    background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%);
+    color: #241A12 !important;
+    font-size: 0.84rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  }
+
+  .burger {
+    display: none; width: 48px; height: 48px; flex: none;
+    align-items: center; justify-content: center;
+    border: 1px solid rgba(184,147,79,0.4); border-radius: 5px;
+    background: rgba(184,147,79,0.12); cursor: pointer;
+  }
+  .burger span {
+    display: block; width: 20px; height: 1.6px; background: #262320;
+    box-shadow: 0 -6px 0 #262320, 0 6px 0 #262320;
+  }
+
+  .mmenu {
+    position: fixed; inset: 0; z-index: 95;
+    display: flex; flex-direction: column; justify-content: center; gap: 0.2rem;
+    padding: 5.5rem clamp(1.4rem, 7vw, 3rem) 2.5rem;
+    background: #F8F4ED;
+  }
+  .mmenu[hidden] { display: none; }
+  .mmenu a {
+    padding: 0.85rem 0; border-bottom: 1px solid rgba(184,147,79,0.4);
+    font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2rem;
+    color: #262320;
+  }
+  .mmenu .buton-gore {
+    align-self: flex-start; margin-top: 0.9rem; border-bottom: 0;
+    font-family: 'Manrope', sans-serif; font-size: 0.84rem;
+  }
+  .zatvori {
+    position: absolute; top: 1.1rem; right: 1.2rem; width: 48px; height: 48px;
+    border: 1px solid rgba(184,147,79,0.4); border-radius: 5px;
+    background: transparent; color: #262320; font-size: 1.5rem; cursor: pointer;
+  }
+
+  @media (max-width: 900px) {
+    .patish { display: none; }
+    .burger { display: flex; }
   }
 
   .nadslov {
@@ -105,8 +147,13 @@
   .red .stojnost a { color: #262320; }
   .red .stojnost a:hover { color: #B8934F; }
 
-  /* Двата бутона са еднакви и минават от край до край на картата. */
-  .buton, button {
+  /* Двата бутона са еднакви и минават от край до край на картата.
+
+     Селекторът е `button[type="submit"]`, не голо `button`: на страницата
+     има и бургер, и затваряне, и целият падащ списък, които са бутони. Хване
+     ли ги това правило, надписите им тръгват с главни букви, разредка и
+     поле отгоре, а списъкът престава да прилича на списък. */
+  .buton, button[type="submit"] {
     display: flex; align-items: center; justify-content: center; text-align: center;
     width: 100%; margin-top: 1.4rem;
     padding: 1.05rem 1rem; border: 0; border-radius: 5px; cursor: pointer;
@@ -115,7 +162,7 @@
     letter-spacing: 0.14em; text-transform: uppercase;
     transition: filter 0.35s, transform 0.35s, box-shadow 0.35s;
   }
-  .buton:hover, button:hover {
+  .buton:hover, button[type="submit"]:hover {
     filter: brightness(1.1); transform: translateY(-2px);
     box-shadow: 0 16px 34px rgba(138,107,63,0.4); color: #241A12;
   }
@@ -129,32 +176,45 @@
     font-family: inherit; font-size: 1rem; line-height: 1.4;
   }
 
-  /* Падащият списък.
+  /* Падащият списък е наш, не системният.
 
-     Стрелката е тънка птичка, нарисувана веднъж като SVG. Преди беше два
-     наклонени градиента, които на телефон изглеждаха като черно триъгълниче
-     и се разминаваха с рамката.
-
-     Полето няма overflow и text-overflow: върху <select> те чупят рисуването
-     на избрания текст на част от телефонните браузъри. Дългите имена и без
-     тях се побират, а списъкът, който се отваря при цъкане, е на
-     операционната система и винаги влиза в екрана. */
-  select {
-    -webkit-appearance: none; -moz-appearance: none; appearance: none;
-    padding-right: 2.6rem;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%23B8934F' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+     Панелът стои под полето, широк точно колкото него, и си има собствено
+     превъртане. Така на тясен екран списъкът не излиза настрани и не се
+     мери по най-дългото име в него. */
+  .izbor { position: relative; }
+  .izbor-buton {
+    width: 100%; text-align: left;
+    padding: 0.85rem 2.6rem 0.85rem 1rem;
+    border: 1px solid rgba(184,147,79,0.4); border-radius: 5px;
+    background-color: #FFFFFF; color: #262320;
+    font-family: inherit; font-size: 1rem; line-height: 1.4; cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%238A6B3F' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 1rem center;
-    background-size: 0.72rem auto;
-    cursor: pointer;
+    background-size: 12px 8px;
   }
-  /* Полето трябва да е поне 16px, иначе iPhone увеличава страницата при
-     цъкане върху него и тя вече не се побира в екрана. При html 18px
-     1rem е 18, но при по-малък шрифт на системата пазим долна граница. */
-  @media (max-width: 900px) {
-    input, select, textarea { font-size: max(1rem, 16px); }
+  .izbor-buton[data-prazno] { color: rgba(38,35,32,0.72); }
+  .izbor-buton:focus { outline: none; border-color: #B8934F; }
+
+  .izbor-spisak {
+    position: absolute; z-index: 40; top: calc(100% + 0.35rem); left: 0; right: 0;
+    max-height: 17rem; overflow-y: auto;
+    display: flex; flex-direction: column;
+    border: 1px solid rgba(184,147,79,0.4); border-radius: 5px;
+    background: #FFFFFF;
+    box-shadow: 0 16px 40px rgba(38,35,32,0.18);
   }
-  select:invalid { color: rgba(38,35,32,0.72); }
+  .izbor-spisak[hidden] { display: none; }
+  .izbor-spisak button {
+    padding: 0.8rem 1rem; border: 0; border-bottom: 1px solid rgba(184,147,79,0.22);
+    background: transparent; color: #262320;
+    font-family: inherit; font-size: 1rem; line-height: 1.4;
+    text-align: left; cursor: pointer;
+  }
+  .izbor-spisak button:last-child { border-bottom: 0; }
+  .izbor-spisak button:hover,
+  .izbor-spisak button[aria-selected="true"] { background: rgba(184,147,79,0.14); }
+
 
   input:focus, select:focus, textarea:focus {
     outline: 2px solid #B8934F; outline-offset: 1px;
@@ -174,13 +234,27 @@
 <body>
 
 <header class="shapka">
-  <a href="../"><img src="../../assets/img/logo.webp" alt="Denny Divine"></a>
+  <a class="znak" href="../"><img src="../../assets/img/logo.webp" alt="Denny Divine"></a>
   <nav class="patish">
-    <a href="../">Апарати за студиа</a>
-    <a href="../za-nas/">За Деница Войнова</a>
+      <a href="../#hifu-13d">HIFU</a>
+      <a href="../#tesla-15">Тяло и мускули</a>
+      <a href="../#maxlipo-13d">Лазери</a>
+      <a href="../#aisia">Анализ на кожата</a>
+      <a href="../za-nas/">За Деница</a>
+    <a class="buton-gore" href="tel:+359888998556">Обадете се</a>
   </nav>
-  <a class="telefon" href="tel:+359888998556">+359 88 899 8556</a>
+  <button class="burger" type="button" aria-label="Меню" data-otvori><span></span></button>
 </header>
+
+<div class="mmenu" data-mmenu hidden>
+  <button class="zatvori" type="button" aria-label="Затвори" data-zatvori>&#215;</button>
+    <a href="../#hifu-13d" data-zatvori>HIFU</a>
+    <a href="../#tesla-15" data-zatvori>Тяло и мускули</a>
+    <a href="../#maxlipo-13d" data-zatvori>Лазери</a>
+    <a href="../#aisia" data-zatvori>Анализ на кожата</a>
+    <a href="../za-nas/" data-zatvori>За Деница</a>
+  <a class="buton-gore" href="tel:+359888998556" data-zatvori>Обадете се +359 88 899 8556</a>
+</div>
 
 <main class="obvivka" style="padding-top: clamp(2.6rem, 7vw, 4.5rem);">
 
@@ -221,20 +295,25 @@
           <input type="tel" name="telefon" autocomplete="tel" required>
         </label>
         <label>Апарат, който ви интересува
-          <select name="predmet" id="predmet">
-        <option value="">Изберете апарат</option>
-        <option value="HIFU 13D Ultraformer">HIFU 13D Ultraformer</option>
-        <option value="HIFU Ultraformer 7D">HIFU Ultraformer 7D</option>
-        <option value="HIFU 5D">HIFU 5D</option>
-        <option value="HIFU 3D">HIFU 3D</option>
-        <option value="Tesla 15 EMSLIM RF">Tesla 15 EMSLIM RF</option>
-        <option value="Tesla 21 EMSLIM Chair">Tesla 21 EMSLIM Chair</option>
-        <option value="13D MaxLipo Laser">13D MaxLipo Laser</option>
-        <option value="Soprano Diode Laser">Soprano Diode Laser</option>
-        <option value="Estella Laser">Estella Laser</option>
-        <option value="AISIA">AISIA</option>
-        <option value="Още не знам">Още не знам</option>
-          </select>
+          <div class="izbor" data-izbor>
+            <input type="hidden" name="predmet" id="predmet">
+            <button class="izbor-buton" type="button" aria-haspopup="listbox"
+                    aria-expanded="false" data-otvori-spisak>Изберете апарат</button>
+            <div class="izbor-spisak" role="listbox" hidden>
+        <button type="button" role="option" data-stojnost="">Изберете апарат</button>
+        <button type="button" role="option" data-stojnost="HIFU 13D Ultraformer">HIFU 13D Ultraformer</button>
+        <button type="button" role="option" data-stojnost="HIFU Ultraformer 7D">HIFU Ultraformer 7D</button>
+        <button type="button" role="option" data-stojnost="HIFU 5D">HIFU 5D</button>
+        <button type="button" role="option" data-stojnost="HIFU 3D">HIFU 3D</button>
+        <button type="button" role="option" data-stojnost="Tesla 15 EMSLIM RF">Tesla 15 EMSLIM RF</button>
+        <button type="button" role="option" data-stojnost="Tesla 21 EMSLIM Chair">Tesla 21 EMSLIM Chair</button>
+        <button type="button" role="option" data-stojnost="13D MaxLipo Laser">13D MaxLipo Laser</button>
+        <button type="button" role="option" data-stojnost="Soprano Diode Laser">Soprano Diode Laser</button>
+        <button type="button" role="option" data-stojnost="Estella Laser">Estella Laser</button>
+        <button type="button" role="option" data-stojnost="AISIA">AISIA</button>
+        <button type="button" role="option" data-stojnost="Още не знам">Още не знам</button>
+            </div>
+          </div>
         </label>
         <label>Какво искате да предлагате
           <textarea name="belezhka" id="belezhka"></textarea>
@@ -346,25 +425,78 @@ var IMENA = {
   "zona-pubis": "Зона пубис"
 };
 
+/* Менюто на телефон. Страниците с .dc.html го въртят през своя runtime,
+   тук страницата е обикновен HTML и отваря и затваря сама. */
+(function () {
+  var menu = document.querySelector('[data-mmenu]');
+  function pokazhi(da) {
+    menu.hidden = !da;
+    document.body.style.overflow = da ? 'hidden' : '';
+  }
+  document.querySelector('[data-otvori]').addEventListener('click', function () {
+    pokazhi(true);
+  });
+  menu.querySelectorAll('[data-zatvori]').forEach(function (el) {
+    el.addEventListener('click', function () { pokazhi(false); });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') pokazhi(false);
+  });
+})();
+
 (function () {
   var params = new URLSearchParams(window.location.search);
   var kljuch = params.get('aparat');
   var ime = kljuch && IMENA[kljuch] ? IMENA[kljuch] : null;
-  var spisak = document.getElementById('predmet');
+  var skrito = document.getElementById('predmet');
+  var obvivka = document.querySelector('[data-izbor]');
+  var butonat = obvivka.querySelector('[data-otvori-spisak]');
+  var panel = obvivka.querySelector('.izbor-spisak');
+
+  function izberi(stojnost, nadpis) {
+    skrito.value = stojnost;
+    butonat.textContent = nadpis;
+    if (stojnost) { butonat.removeAttribute('data-prazno'); }
+    else { butonat.setAttribute('data-prazno', ''); }
+    panel.querySelectorAll('button').forEach(function (b) {
+      b.setAttribute('aria-selected', b.dataset.stojnost === stojnost ? 'true' : 'false');
+    });
+  }
+
+  function pokazhi(da) {
+    panel.hidden = !da;
+    butonat.setAttribute('aria-expanded', da ? 'true' : 'false');
+  }
+
+  butonat.setAttribute('data-prazno', '');
+  butonat.addEventListener('click', function (e) {
+    e.stopPropagation();
+    pokazhi(panel.hidden);
+  });
+  panel.addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (!b) return;
+    izberi(b.dataset.stojnost, b.textContent);
+    pokazhi(false);
+  });
+  document.addEventListener('click', function () { pokazhi(false); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') pokazhi(false);
+  });
 
   if (ime) {
-    var ima = Array.prototype.some.call(spisak.options, function (o) {
-      return o.value === ime;
-    });
-    if (!ima) {
+    var red = panel.querySelector('[data-stojnost="' + ime + '"]');
+    if (!red) {
       // Страницата, от която идва човекът, може да е за по-тясна зона,
       // отколкото стои в списъка. Тогава тя влиза като своя стойност.
-      var nova = document.createElement('option');
-      nova.value = ime;
-      nova.textContent = ime;
-      spisak.insertBefore(nova, spisak.options[1] || null);
+      red = document.createElement('button');
+      red.type = 'button';
+      red.setAttribute('role', 'option');
+      red.dataset.stojnost = ime;
+      red.textContent = ime;
+      panel.insertBefore(red, panel.children[1] || null);
     }
-    spisak.value = ime;
+    izberi(ime, ime);
   }
 
   document.getElementById('forma').addEventListener('submit', function (e) {
