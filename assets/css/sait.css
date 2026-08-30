@@ -333,3 +333,15 @@
     border-top: 1px solid rgba(184,147,79,0.32) !important;
   }
 }
+
+/* ── Дръжката на трансформациите ──────────────────────────────────
+   В кръгчето стояха знаците „‹ ›“. На iPhone системата ги рисува с
+   друг шрифт и вместо две стрелки излиза странна иконка. Знакът пада,
+   а стрелките се рисуват като картинка: една и съща на всеки телефон. */
+[data-ba-handle] > span {
+  font-size: 0 !important;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 12'%3E%3Cg fill='none' stroke='%23F8F4ED' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 2.5 4 6l4 3.5'/%3E%3Cpath d='M14 2.5 18 6l-4 3.5'/%3E%3C/g%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 22px 12px !important;
+}

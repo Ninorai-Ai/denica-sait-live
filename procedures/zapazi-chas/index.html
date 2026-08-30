@@ -85,8 +85,12 @@
     font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2rem;
     color: #262320;
   }
+  /* Бутонът върви от край до край като редовете над него. С
+     align-self: flex-start стигаше само докъдето му е текстът и стърчеше
+     по-къс от всичко останало в менюто. */
   .mmenu .buton-gore {
-    align-self: flex-start; margin-top: 0.9rem; border-bottom: 0;
+    align-self: stretch; justify-content: center; text-align: center;
+    margin-top: 0.9rem; border-bottom: 0;
     font-family: 'Manrope', sans-serif; font-size: 0.84rem;
   }
   .zatvori {
