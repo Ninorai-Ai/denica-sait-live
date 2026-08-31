@@ -28,7 +28,7 @@
   details[open] [data-caret] { transform: translateY(2.8px) rotate(225deg); }
   @media (max-width: 900px) { html { font-size: 18px; } }
 </style>
-<link href="../assets/css/sait.css?v=3235d41d" rel="stylesheet">
+<link href="../assets/css/sait.css?v=114c4dad" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
@@ -47,7 +47,7 @@
       <a data-navlink="" href="#lazer" style="font-size: 0.96rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Лазер</a>
       <a data-navlink="" href="#intimno" style="font-size: 0.96rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Интимно здраве</a>
       <a data-navlink="" href="#maje" style="font-size: 0.96rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">За мъже</a>
-      <a data-navlink-soft="" href="#kontakti" style="font-size: 0.96rem; font-weight: 500; color: rgba(38,35,32,0.6); transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Контакти</a>
+      <a data-navlink="" href="#kontakti" style="font-size: 0.96rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Контакти</a>
       <a data-dd-btn="" href="zapazi-chas/" style="display: inline-flex; align-items: center; padding: 0.78rem 1.5rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #F8F4ED; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 14px 30px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-2px); letter-spacing: 0.2em;">Запазете час</a>
     </div>
     <button data-burger="" type="button" aria-label="Меню" onClick="{{ toggleMenu }}" style="display: none; width: 48px; height: 48px; flex: none; border: 1px solid rgba(184,147,79,0.7); background: rgba(184,147,79,0.12); border-radius: 5px; cursor: pointer; padding: 0; align-items: center; justify-content: center;">
@@ -63,7 +63,7 @@
     <a href="#lazer" onClick="{{ toggleMenu }}" style="padding: 0.85rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2rem; color: #262320;">Лазер</a>
     <a href="#intimno" onClick="{{ toggleMenu }}" style="padding: 0.85rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2rem; color: #262320;">Интимно здраве</a>
     <a href="#maje" onClick="{{ toggleMenu }}" style="padding: 0.85rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2rem; color: #262320;">За мъже</a>
-    <a href="#kontakti" onClick="{{ toggleMenu }}" style="padding: 0.9rem 0; font-size: 1.02rem; color: #8A6B3F;">Контакти и локация</a>
+    <a href="#kontakti" onClick="{{ toggleMenu }}" style="padding: 0.9rem 0; font-size: 1.02rem; color: #262320;">Контакти и локация</a>
     <a data-dd-btn="" href="zapazi-chas/" style="align-self: flex-start; margin-top: 0.8rem; padding: 1rem 1.9rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #F8F4ED; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Запазете час</a>
   </div>
 
@@ -623,67 +623,77 @@
       <div data-reveal="" style="max-width: 44rem;">
         <span style="display: inline-flex; align-items: center; gap: 0.9rem; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6B3F;"><span style="display: block; width: 2.6rem; height: 2px; background: linear-gradient(90deg, #B8934F, rgba(184,147,79,0));"></span>Контакти</span>
         <h2 style="margin-top: 1.2rem; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(2.1rem, 4vw, 3.4rem);">Елате при нас в <em style="font-style: italic; color: #8A6B3F;">София.</em></h2>
-        <p style="margin-top: 1.2rem; font-size: 1.05rem; color: rgba(38,35,32,0.72);">Центърът е на бул. „Свети Наум“ 70А. Отворете картата, пуснете навигация до вратата или се обадете — вдигаме в работно време, а първата консултация е безплатна.</p>
+        <p style="margin-top: 1.2rem; font-size: 1.05rem; color: rgba(38,35,32,0.72);">Центърът е на бул. „Свети Наум“ 70А. Отворете картата, пуснете навигация до вратата или се обадете, вдигаме в работно време, а първата консултация е безплатна.</p>
       </div>
 
+      <!-- ── Картата ляга цяла над двете карти ─────────────────────
+           Тя е ориентирът и се гледа първа. Редовете и формата под нея
+           получават цялата ширина, вместо да се борят с нея за колона. -->
+      <div style="position: relative; height: clamp(20rem, 52vh, 30rem); margin-top: clamp(2.2rem, 5vh, 3.4rem); background: #FFFFFF; border-top: 2px solid #B8934F; border-radius: 5px; overflow: hidden;">
+        <iframe title="Карта до Denny Divine, бул. „Свети Наум“ 70А, 1421 София" src="https://www.google.com/maps?q=%D0%B1%D1%83%D0%BB.%20%D0%A1%D0%B2%D0%B5%D1%82%D0%B8%20%D0%9D%D0%B0%D1%83%D0%BC%2070%D0%90%2C%201421%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F&z=16&hl=bg&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width: 100%; height: 100%; border: 0; display: block;"></iframe>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.9rem 1.4rem; margin-top: 1.1rem;">
+        <a data-dd-btn="" href="https://www.google.com/maps/dir/?api=1&destination=%D0%B1%D1%83%D0%BB.%20%D0%A1%D0%B2%D0%B5%D1%82%D0%B8%20%D0%9D%D0%B0%D1%83%D0%BC%2070%D0%90%2C%201421%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 14px 30px rgba(138,107,63,0.45); transform: translateY(-2px);">Пуснете навигация</a>
+        <a data-kontakt-vrazka="" href="https://www.google.com/maps/search/?api=1&query=Denny%20Divine%20Aesthetic%20Center%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A1%D0%B2%D0%B5%D1%82%D0%B8%20%D0%9D%D0%B0%D1%83%D0%BC%2070%D0%90%2C%201421%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F" target="_blank" rel="noopener" style="align-self: center; font-size: 0.95rem; color: #8A6B3F; text-decoration: underline; text-underline-offset: 4px; transition: opacity 0.35s ease;" style-hover="opacity: 0.7;">Отворете в Google Maps</a>
+      </div>
+
+      <!-- ── Телефонът с редовете и формата, една до друга под картата ── -->
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: clamp(1.6rem, 3vw, 2.8rem); margin-top: clamp(2.2rem, 5vh, 3.4rem); align-items: start;">
 
-        <!-- ── Картата и двата бутона под нея ───────────────────── -->
-        <div data-kontakt-karta="" style="position: sticky; top: 104px; align-self: start; display: flex; flex-direction: column; gap: 1.1rem;">
-          <div style="position: relative; min-height: clamp(20rem, 46vh, 30rem); background: #FFFFFF; border-top: 2px solid #B8934F; border-radius: 5px; overflow: hidden;">
-            <iframe title="Карта до Denny Divine, бул. „Свети Наум“ 70А, 1421 София" src="https://www.google.com/maps?q=%D0%B1%D1%83%D0%BB.%20%D0%A1%D0%B2%D0%B5%D1%82%D0%B8%20%D0%9D%D0%B0%D1%83%D0%BC%2070%D0%90%2C%201421%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F&z=16&hl=bg&output=embed" loading="lazy" style="width: 100%; height: 100%; min-height: clamp(20rem, 46vh, 30rem); border: 0; display: block;"></iframe>
-          </div>
-          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.9rem 1.4rem;">
-            <a data-dd-btn="" href="https://www.google.com/maps/dir/?api=1&destination=%D0%B1%D1%83%D0%BB.%20%D0%A1%D0%B2%D0%B5%D1%82%D0%B8%20%D0%9D%D0%B0%D1%83%D0%BC%2070%D0%90%2C%201421%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; padding: 0.95rem 1.8rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 14px 30px rgba(138,107,63,0.45); transform: translateY(-2px);">Пуснете навигация</a>
-            <a data-kontakt-vrazka="" href="https://www.google.com/maps/search/?api=1&query=Denny%20Divine%20Aesthetic%20Center%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A1%D0%B2%D0%B5%D1%82%D0%B8%20%D0%9D%D0%B0%D1%83%D0%BC%2070%D0%90%2C%201421%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F" target="_blank" rel="noopener" style="align-self: center; font-size: 0.95rem; color: #8A6B3F; text-decoration: underline; text-underline-offset: 4px; transition: opacity 0.35s ease;" style-hover="opacity: 0.7;">Отворете в Google Maps</a>
-          </div>
-        </div>
+        <div style="position: relative; padding: clamp(1.6rem, 3vw, 2.4rem); background: #FFFFFF; border-top: 2px solid #B8934F; border-radius: 5px;">
+          <h3 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(1.6rem, 2.6vw, 2.1rem); color: #262320;">Обадете се</h3>
+          <a data-kontakt-tel="" href="tel:+359888998556" style="display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; width: 100%; margin-top: 1.3rem; padding: 1.1rem 2rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.6rem; letter-spacing: 0.02em; transition: filter 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;" style-hover="filter: brightness(1.14); transform: translateY(-2px); box-shadow: 0 16px 34px rgba(138,107,63,0.4);">+359 88 899 8556</a>
 
-        <!-- ── Телефонът, редовете и формата ────────────────────── -->
-        <div style="display: flex; flex-direction: column; gap: clamp(1.4rem, 3vw, 2.2rem);">
-
-          <div style="position: relative; padding: clamp(1.6rem, 3vw, 2.4rem); background: #FFFFFF; border-top: 2px solid #B8934F; border-radius: 5px;">
-            <a data-kontakt-tel="" href="tel:+359888998556" style="display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; width: 100%; padding: 1.1rem 2rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.6rem; letter-spacing: 0.02em; transition: filter 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;" style-hover="filter: brightness(1.14); transform: translateY(-2px); box-shadow: 0 16px 34px rgba(138,107,63,0.4);">+359 88 899 8556</a>
-
-            <div style="display: grid; gap: 1.05rem; margin-top: 1.5rem;">
-              <div style="display: grid; gap: 0.2rem;">
-                <span style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6B3F;">Адрес</span>
-                <span style="font-size: 1.04rem; color: #262320;">бул. „Свети Наум“ 70А, 1421 София</span>
-              </div>
-              <div style="display: grid; gap: 0.2rem; border-top: 1px solid rgba(184,147,79,0.45); padding-top: 1.05rem;">
-                <span style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6B3F;">Имейл</span>
-                <span style="font-size: 1.04rem;"><a href="mailto:info@hifubg.com" style="color: #262320; transition: color 0.35s ease;" style-hover="color: #B8934F;">info@hifubg.com</a></span>
-              </div>
-              <div style="display: grid; gap: 0.2rem; border-top: 1px solid rgba(184,147,79,0.45); padding-top: 1.05rem;">
-                <span style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6B3F;">Работно време</span>
-                <span style="font-size: 1.04rem; color: #262320;">Пон до Съб: 9:00 до 19:30<br>Нед: 10:00 до 18:00</span>
-              </div>
-              <div style="display: grid; gap: 0.2rem; border-top: 1px solid rgba(184,147,79,0.45); padding-top: 1.05rem;">
-                <span style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6B3F;">Час за процедура</span>
-                <span style="font-size: 1.04rem;"><a href="zapazi-chas/" style="color: #262320; transition: color 0.35s ease;" style-hover="color: #B8934F;">Запазете час онлайн</a></span>
-              </div>
+          <div style="display: grid; gap: 1.05rem; margin-top: 1.5rem;">
+            <div style="display: grid; gap: 0.2rem;">
+              <span style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6B3F;">Адрес</span>
+              <span style="font-size: 1.04rem; color: #262320;">бул. „Свети Наум“ 70А, 1421 София</span>
+            </div>
+            <div style="display: grid; gap: 0.2rem; border-top: 1px solid rgba(184,147,79,0.45); padding-top: 1.05rem;">
+              <span style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6B3F;">Имейл</span>
+              <span style="font-size: 1.04rem;"><a href="mailto:info@hifubg.com" style="color: #262320; transition: color 0.35s ease;" style-hover="color: #B8934F;">info@hifubg.com</a></span>
+            </div>
+            <div style="display: grid; gap: 0.2rem; border-top: 1px solid rgba(184,147,79,0.45); padding-top: 1.05rem;">
+              <span style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6B3F;">Работно време</span>
+              <span style="font-size: 1.04rem; color: #262320;">Пон до Съб: 9:00 до 19:30<br>Нед: 10:00 до 18:00</span>
             </div>
           </div>
-
-          <div style="position: relative; padding: clamp(1.6rem, 3vw, 2.4rem); background: #FFFFFF; border-top: 2px solid #B8934F; border-radius: 5px;">
-            <h3 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(1.6rem, 2.6vw, 2.1rem); color: #262320;">Или ни пишете</h3>
-            <p style="margin-top: 0.7rem; font-size: 0.94rem; color: rgba(38,35,32,0.72);">Попълнете полетата и бутонът отваря готово писмо до центъра. Проверете го и го изпратете от своята поща.</p>
-
-            <form data-kontakt-forma="" onSubmit="{{ sendContact }}" style="display: grid; gap: 1rem; margin-top: 1.3rem;">
-              <label style="display: grid; gap: 0.4rem; font-size: 0.92rem; color: rgba(38,35,32,0.72);">Име
-                <input type="text" name="ime" autocomplete="name" required style="width: 100%; padding: 0.82rem 1rem; border: 1px solid rgba(184,147,79,0.45); border-radius: 5px; background: #FFFFFF; color: #262320; font-family: inherit; font-size: 1rem;">
-              </label>
-              <label style="display: grid; gap: 0.4rem; font-size: 0.92rem; color: rgba(38,35,32,0.72);">Телефон
-                <input type="tel" name="telefon" autocomplete="tel" required style="width: 100%; padding: 0.82rem 1rem; border: 1px solid rgba(184,147,79,0.45); border-radius: 5px; background: #FFFFFF; color: #262320; font-family: inherit; font-size: 1rem;">
-              </label>
-              <label style="display: grid; gap: 0.4rem; font-size: 0.92rem; color: rgba(38,35,32,0.72);">Вашият въпрос
-                <textarea name="belezhka" rows="4" style="width: 100%; min-height: 6.5rem; padding: 0.82rem 1rem; border: 1px solid rgba(184,147,79,0.45); border-radius: 5px; background: #FFFFFF; color: #262320; font-family: inherit; font-size: 1rem; resize: vertical;"></textarea>
-              </label>
-              <button data-dd-btn="" type="submit" style="padding: 1.05rem 2rem; border: 0; border-radius: 5px; cursor: pointer; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); color: #241A12; font-family: inherit; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;" style-hover="filter: brightness(1.18); transform: translateY(-2px); box-shadow: 0 16px 34px rgba(138,107,63,0.4);">Изпрати</button>
-            </form>
-          </div>
-
         </div>
+
+        <div style="position: relative; padding: clamp(1.6rem, 3vw, 2.4rem); background: #FFFFFF; border-top: 2px solid #B8934F; border-radius: 5px;">
+          <h3 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(1.6rem, 2.6vw, 2.1rem); color: #262320;">Или ни пишете</h3>
+          <p style="margin-top: 0.7rem; font-size: 0.94rem; color: rgba(38,35,32,0.72);">Попълнете полетата и бутонът отваря готово писмо до нас. Проверете го и го изпратете от своята поща.</p>
+
+          <form data-kontakt-forma="" onSubmit="{{ sendContact }}" style="display: grid; gap: 1.1rem; margin-top: 1.3rem;">
+            <label style="display: grid; gap: 0.45rem; font-size: 0.95rem; color: rgba(38,35,32,0.72);">Име
+              <input type="text" name="ime" autocomplete="name" required style="width: 100%; padding: 0.85rem 1rem; border: 1px solid rgba(184,147,79,0.4); border-radius: 5px; background-color: #FFFFFF; color: #262320; font-family: inherit; font-size: 1rem; line-height: 1.4;">
+            </label>
+            <label style="display: grid; gap: 0.45rem; font-size: 0.95rem; color: rgba(38,35,32,0.72);">Телефон
+              <input type="tel" name="telefon" autocomplete="tel" required style="width: 100%; padding: 0.85rem 1rem; border: 1px solid rgba(184,147,79,0.4); border-radius: 5px; background-color: #FFFFFF; color: #262320; font-family: inherit; font-size: 1rem; line-height: 1.4;">
+            </label>
+            <label style="display: grid; gap: 0.45rem; font-size: 0.95rem; color: rgba(38,35,32,0.72);">Зона, която ви интересува
+              <div class="izbor" data-izbor>
+                <input type="hidden" name="predmet">
+                <button class="izbor-buton" type="button" aria-haspopup="listbox" aria-expanded="false" data-prazno data-otvori-spisak>Изберете зона</button>
+                <div class="izbor-spisak" role="listbox" hidden>
+              <button type="button" role="option" data-stojnost="">Изберете зона</button>
+              <button type="button" role="option" data-stojnost="Лице и шия">Лице и шия</button>
+              <button type="button" role="option" data-stojnost="Тяло">Тяло</button>
+              <button type="button" role="option" data-stojnost="Лазерни процедури">Лазерни процедури</button>
+              <button type="button" role="option" data-stojnost="Интимно здраве">Интимно здраве</button>
+              <button type="button" role="option" data-stojnost="Процедури за мъже">Процедури за мъже</button>
+              <button type="button" role="option" data-stojnost="Още не знам">Още не знам</button>
+                </div>
+              </div>
+            </label>
+            <label style="display: grid; gap: 0.45rem; font-size: 0.95rem; color: rgba(38,35,32,0.72);">Вашият въпрос или предпочитан час
+              <textarea name="belezhka" rows="4" style="width: 100%; min-height: 6.5rem; padding: 0.85rem 1rem; border: 1px solid rgba(184,147,79,0.4); border-radius: 5px; background-color: #FFFFFF; color: #262320; font-family: inherit; font-size: 1rem; line-height: 1.4; resize: vertical;"></textarea>
+            </label>
+            <button data-dd-btn="" type="submit" style="margin-top: 0.3rem; padding: 1.05rem 2rem; border: 0; border-radius: 5px; cursor: pointer; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); color: #241A12; font-family: inherit; font-size: 1rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;" style-hover="filter: brightness(1.18); transform: translateY(-2px); box-shadow: 0 16px 34px rgba(138,107,63,0.4);">Изпратете</button>
+          </form>
+        </div>
+
       </div>
     </div>
   </section>
@@ -736,6 +746,7 @@ class Component extends DCLogic {
         const tqlo = [
           'Име: ' + red('ime'),
           'Телефон: ' + red('telefon'),
+          'Зона: ' + (red('predmet') || 'не е посочено'),
           '',
           red('belezhka')
         ].join('\n');
@@ -749,7 +760,42 @@ class Component extends DCLogic {
     };
   }
 
+
+  /* Падащият списък в контактите е същият като на страниците за запитване:
+     панел с ширината на полето, който се затваря при избор и при цъкане
+     настрани. Системният <select> излизаше извън екрана на телефон. */
+  initIzbor() {
+    document.querySelectorAll('[data-izbor]').forEach(obvivka => {
+      if (obvivka.dataset.wired) return;
+      obvivka.dataset.wired = '1';
+      const skrito = obvivka.querySelector('input[name="predmet"]');
+      const butonat = obvivka.querySelector('[data-otvori-spisak]');
+      const panel = obvivka.querySelector('.izbor-spisak');
+      if (!skrito || !butonat || !panel) return;
+      const pokazhi = (da) => {
+        panel.hidden = !da;
+        butonat.setAttribute('aria-expanded', da ? 'true' : 'false');
+      };
+      butonat.addEventListener('click', (e) => { e.stopPropagation(); pokazhi(panel.hidden); });
+      panel.addEventListener('click', (e) => {
+        const b = e.target.closest('button');
+        if (!b) return;
+        skrito.value = b.dataset.stojnost;
+        butonat.textContent = b.textContent;
+        if (b.dataset.stojnost) butonat.removeAttribute('data-prazno');
+        else butonat.setAttribute('data-prazno', '');
+        panel.querySelectorAll('button').forEach(o => {
+          o.setAttribute('aria-selected', o.dataset.stojnost === b.dataset.stojnost ? 'true' : 'false');
+        });
+        pokazhi(false);
+      });
+      document.addEventListener('click', () => pokazhi(false));
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') pokazhi(false); });
+    });
+  }
+
   componentDidMount() {
+    this.initIzbor();
     this.applyResponsive();
     this.applyProps();
     this.paintCases(this.state.activeCase);
@@ -762,6 +808,7 @@ class Component extends DCLogic {
   }
 
   componentDidUpdate() {
+    this.initIzbor();
     this.applyResponsive();
     this.applyProps();
     this.paintCases(this.state.activeCase);

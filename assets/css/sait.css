@@ -346,18 +346,6 @@
   background-size: 22px 12px !important;
 }
 
-/* ── Контактите ──────────────────────────────────────────────────
-   На широк екран картата се закача и върви заедно със скрола, докато
-   отдясно минават редовете и формата. На тесен екран колоните са една
-   под друга и закачането само би скрило формата. */
-@media (max-width: 1100px) {
-
-  [data-kontakt-karta] {
-    position: static !important;
-    top: auto !important;
-  }
-}
-
 /* Номерът в контактите е с едри цифри и на тесен екран се пречупваше на
    два реда в бутона. Полето отстрани се свива и шрифтът пада точно
    толкова, колкото номерът да седне на един ред. */
@@ -376,3 +364,50 @@
     text-align: center !important;
   }
 }
+
+/* ── Падащият списък във формата за контакти ─────────────────────
+   Същият, който стои на страниците за запитване: панел точно с ширината
+   на полето, със собствено превъртане. Системният <select> се мери по
+   най-дългото име в него и на телефон излизаше извън страницата. */
+.izbor { position: relative; }
+
+.izbor-buton {
+  width: 100%; text-align: left;
+  padding: 0.85rem 2.6rem 0.85rem 1rem;
+  border: 1px solid rgba(184,147,79,0.4); border-radius: 5px;
+  background-color: #FFFFFF; color: #262320;
+  font-family: inherit; font-size: 1rem; line-height: 1.4; cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%238A6B3F' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 12px 8px;
+}
+
+.izbor-buton[data-prazno] { color: rgba(38,35,32,0.72); }
+.izbor-buton:focus { outline: none; border-color: #B8934F; }
+
+.izbor-spisak {
+  position: absolute; z-index: 40; top: calc(100% + 0.35rem); left: 0; right: 0;
+  max-height: 17rem; overflow-y: auto;
+  display: flex; flex-direction: column;
+  border: 1px solid rgba(184,147,79,0.4); border-radius: 5px;
+  background: #FFFFFF;
+  box-shadow: 0 16px 40px rgba(38,35,32,0.18);
+}
+
+.izbor-spisak[hidden] { display: none; }
+
+.izbor-spisak button {
+  padding: 0.8rem 1rem; border: 0; border-bottom: 1px solid rgba(184,147,79,0.22);
+  background: transparent; color: #262320;
+  font-family: inherit; font-size: 1rem; line-height: 1.4;
+  text-align: left; cursor: pointer;
+}
+
+.izbor-spisak button:last-child { border-bottom: 0; }
+
+.izbor-spisak button:hover,
+.izbor-spisak button[aria-selected="true"] { background: rgba(184,147,79,0.14); }
+
+[data-kontakt-forma] input:focus,
+[data-kontakt-forma] textarea:focus { outline: 2px solid #B8934F; outline-offset: 1px; }
