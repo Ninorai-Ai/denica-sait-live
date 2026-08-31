@@ -358,13 +358,21 @@
   }
 }
 
-/* Вторият бутон под картата не носи [data-dd-btn], защото не е златен.
-   На телефон обаче трябва да се разпъне като първия, иначе двата стоят
-   с различна ширина един под друг. */
+/* Номерът в контактите е с едри цифри и на тесен екран се пречупваше на
+   два реда в бутона. Полето отстрани се свива и шрифтът пада точно
+   толкова, колкото номерът да седне на един ред. */
 @media (max-width: 760px) {
 
-  [data-kontakt-btn] {
+  [data-kontakt-tel] {
+    padding-left: 0.8rem !important;
+    padding-right: 0.8rem !important;
+    font-size: 1.32rem !important;
+  }
+
+  /* Линкът към Google Maps сяда под бутона, не до него. Редът е flex с
+     пренасяне, затова align-self не му дава ширина — трябва width. */
+  [data-kontakt-vrazka] {
     width: 100% !important;
-    box-sizing: border-box !important;
+    text-align: center !important;
   }
 }

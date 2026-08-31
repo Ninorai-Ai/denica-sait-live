@@ -202,15 +202,16 @@
   }
   .karta-ramka iframe { width: 100%; height: 100%; border: 0; display: block; }
 
-  .karta-butoni { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 1.1rem; }
-  .karta-butoni .vtori {
-    display: inline-flex; align-items: center; justify-content: center;
-    padding: 0.95rem 1.8rem; border: 1px solid rgba(184,147,79,0.6); border-radius: 5px;
-    color: #262320; font-size: 0.86rem; font-weight: 700;
-    letter-spacing: 0.14em; text-transform: uppercase;
-    transition: background 0.35s, border-color 0.35s, color 0.35s;
+  .karta-butoni { display: flex; flex-wrap: wrap; align-items: center; gap: 0.9rem 1.4rem; margin-top: 1.1rem; }
+  /* Отварянето в Google Maps е второстепенно: минава като линк, вместо
+     да се състезава по тежест с бутона за навигация до него. */
+  .karta-butoni .vrazka {
+    align-self: center;
+    font-size: 0.95rem; color: #8A6B3F;
+    text-decoration: underline; text-underline-offset: 4px;
+    transition: opacity 0.35s;
   }
-  .karta-butoni .vtori:hover { background: #B8934F; border-color: #B8934F; color: #F8F4ED; }
+  .karta-butoni .vrazka:hover { opacity: 0.7; }
   /* Първият бутон е златният от сайта; вторият стои до него. На телефон
      двата минават от край до край, за да се уцелват с палец. */
   .karta-butoni [data-dd-btn] {
@@ -221,8 +222,10 @@
     letter-spacing: 0.14em; text-transform: uppercase;
   }
   @media (max-width: 760px) {
-    .karta-butoni { flex-direction: column; }
-    .karta-butoni a { width: 100%; }
+    .karta-butoni { flex-direction: column; align-items: stretch; }
+    .karta-butoni [data-dd-btn] { width: 100%; }
+    /* align-self: center от основното правило пречи на разпъването */
+    .karta-butoni .vrazka { align-self: auto; text-align: center; }
   }
 </style>
 </head>
@@ -270,7 +273,7 @@
 
   <div class="karta-butoni">
     <a data-dd-btn="" href="https://www.google.com/maps/dir/?api=1&destination=%D0%B1%D1%83%D0%BB.%20%D0%A1%D0%B2%D0%B5%D1%82%D0%B8%20%D0%9D%D0%B0%D1%83%D0%BC%2070%D0%90%2C%201421%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F" target="_blank" rel="noopener">Пуснете навигация</a>
-    <a class="vtori" href="https://www.google.com/maps/search/?api=1&query=Denny%20Divine%20Aesthetic%20Center%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A1%D0%B2%D0%B5%D1%82%D0%B8%20%D0%9D%D0%B0%D1%83%D0%BC%2070%D0%90%2C%201421%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F" target="_blank" rel="noopener">Отворете в Google Maps</a>
+    <a class="vrazka" href="https://www.google.com/maps/search/?api=1&query=Denny%20Divine%20Aesthetic%20Center%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A1%D0%B2%D0%B5%D1%82%D0%B8%20%D0%9D%D0%B0%D1%83%D0%BC%2070%D0%90%2C%201421%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F" target="_blank" rel="noopener">Отворете в Google Maps</a>
   </div>
 
   <div class="koloni" style="margin-top: clamp(2.4rem, 6vw, 3.6rem);">
