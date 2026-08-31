@@ -228,6 +228,15 @@
     display: flex; flex-wrap: wrap; gap: 0.8rem 1.4rem;
     font-size: 0.95rem; color: rgba(38,35,32,0.72);
   }
+
+  /* Празният избор се показва с рамката на полето и с ред под него. */
+  .izbor[data-greshka] .izbor-buton { border-color: #A33A28; }
+  [data-izbor-greshka] { font-size: 0.88rem; color: #A33A28; }
+  [data-izbor-greshka][hidden] { display: none; }
+
+  /* Кое поле може да се пропусне се вижда от етикета, не се научава
+     чак когато формата откаже да тръгне. */
+  .po-zhelanie { color: rgba(38,35,32,0.5); }
 </style>
 </head>
 <body>
@@ -295,11 +304,14 @@
         <label>Телефон
           <input type="tel" name="telefon" autocomplete="tel" required>
         </label>
+        <label>Имейл
+          <input type="email" name="poshta" autocomplete="email" required>
+        </label>
         <label>Зона, която ви интересува
           <div class="izbor" data-izbor>
             <input type="hidden" name="predmet" id="predmet">
             <button class="izbor-buton" type="button" aria-haspopup="listbox"
-                    aria-expanded="false" data-otvori-spisak>Изберете зона</button>
+                    aria-expanded="false" aria-required="true" data-otvori-spisak>Изберете зона</button>
             <div class="izbor-spisak" role="listbox" hidden>
         <button type="button" role="option" data-stojnost="">Изберете зона</button>
         <button type="button" role="option" data-stojnost="Лице и шия">Лице и шия</button>
@@ -310,8 +322,9 @@
         <button type="button" role="option" data-stojnost="Още не знам">Още не знам</button>
             </div>
           </div>
+          <span data-izbor-greshka hidden>Изберете от списъка.</span>
         </label>
-        <label>Вашият въпрос или предпочитан час
+        <label>Вашият въпрос или предпочитан час <span class="po-zhelanie">(по желание)</span>
           <textarea name="belezhka" id="belezhka"></textarea>
         </label>
         <button type="submit">Изпратете</button>
@@ -496,19 +509,39 @@ var IMENA = {
     izberi(ime, ime);
   }
 
+
+  /* Списъкът не е <input> и браузърът не го пази сам. */
+  var obvivka_izbor = document.querySelector('[data-izbor]');
+  var red_greshka = document.querySelector('[data-izbor-greshka]');
+  function izboratLipsva() {
+    if (!obvivka_izbor) return false;
+    var skrito = obvivka_izbor.querySelector('input[name="predmet"]');
+    if (skrito && skrito.value) {
+      obvivka_izbor.removeAttribute('data-greshka');
+      if (red_greshka) red_greshka.hidden = true;
+      return false;
+    }
+    obvivka_izbor.setAttribute('data-greshka', '1');
+    if (red_greshka) red_greshka.hidden = false;
+    var b = obvivka_izbor.querySelector('[data-otvori-spisak]');
+    if (b) b.focus();
+    return true;
+  }
   document.getElementById('forma').addEventListener('submit', function (e) {
     e.preventDefault();
+    if (izboratLipsva()) return;
     var d = new FormData(e.target);
     var tqlo = [
       'Име: ' + (d.get('ime') || ''),
       'Телефон: ' + (d.get('telefon') || ''),
-      'Зона, която ви интересува: ' + (d.get('predmet') || 'не е посочено'),
+      'Имейл: ' + (d.get('poshta') || ''),
+      'Зона: ' + (d.get('predmet') || ''),
       '',
       d.get('belezhka') || ''
     ].join('\n');
-    var predmet = 'Запазване на час' + (d.get('predmet') ? ', ' + d.get('predmet') : '');
+    var tema = 'Запазване на час' + (d.get('predmet') ? ', ' + d.get('predmet') : '');
     window.location.href = 'mailto:info@hifubg.com'
-      + '?subject=' + encodeURIComponent(predmet)
+      + '?subject=' + encodeURIComponent(tema)
       + '&body=' + encodeURIComponent(tqlo);
   });
 })();

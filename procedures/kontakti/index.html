@@ -227,6 +227,51 @@
     /* align-self: center от основното правило пречи на разпъването */
     .karta-butoni .vrazka { align-self: auto; text-align: center; }
   }
+
+  /* Празният избор се показва с рамката на полето и с ред под него. */
+  .izbor[data-greshka] .izbor-buton { border-color: #A33A28; }
+  [data-izbor-greshka] { font-size: 0.88rem; color: #A33A28; }
+  [data-izbor-greshka][hidden] { display: none; }
+
+  /* Падащият списък: панелът стои под полето, широк точно колкото него,
+     и си има собствено превъртане. */
+  .izbor { position: relative; }
+  .izbor-buton {
+    width: 100%; text-align: left;
+    padding: 0.85rem 2.6rem 0.85rem 1rem;
+    border: 1px solid rgba(184,147,79,0.4); border-radius: 5px;
+    background-color: #FFFFFF; color: #262320;
+    font-family: inherit; font-size: 1rem; line-height: 1.4; cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%238A6B3F' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 12px 8px;
+  }
+  .izbor-buton[data-prazno] { color: rgba(38,35,32,0.72); }
+  .izbor-buton:focus { outline: none; border-color: #B8934F; }
+
+  .izbor-spisak {
+    position: absolute; z-index: 40; top: calc(100% + 0.35rem); left: 0; right: 0;
+    max-height: 17rem; overflow-y: auto;
+    display: flex; flex-direction: column;
+    border: 1px solid rgba(184,147,79,0.4); border-radius: 5px;
+    background: #FFFFFF;
+    box-shadow: 0 16px 40px rgba(38,35,32,0.18);
+  }
+  .izbor-spisak[hidden] { display: none; }
+  .izbor-spisak button {
+    padding: 0.8rem 1rem; border: 0; border-bottom: 1px solid rgba(184,147,79,0.22);
+    background: transparent; color: #262320;
+    font-family: inherit; font-size: 1rem; line-height: 1.4;
+    text-align: left; cursor: pointer;
+  }
+  .izbor-spisak button:last-child { border-bottom: 0; }
+  .izbor-spisak button:hover,
+  .izbor-spisak button[aria-selected="true"] { background: rgba(184,147,79,0.14); }
+
+  /* Кое поле може да се пропусне се вижда от етикета, не се научава
+     чак когато формата откаже да тръгне. */
+  .po-zhelanie { color: rgba(38,35,32,0.5); }
 </style>
 </head>
 <body>
@@ -313,7 +358,27 @@
         <label>Телефон
           <input type="tel" name="telefon" autocomplete="tel" required>
         </label>
-        <label>Вашият въпрос
+        <label>Имейл
+          <input type="email" name="poshta" autocomplete="email" required>
+        </label>
+        <label>Зона, която ви интересува
+          <div class="izbor" data-izbor>
+            <input type="hidden" name="predmet" id="predmet">
+            <button class="izbor-buton" type="button" aria-haspopup="listbox"
+                    aria-expanded="false" aria-required="true" data-otvori-spisak>Изберете зона</button>
+            <div class="izbor-spisak" role="listbox" hidden>
+        <button type="button" role="option" data-stojnost="">Изберете зона</button>
+        <button type="button" role="option" data-stojnost="Лице и шия">Лице и шия</button>
+        <button type="button" role="option" data-stojnost="Тяло">Тяло</button>
+        <button type="button" role="option" data-stojnost="Лазерни процедури">Лазерни процедури</button>
+        <button type="button" role="option" data-stojnost="Интимно здраве">Интимно здраве</button>
+        <button type="button" role="option" data-stojnost="Процедури за мъже">Процедури за мъже</button>
+        <button type="button" role="option" data-stojnost="Още не знам">Още не знам</button>
+            </div>
+          </div>
+          <span data-izbor-greshka hidden>Изберете от списъка.</span>
+        </label>
+        <label>Вашият въпрос <span class="po-zhelanie">(по желание)</span>
           <textarea name="belezhka"></textarea>
         </label>
         <button type="submit">Изпратете</button>
@@ -351,17 +416,81 @@
 })();
 
 (function () {
+
+  /* Падащият списък: панел с ширината на полето, който се затваря при
+     избор и при цъкане настрани. Системният <select> се мери по
+     най-дългото име и на телефон излизаше извън страницата. */
+  (function () {
+    var obvivka = document.querySelector('[data-izbor]');
+    if (!obvivka) return;
+    var butonat = obvivka.querySelector('[data-otvori-spisak]');
+    var panel = obvivka.querySelector('.izbor-spisak');
+
+    function pokazhi(da) {
+      panel.hidden = !da;
+      butonat.setAttribute('aria-expanded', da ? 'true' : 'false');
+    }
+
+    butonat.setAttribute('data-prazno', '');
+    butonat.addEventListener('click', function (e) {
+      e.stopPropagation();
+      pokazhi(panel.hidden);
+    });
+    panel.addEventListener('click', function (e) {
+      var b = e.target.closest('button');
+      if (!b) return;
+      obvivka.querySelector('input[name="predmet"]').value = b.dataset.stojnost;
+      butonat.textContent = b.textContent;
+      if (b.dataset.stojnost) butonat.removeAttribute('data-prazno');
+      else butonat.setAttribute('data-prazno', '');
+      panel.querySelectorAll('button').forEach(function (o) {
+        o.setAttribute('aria-selected', o.dataset.stojnost === b.dataset.stojnost ? 'true' : 'false');
+      });
+      if (b.dataset.stojnost) {
+        obvivka.removeAttribute('data-greshka');
+        var red = document.querySelector('[data-izbor-greshka]');
+        if (red) red.hidden = true;
+      }
+      pokazhi(false);
+    });
+    document.addEventListener('click', function () { pokazhi(false); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') pokazhi(false);
+    });
+  })();
+
+  /* Списъкът не е <input> и браузърът не го пази сам. */
+  var obvivka_izbor = document.querySelector('[data-izbor]');
+  var red_greshka = document.querySelector('[data-izbor-greshka]');
+  function izboratLipsva() {
+    if (!obvivka_izbor) return false;
+    var skrito = obvivka_izbor.querySelector('input[name="predmet"]');
+    if (skrito && skrito.value) {
+      obvivka_izbor.removeAttribute('data-greshka');
+      if (red_greshka) red_greshka.hidden = true;
+      return false;
+    }
+    obvivka_izbor.setAttribute('data-greshka', '1');
+    if (red_greshka) red_greshka.hidden = false;
+    var b = obvivka_izbor.querySelector('[data-otvori-spisak]');
+    if (b) b.focus();
+    return true;
+  }
   document.getElementById('forma').addEventListener('submit', function (e) {
     e.preventDefault();
+    if (izboratLipsva()) return;
     var d = new FormData(e.target);
     var tqlo = [
       'Име: ' + (d.get('ime') || ''),
       'Телефон: ' + (d.get('telefon') || ''),
+      'Имейл: ' + (d.get('poshta') || ''),
+      'Зона: ' + (d.get('predmet') || ''),
       '',
       d.get('belezhka') || ''
     ].join('\n');
+    var tema = 'Запазване на час' + (d.get('predmet') ? ', ' + d.get('predmet') : '');
     window.location.href = 'mailto:info@hifubg.com'
-      + '?subject=' + encodeURIComponent('Съобщение от сайта')
+      + '?subject=' + encodeURIComponent(tema)
       + '&body=' + encodeURIComponent(tqlo);
   });
 })();
