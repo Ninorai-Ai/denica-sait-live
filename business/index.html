@@ -774,16 +774,16 @@
             <p style="margin-top: 0.7rem; font-size: 0.94rem; color: rgba(38,35,32,0.72);">Попълнете полетата и бутонът отваря готово писмо до нас. Проверете го и го изпратете от своята поща.</p>
 
             <form data-kontakt-forma="" onSubmit="{{ sendContact }}" style="display: grid; gap: 1.1rem; margin-top: 1.3rem;">
-              <label style="display: grid; gap: 0.45rem; font-size: 0.95rem; color: rgba(38,35,32,0.72);">Име
+              <label style="display: grid; gap: 0.45rem; font-size: 0.95rem; color: rgba(38,35,32,0.72);"><span>Име <span style="color: #B8934F;" aria-hidden="true">*</span></span>
                 <input type="text" name="ime" autocomplete="name" required="required" style="width: 100%; padding: 0.85rem 1rem; border: 1px solid rgba(184,147,79,0.4); border-radius: 5px; background-color: #FFFFFF; color: #262320; font-family: inherit; font-size: 1rem; line-height: 1.4;">
               </label>
-              <label style="display: grid; gap: 0.45rem; font-size: 0.95rem; color: rgba(38,35,32,0.72);">Телефон
+              <label style="display: grid; gap: 0.45rem; font-size: 0.95rem; color: rgba(38,35,32,0.72);"><span>Телефон <span style="color: #B8934F;" aria-hidden="true">*</span></span>
                 <input type="tel" name="telefon" autocomplete="tel" required="required" style="width: 100%; padding: 0.85rem 1rem; border: 1px solid rgba(184,147,79,0.4); border-radius: 5px; background-color: #FFFFFF; color: #262320; font-family: inherit; font-size: 1rem; line-height: 1.4;">
               </label>
-              <label style="display: grid; gap: 0.45rem; font-size: 0.95rem; color: rgba(38,35,32,0.72);">Имейл
+              <label style="display: grid; gap: 0.45rem; font-size: 0.95rem; color: rgba(38,35,32,0.72);"><span>Имейл <span style="color: #B8934F;" aria-hidden="true">*</span></span>
                 <input type="email" name="poshta" autocomplete="email" required="required" style="width: 100%; padding: 0.85rem 1rem; border: 1px solid rgba(184,147,79,0.4); border-radius: 5px; background-color: #FFFFFF; color: #262320; font-family: inherit; font-size: 1rem; line-height: 1.4;">
               </label>
-              <label style="display: grid; gap: 0.45rem; font-size: 0.95rem; color: rgba(38,35,32,0.72);">Апарат, който ви интересува
+              <label style="display: grid; gap: 0.45rem; font-size: 0.95rem; color: rgba(38,35,32,0.72);"><span>Апарат, който ви интересува <span style="color: #B8934F;" aria-hidden="true">*</span></span>
                 <div class="izbor" data-izbor>
                   <input type="hidden" name="predmet">
                   <button class="izbor-buton" type="button" aria-haspopup="listbox" aria-expanded="false" aria-required="true" data-prazno="1" data-otvori-spisak>Изберете апарат</button>
@@ -804,7 +804,7 @@
                 </div>
                 <span data-izbor-greshka style="display: none; font-size: 0.88rem; color: #A33A28;">Изберете от списъка.</span>
               </label>
-              <label style="display: grid; gap: 0.45rem; font-size: 0.95rem; color: rgba(38,35,32,0.72);">Какъв апарат или решение търсите <span style="color: rgba(38,35,32,0.5);">(по желание)</span>
+              <label style="display: grid; gap: 0.45rem; font-size: 0.95rem; color: rgba(38,35,32,0.72);">Какъв апарат или решение търсите
                 <textarea name="belezhka" rows="4" style="width: 100%; padding: 0.85rem 1rem; border: 1px solid rgba(184,147,79,0.4); border-radius: 5px; background-color: #FFFFFF; color: #262320; font-family: inherit; font-size: 1rem; line-height: 1.4; min-height: 6.5rem; resize: vertical;"></textarea>
               </label>
               <button data-dd-btn="" type="submit" style="margin-top: 0.3rem; padding: 1.05rem 2rem; border: 0; border-radius: 5px; cursor: pointer; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); color: #241A12; font-family: inherit; font-size: 1rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;" style-hover="filter: brightness(1.18); transform: translateY(-2px); box-shadow: 0 16px 34px rgba(138,107,63,0.4);">Изпратете</button>

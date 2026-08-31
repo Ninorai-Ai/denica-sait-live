@@ -127,14 +127,16 @@
     font-size: clamp(1.8rem, 3vw, 2.4rem);
   }
 
-  /* Телефонът се чете преди всичко останало в картата. */
-  .nomer {
-    display: block; margin-top: 1.2rem;
+  /* Телефонът се чете преди всичко останало в картата и сам е бутонът:
+     номерът над бутон със същия надпис беше едно и също нещо два пъти. */
+  .buton.nomer {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: clamp(2rem, 4vw, 2.6rem); line-height: 1.1;
-    color: #262320; white-space: nowrap;
+    font-size: clamp(1.5rem, 3.4vw, 1.9rem); font-weight: 400;
+    letter-spacing: 0.02em; text-transform: none; white-space: nowrap;
   }
-  .nomer:hover { color: #8A6B3F; }
+  @media (max-width: 760px) {
+    .buton.nomer { padding-left: 0.8rem; padding-right: 0.8rem; font-size: 1.32rem; }
+  }
 
   .redove { margin-top: 1.6rem; display: grid; gap: 1.1rem; }
   .red { display: grid; gap: 0.2rem; }
@@ -269,9 +271,9 @@
   .izbor-spisak button:hover,
   .izbor-spisak button[aria-selected="true"] { background: rgba(184,147,79,0.14); }
 
-  /* Кое поле може да се пропусне се вижда от етикета, не се научава
-     чак когато формата откаже да тръгне. */
-  .po-zhelanie { color: rgba(38,35,32,0.5); }
+  /* Звездичката казва кое поле е задължително. Без нея полето е по желание,
+     затова такъв надпис няма: знакът е достатъчен и е познат. */
+  .zvezda { color: #B8934F; }
 </style>
 </head>
 <body>
@@ -325,8 +327,7 @@
 
     <section class="karta">
       <h2>Обадете се</h2>
-      <a class="nomer" href="tel:+359888998556">+359 88 899 8556</a>
-      <a class="buton" href="tel:+359888998556">Обадете се</a>
+      <a class="buton nomer" href="tel:+359888998556">+359 88 899 8556</a>
 
       <div class="redove">
         <div class="red">
@@ -352,16 +353,16 @@
       <h2>Или ни пишете</h2>
 
       <form id="forma">
-        <label>Име
+        <label><span>Име <span class="zvezda" aria-hidden="true">*</span></span>
           <input type="text" name="ime" autocomplete="name" required>
         </label>
-        <label>Телефон
+        <label><span>Телефон <span class="zvezda" aria-hidden="true">*</span></span>
           <input type="tel" name="telefon" autocomplete="tel" required>
         </label>
-        <label>Имейл
+        <label><span>Имейл <span class="zvezda" aria-hidden="true">*</span></span>
           <input type="email" name="poshta" autocomplete="email" required>
         </label>
-        <label>Зона, която ви интересува
+        <label><span>Зона, която ви интересува <span class="zvezda" aria-hidden="true">*</span></span>
           <div class="izbor" data-izbor>
             <input type="hidden" name="predmet" id="predmet">
             <button class="izbor-buton" type="button" aria-haspopup="listbox"
@@ -378,7 +379,7 @@
           </div>
           <span data-izbor-greshka hidden>Изберете от списъка.</span>
         </label>
-        <label>Вашият въпрос <span class="po-zhelanie">(по желание)</span>
+        <label>Вашият въпрос
           <textarea name="belezhka"></textarea>
         </label>
         <button type="submit">Изпратете</button>
