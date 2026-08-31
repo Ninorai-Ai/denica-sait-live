@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Запитване за апарат — HIFU by Denny Divine</title>
-<meta name="description" content="Поискайте оферта за HIFU или лазерен апарат за вашето студио. В офертата влизат обучението, документите и протоколите за работа.">
+<title>Контакти — HIFU by Denny Divine, апарати за студиа</title>
+<meta name="description" content="Адрес, телефон и карта на HIFU by Denny Divine: бул. „Свети Наум“ 70А, 1421 София. Елате да видите апаратите на живо или ни пишете направо от страницата.">
 <link rel="icon" href="../../assets/img/brand/logo-zlato-znak.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -175,44 +175,6 @@
     font-family: inherit; font-size: 1rem; line-height: 1.4;
   }
 
-  /* Падащият списък е наш, не системният.
-
-     Панелът стои под полето, широк точно колкото него, и си има собствено
-     превъртане. Така на тясен екран списъкът не излиза настрани и не се
-     мери по най-дългото име в него. */
-  .izbor { position: relative; }
-  .izbor-buton {
-    width: 100%; text-align: left;
-    padding: 0.85rem 2.6rem 0.85rem 1rem;
-    border: 1px solid rgba(184,147,79,0.4); border-radius: 5px;
-    background-color: #FFFFFF; color: #262320;
-    font-family: inherit; font-size: 1rem; line-height: 1.4; cursor: pointer;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%238A6B3F' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
-    background-size: 12px 8px;
-  }
-  .izbor-buton[data-prazno] { color: rgba(38,35,32,0.72); }
-  .izbor-buton:focus { outline: none; border-color: #B8934F; }
-
-  .izbor-spisak {
-    position: absolute; z-index: 40; top: calc(100% + 0.35rem); left: 0; right: 0;
-    max-height: 17rem; overflow-y: auto;
-    display: flex; flex-direction: column;
-    border: 1px solid rgba(184,147,79,0.4); border-radius: 5px;
-    background: #FFFFFF;
-    box-shadow: 0 16px 40px rgba(38,35,32,0.18);
-  }
-  .izbor-spisak[hidden] { display: none; }
-  .izbor-spisak button {
-    padding: 0.8rem 1rem; border: 0; border-bottom: 1px solid rgba(184,147,79,0.22);
-    background: transparent; color: #262320;
-    font-family: inherit; font-size: 1rem; line-height: 1.4;
-    text-align: left; cursor: pointer;
-  }
-  .izbor-spisak button:last-child { border-bottom: 0; }
-  .izbor-spisak button:hover,
-  .izbor-spisak button[aria-selected="true"] { background: rgba(184,147,79,0.14); }
 
 
   input:focus, select:focus, textarea:focus {
@@ -228,6 +190,40 @@
     display: flex; flex-wrap: wrap; gap: 0.8rem 1.4rem;
     font-size: 0.95rem; color: rgba(38,35,32,0.72);
   }
+
+  /* ── Картата ─────────────────────────────────────────────────
+     Рамката държи височината от първия кадър, за да не подскача
+     страницата, докато Google дърпа плочките. */
+  .karta-ramka {
+    position: relative; margin-top: clamp(2.2rem, 5vw, 3.2rem);
+    height: clamp(20rem, 52vh, 30rem);
+    background: #ECDFCC; border-top: 2px solid #B8934F;
+    border-radius: 5px; overflow: hidden;
+  }
+  .karta-ramka iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+  .karta-butoni { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 1.1rem; }
+  .karta-butoni .vtori {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 0.95rem 1.8rem; border: 1px solid rgba(184,147,79,0.6); border-radius: 5px;
+    color: #262320; font-size: 0.86rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    transition: background 0.35s, border-color 0.35s, color 0.35s;
+  }
+  .karta-butoni .vtori:hover { background: #B8934F; border-color: #B8934F; color: #F8F4ED; }
+  /* Първият бутон е златният от сайта; вторият стои до него. На телефон
+     двата минават от край до край, за да се уцелват с палец. */
+  .karta-butoni [data-dd-btn] {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 0.95rem 1.8rem; border-radius: 5px;
+    background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%);
+    color: #241A12; font-size: 0.86rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+  }
+  @media (max-width: 760px) {
+    .karta-butoni { flex-direction: column; }
+    .karta-butoni a { width: 100%; }
+  }
 </style>
 </head>
 <body>
@@ -240,7 +236,7 @@
       <a href="../#maxlipo-13d">Лазери</a>
       <a href="../#aisia">Анализ на кожата</a>
       <a href="../za-nas/">За Деница</a>
-      <a href="../kontakti/">Контакти</a>
+      <a href="./">Контакти</a>
     <a data-dd-btn="" href="tel:+359888998556" style="display: inline-flex; align-items: center; padding: 0.78rem 1.5rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease; color: #241A12">Обадете се</a>
   </nav>
   <button class="burger" type="button" aria-label="Меню" data-otvori><span></span></button>
@@ -253,14 +249,29 @@
     <a href="../#maxlipo-13d" data-zatvori>Лазери</a>
     <a href="../#aisia" data-zatvori>Анализ на кожата</a>
     <a href="../za-nas/" data-zatvori>За Деница</a>
-    <a href="../kontakti/" data-zatvori>Контакти</a>
+    <a href="./" data-zatvori>Контакти</a>
   <a data-dd-btn="" href="tel:+359888998556" style="align-self: flex-start; margin-top: 0.8rem; padding: 1rem 1.9rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; align-self: stretch; display: flex; justify-content: center; text-align: center; color: #241A12">Обадете се</a>
 </div>
 
 <main class="obvivka" style="padding-top: clamp(2.6rem, 7vw, 4.5rem);">
 
-  <p class="nadslov">Оферта за студио</p>
-  <h1>Поискайте <em>оферта</em></h1>
+  <p class="nadslov">Шоурумът и как да го намерите</p>
+  <h1>Контакти и <em>локация</em></h1>
+  <p style="margin-top: 1.5rem; max-width: 38rem; font-size: 1.1rem; color: rgba(38,35,32,0.72);">Апаратите стоят на бул. „Свети Наум“ 70А в София и се пробват на живо. Отворете картата, пуснете навигация или се обадете, за да уговорим демонстрация.</p>
+
+  <div class="karta-ramka">
+    <iframe
+      title="Карта до Denny Divine, бул. Свети Наум 70А, София"
+      src="https://www.google.com/maps?q=%D0%B1%D1%83%D0%BB.%20%D0%A1%D0%B2%D0%B5%D1%82%D0%B8%20%D0%9D%D0%B0%D1%83%D0%BC%2070%D0%90%2C%201421%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F&z=16&hl=bg&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      allowfullscreen></iframe>
+  </div>
+
+  <div class="karta-butoni">
+    <a data-dd-btn="" href="https://www.google.com/maps/dir/?api=1&destination=%D0%B1%D1%83%D0%BB.%20%D0%A1%D0%B2%D0%B5%D1%82%D0%B8%20%D0%9D%D0%B0%D1%83%D0%BC%2070%D0%90%2C%201421%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F" target="_blank" rel="noopener">Пуснете навигация</a>
+    <a class="vtori" href="https://www.google.com/maps/search/?api=1&query=Denny%20Divine%20Aesthetic%20Center%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A1%D0%B2%D0%B5%D1%82%D0%B8%20%D0%9D%D0%B0%D1%83%D0%BC%2070%D0%90%2C%201421%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F" target="_blank" rel="noopener">Отворете в Google Maps</a>
+  </div>
 
   <div class="koloni" style="margin-top: clamp(2.4rem, 6vw, 3.6rem);">
 
@@ -282,11 +293,15 @@
           <span class="etiket">Работно време</span>
           <span class="stojnost">Пон до Съб: 9:00 до 19:30<br>Нед: 10:00 до 18:00</span>
         </div>
+        <div class="red">
+          <span class="etiket">Оферта за апарат</span>
+          <span class="stojnost"><a href="../zapitvane/">Поискайте оферта</a></span>
+        </div>
       </div>
     </section>
 
     <section class="karta">
-      <h2>Направете запитване</h2>
+      <h2>Или ни пишете</h2>
 
       <form id="forma">
         <label>Име
@@ -295,29 +310,8 @@
         <label>Телефон
           <input type="tel" name="telefon" autocomplete="tel" required>
         </label>
-        <label>Апарат, който ви интересува
-          <div class="izbor" data-izbor>
-            <input type="hidden" name="predmet" id="predmet">
-            <button class="izbor-buton" type="button" aria-haspopup="listbox"
-                    aria-expanded="false" data-otvori-spisak>Изберете апарат</button>
-            <div class="izbor-spisak" role="listbox" hidden>
-        <button type="button" role="option" data-stojnost="">Изберете апарат</button>
-        <button type="button" role="option" data-stojnost="HIFU 13D Ultraformer">HIFU 13D Ultraformer</button>
-        <button type="button" role="option" data-stojnost="HIFU Ultraformer 7D">HIFU Ultraformer 7D</button>
-        <button type="button" role="option" data-stojnost="HIFU 5D">HIFU 5D</button>
-        <button type="button" role="option" data-stojnost="HIFU 3D">HIFU 3D</button>
-        <button type="button" role="option" data-stojnost="Tesla 15 EMSLIM RF">Tesla 15 EMSLIM RF</button>
-        <button type="button" role="option" data-stojnost="Tesla 21 EMSLIM Chair">Tesla 21 EMSLIM Chair</button>
-        <button type="button" role="option" data-stojnost="13D MaxLipo Laser">13D MaxLipo Laser</button>
-        <button type="button" role="option" data-stojnost="Soprano Diode Laser">Soprano Diode Laser</button>
-        <button type="button" role="option" data-stojnost="Estella Laser">Estella Laser</button>
-        <button type="button" role="option" data-stojnost="AISIA">AISIA</button>
-        <button type="button" role="option" data-stojnost="Още не знам">Още не знам</button>
-            </div>
-          </div>
-        </label>
-        <label>Какъв апарат или решение търсите
-          <textarea name="belezhka" id="belezhka"></textarea>
+        <label>Какво искате да ни попитате
+          <textarea name="belezhka"></textarea>
         </label>
         <button type="submit">Изпрати</button>
       </form>
@@ -332,103 +326,10 @@
   <a href="tel:+359888998556">+359 88 899 8556</a>
   <span>·</span>
   <a href="mailto:info@hifubg.com">info@hifubg.com</a>
-  <span>·</span>
-  <a href="../kontakti/">Контакти и локация</a>
+  
 </footer>
 
 <script>
-var IMENA = {
-  "aisia": "AISIA",
-  "akne": "Акне по лицето",
-  "akne-tqlo": "Акне по тялото",
-  "bedra": "Бедра",
-  "bedra-epilaciq": "Бедра",
-  "bqst": "Стягане на бюст",
-  "brahioplastika": "Ръце над лакътя",
-  "celi-kraka": "Цели крака",
-  "celi-race": "Цели ръце",
-  "chelo": "Чело",
-  "cqlo-lice": "Цяло лице с шията",
-  "dekolte": "Деколте",
-  "dolen-kontur": "Долен контур на лицето",
-  "dvojna-bradichka": "Двойна брадичка",
-  "emslim-cqlo-tqlo": "Цяло тяло",
-  "emslim-korem": "Корем",
-  "emslim-kraka": "Крака",
-  "emslim-race": "Ръце",
-  "emslim-sedalishte": "Седалище",
-  "epilaciq-intim": "Трайна епилация на интимната зона",
-  "epilaciya-kraka": "Крака",
-  "estella": "Estella Laser",
-  "fotopodmladqvane": "Фотоподмладяване",
-  "fotopodmladqvane-lice": "Фотоподмладяване на цяло лице",
-  "fotopodmladqvane-zona": "Фотоподмладяване на зона",
-  "foxy-eyes": "Foxy eyes",
-  "gardi-korem": "Гърди и корем",
-  "gnevna-brachka": "Гневна бръчка",
-  "gorna-ustna": "Горна устна",
-  "grab": "Гръб",
-  "grab-ramene": "Гръб и рамене",
-  "grim-ustni": "Перманентен грим на устни",
-  "hifu-13d": "HIFU 13D Ultraformer",
-  "hifu-3d": "HIFU 3D",
-  "hifu-5d": "HIFU 5D",
-  "hifu-7d": "HIFU Ultraformer 7D",
-  "hifu-cqlo-tqlo": "Цяло тяло",
-  "hifu-korem": "Корем",
-  "hifu-kraka": "Крака",
-  "hifu-lice": "Лице и шия",
-  "hifu-lice-shiya": "HIFU на лице и шия",
-  "hifu-race": "Ръце",
-  "hifu-sedalishte": "Седалище",
-  "hifu-tqlo": "Тяло",
-  "hiperhidroza": "Прекомерно изпотяване",
-  "inkontinenciq": "Инконтиненция",
-  "intim": "Интимна зона",
-  "intim-podmishnici": "Интимна зона и подмишници",
-  "intimno-podmladqvane": "Интимно подмладяване",
-  "intimno-zdrave": "Интимно здраве",
-  "kapilqri": "Разширени капилярчета",
-  "karbonov-piling": "Холивудски карбонов пилинг",
-  "klepach": "Повдигане на клепача",
-  "kolene": "Колене",
-  "korem": "Корем",
-  "lazer": "Лазерни процедури",
-  "marionetni": "Марионетни линии",
-  "maxlipo-13d": "13D MaxLipo Laser",
-  "nazolabialni": "Назолабиални линии",
-  "ochna-liniq": "Перманентна очна линия",
-  "okoloochen-kontur": "Околоочен контур",
-  "permanenten-grim": "Перманентен грим и микроблейдинг",
-  "petna-lice": "Пигментни петна по лицето",
-  "pigmentaciq": "Пигментация по подмишниците и интимните зони",
-  "pigmentaciq-intimni-zoni": "Пигментация по интимните зони",
-  "pigmentaciq-mishnici": "Пигментация по мишниците",
-  "podbedrici": "Подбедрици",
-  "podmishnici": "Подмишници",
-  "prasci": "Прасци",
-  "race": "Ръце",
-  "raztvarqne-filar": "Разтваряне на филър",
-  "rf-lice": "Стягане на лицето с радиофреквенция",
-  "santimetri": "Сантиметри в талията и бедрата",
-  "sedalishte": "Седалище",
-  "shiq": "Шия",
-  "skuli": "Скули",
-  "soprano": "Soprano Diode Laser",
-  "strii": "Стрии",
-  "tatuirovki": "Татуировки",
-  "tazovo-dano": "Тазово дъно",
-  "tesla-15": "Tesla 15 EMSLIM RF",
-  "tesla-21": "Tesla 21 EMSLIM Chair",
-  "tonus": "Стягане на корема и седалището",
-  "ustna-brada": "Горна устна и брада",
-  "vrat": "Врат",
-  "za-maje": "Процедури за мъже",
-  "zona-pubis": "Зона пубис"
-};
-
-/* Менюто на телефон. Страниците с .dc.html го въртят през своя runtime,
-   тук страницата е обикновен HTML и отваря и затваря сама. */
 (function () {
   var menu = document.querySelector('[data-mmenu]');
   function pokazhi(da) {
@@ -447,73 +348,17 @@ var IMENA = {
 })();
 
 (function () {
-  var params = new URLSearchParams(window.location.search);
-  var kljuch = params.get('aparat');
-  var ime = kljuch && IMENA[kljuch] ? IMENA[kljuch] : null;
-  var skrito = document.getElementById('predmet');
-  var obvivka = document.querySelector('[data-izbor]');
-  var butonat = obvivka.querySelector('[data-otvori-spisak]');
-  var panel = obvivka.querySelector('.izbor-spisak');
-
-  function izberi(stojnost, nadpis) {
-    skrito.value = stojnost;
-    butonat.textContent = nadpis;
-    if (stojnost) { butonat.removeAttribute('data-prazno'); }
-    else { butonat.setAttribute('data-prazno', ''); }
-    panel.querySelectorAll('button').forEach(function (b) {
-      b.setAttribute('aria-selected', b.dataset.stojnost === stojnost ? 'true' : 'false');
-    });
-  }
-
-  function pokazhi(da) {
-    panel.hidden = !da;
-    butonat.setAttribute('aria-expanded', da ? 'true' : 'false');
-  }
-
-  butonat.setAttribute('data-prazno', '');
-  butonat.addEventListener('click', function (e) {
-    e.stopPropagation();
-    pokazhi(panel.hidden);
-  });
-  panel.addEventListener('click', function (e) {
-    var b = e.target.closest('button');
-    if (!b) return;
-    izberi(b.dataset.stojnost, b.textContent);
-    pokazhi(false);
-  });
-  document.addEventListener('click', function () { pokazhi(false); });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') pokazhi(false);
-  });
-
-  if (ime) {
-    var red = panel.querySelector('[data-stojnost="' + ime + '"]');
-    if (!red) {
-      // Страницата, от която идва човекът, може да е за по-тясна зона,
-      // отколкото стои в списъка. Тогава тя влиза като своя стойност.
-      red = document.createElement('button');
-      red.type = 'button';
-      red.setAttribute('role', 'option');
-      red.dataset.stojnost = ime;
-      red.textContent = ime;
-      panel.insertBefore(red, panel.children[1] || null);
-    }
-    izberi(ime, ime);
-  }
-
   document.getElementById('forma').addEventListener('submit', function (e) {
     e.preventDefault();
     var d = new FormData(e.target);
     var tqlo = [
       'Име: ' + (d.get('ime') || ''),
       'Телефон: ' + (d.get('telefon') || ''),
-      'Апарат, който ви интересува: ' + (d.get('predmet') || 'не е посочено'),
       '',
       d.get('belezhka') || ''
     ].join('\n');
-    var predmet = 'Запитване за апарат' + (d.get('predmet') ? ', ' + d.get('predmet') : '');
     window.location.href = 'mailto:info@hifubg.com'
-      + '?subject=' + encodeURIComponent(predmet)
+      + '?subject=' + encodeURIComponent('Запитване от сайта за апарати')
       + '&body=' + encodeURIComponent(tqlo);
   });
 })();

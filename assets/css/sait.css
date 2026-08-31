@@ -345,3 +345,26 @@
   background-position: center !important;
   background-size: 22px 12px !important;
 }
+
+/* ── Контактите ──────────────────────────────────────────────────
+   На широк екран картата се закача и върви заедно със скрола, докато
+   отдясно минават редовете и формата. На тесен екран колоните са една
+   под друга и закачането само би скрило формата. */
+@media (max-width: 1100px) {
+
+  [data-kontakt-karta] {
+    position: static !important;
+    top: auto !important;
+  }
+}
+
+/* Вторият бутон под картата не носи [data-dd-btn], защото не е златен.
+   На телефон обаче трябва да се разпъне като първия, иначе двата стоят
+   с различна ширина един под друг. */
+@media (max-width: 760px) {
+
+  [data-kontakt-btn] {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
