@@ -725,7 +725,11 @@ class Component extends DCLogic {
       };
       const fromEvent = (e) => { const r = stage.getBoundingClientRect(); set(((e.clientX - r.left) / r.width) * 100); };
       let dragging = false;
-      stage.addEventListener('pointerdown', (e) => { dragging = true; stage.setPointerCapture(e.pointerId); fromEvent(e); });
+      /* Без preventDefault мишката тръгва да ВЛАЧИ самата снимка: браузърът
+         почва свое drag-and-drop, взима показалеца и плъзгачът спира по
+         средата. На телефон това го няма и затова се чупеше само на десктоп. */
+      stage.addEventListener('dragstart', (e) => e.preventDefault());
+      stage.addEventListener('pointerdown', (e) => { e.preventDefault(); dragging = true; stage.setPointerCapture(e.pointerId); fromEvent(e); });
       stage.addEventListener('pointermove', (e) => { if (dragging) fromEvent(e); });
       stage.addEventListener('pointerup', () => { dragging = false; });
       stage.addEventListener('pointercancel', () => { dragging = false; });
