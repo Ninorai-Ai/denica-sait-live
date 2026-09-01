@@ -72,9 +72,8 @@
 
   <header id="top" data-hero="" style="position: relative; height: 84svh; min-height: 680px; max-height: 860px; overflow: hidden; background: #ECDFCC;">
     <span data-hero-glow="" style="position: absolute; inset: -8%; z-index: 0; background: linear-gradient(128deg, rgba(184,147,79,0.34), transparent 42%, transparent 58%, rgba(184,147,79,0.34)); clip-path: polygon(0% 0%, 100% 0%, 46% 50%, 100% 100%, 0% 100%, 54% 50%); filter: blur(26px); pointer-events: none;"></span>
-    <div data-hero-content="" style="position: absolute; z-index: 2; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; top: clamp(7.5rem, 18vh, 11rem); left: clamp(1.8rem, 6vw, 6rem); right: clamp(1.8rem, 6vw, 6rem); bottom: clamp(3rem, 9vh, 5.2rem); max-width: none; color: #262320;">
+    <div data-hero-content="" style="position: absolute; z-index: 2; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; top: clamp(6.2rem, 13vh, 8.6rem); left: clamp(1.8rem, 6vw, 6rem); right: clamp(1.8rem, 6vw, 6rem); bottom: clamp(3rem, 9vh, 5.2rem); max-width: none; color: #262320;">
       <div data-hero-tekst="" style="display: flex; flex-direction: column; align-items: flex-start; gap: clamp(1rem, 2.4vh, 1.5rem); max-width: min(34rem, 46vw);">
-      <span style="display: inline-flex; align-items: center; gap: 0.9rem; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6B3F;"><span style="display: block; width: 2.6rem; height: 2px; background: linear-gradient(90deg, #8A6B3F, rgba(184,147,79,0));"></span>Процедури · София</span>
       <h1 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: clamp(2.4rem, min(6vw, 7.6vh), 4.6rem); line-height: 1.22; letter-spacing: -0.025em; color: #262320;">Изглеждайте така, както <em style="font-style: italic; color: #8A6B3F;">винаги сте мечтали</em></h1>
       <p style="margin: 0; max-width: 100%; font-size: 1.08rem; line-height: 1.72; color: rgba(38,35,32,0.78);">Неоперативни процедури за подмладяване и разкрасяване на лицето, отслабване и стягане на тялото, гладка кожа, лазерна епилация и интимно подмладяване.</p>
       </div>
@@ -1330,7 +1329,7 @@ class Component extends DCLogic {
     if (window.innerWidth <= 760) {
       /* на телефон херото расте с текста, за да не се реже бутонът и телефонът */
       /* на телефон херото е точно колкото текста си иска: без празно поле под телефона */
-      if (hero) { hero.style.height = 'auto'; hero.style.minHeight = 'auto'; hero.style.maxHeight = 'none'; hero.style.paddingTop = '7rem'; hero.style.paddingBottom = '3.4rem'; }
+      if (hero) { hero.style.height = 'auto'; hero.style.minHeight = 'auto'; hero.style.maxHeight = 'none'; hero.style.paddingTop = '5.8rem'; hero.style.paddingBottom = '3.4rem'; }
       content.style.position = 'static';
       content.style.top = 'auto'; content.style.bottom = 'auto'; content.style.left = 'auto'; content.style.right = 'auto';
       content.style.padding = '0 1.7rem';
