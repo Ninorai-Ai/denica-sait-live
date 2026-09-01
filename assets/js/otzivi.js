@@ -167,9 +167,64 @@
     pusni();
   }
 
+  /* ── Кой превключвател свети ───────────────────────────────────
+     Класът на страницата сменя снимката, но златният фон се връщаше
+     на първия бутон: рендерът пренаписва авторския стил малко след
+     натискането. Затова следим двете редици и боядисваме сами, а
+     пишем само когато има разлика, за да не се въртим в кръг. */
+  function vidimi(vzor) {
+    var vsichki = document.querySelectorAll(vzor);
+    var izhod = [];
+    for (var i = 0; i < vsichki.length; i++) {
+      if (!vsichki[i].closest('x-dc')) izhod.push(vsichki[i]);
+    }
+    return izhod;
+  }
+
+  function boyadisai() {
+    var tabove = vidimi('[data-tab]');
+    var sluchai = vidimi('[data-case]');
+    if (!tabove.length || tabove.length !== sluchai.length) return;
+    var aktiven = -1;
+    for (var i = 0; i < sluchai.length; i++) {
+      if (getComputedStyle(sluchai[i]).display !== 'none') { aktiven = i; break; }
+    }
+    if (aktiven < 0) return;
+    for (var j = 0; j < tabove.length; j++) {
+      /* класът се закача, а не стилът: рендерът пренаписва style веднага,
+         но класовете остават на място */
+      tabove[j].classList.toggle('tab-aktiven', j === aktiven);
+    }
+  }
+
+  var chaka = false;
+  function poiskai() {
+    if (chaka) return;
+    chaka = true;
+    setTimeout(function () { chaka = false; boyadisai(); }, 40);
+  }
+
+  /* Рендерът връща авторския стил на бутоните и след натискането, и по-късно,
+     затова не чакаме събитие, а проверяваме кой случай се вижда. Пише се само
+     когато има разлика, тоест почти никога. */
+  function sledi() {
+    boyadisai();
+    setInterval(boyadisai, 400);
+    return true;
+  }
+
+  document.addEventListener('click', function (sabitie) {
+    if (sabitie.target.closest && sabitie.target.closest('[data-tab]')) poiskai();
+  }, true);
+
+  function zakachiTabove() {
+    sledi();
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', debni);
+    document.addEventListener('DOMContentLoaded', function () { debni(); zakachiTabove(); });
   } else {
     debni();
+    zakachiTabove();
   }
 })();

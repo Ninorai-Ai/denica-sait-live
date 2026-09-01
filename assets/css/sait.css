@@ -483,3 +483,8 @@
 @media (max-width: 900px) {
   .ekip-karti, .ekip-karti.dve { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Превключвателите на трансформациите. Кой свети се решава от класа,
+   защото рендерът пренаписва инлайн стила при всяко натискане. */
+[data-tab]:not(.tab-aktiven) { background: transparent !important; }
+[data-tab].tab-aktiven { background: #B8934F !important; }
