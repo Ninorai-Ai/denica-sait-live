@@ -40,28 +40,31 @@
 
   <nav data-nav="" style="position: fixed; top: 0; left: 0; right: 0; z-index: 90; display: flex; align-items: center; justify-content: space-between; gap: 1.2rem; padding: 0.9rem max(clamp(1.2rem, 4vw, 3.6rem), calc((100% - 1200px) / 2)); background: #F8F4ED; border-bottom: 1px solid rgba(184,147,79,0.3); transition: background 0.45s, border-color 0.45s, box-shadow 0.45s;">
     <a href="../" style="display: block; flex: none;"><img data-logo="" src="../../assets/img/logo.webp" alt="Denny Divine" style="height: 44px; width: auto;"></a>
-    <div data-navpaths="" style="display: flex; align-items: center; gap: 1.5rem;">
-      <a data-navlink="" href="../lice-shiq/" style="font-size: 0.96rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Лице и шия</a>
-      <a data-navlink="" href="../tqlo/" style="font-size: 0.96rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Тяло</a>
-      <a data-navlink="" href="../intimno-zdrave/" style="font-size: 0.96rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Интимно</a>
-      <a data-navlink="" href="../za-maje/" style="font-size: 0.96rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">За мъже</a>
-      <a data-navlink="" href="../kontakti/" style="font-size: 0.96rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Контакти</a>
-      <a data-dd-btn="" href="../zapazi-chas/?usluga=lazer" style="display: inline-flex; align-items: center; padding: 0.78rem 1.5rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #F8F4ED; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 14px 30px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-2px); letter-spacing: 0.2em;">Запазете час</a>
+    <div data-navpaths="" style="display: flex; align-items: center; gap: 0.85rem;">
+      <a data-navlink="" href="../lice-shiq/" style="white-space: nowrap; font-size: 0.9rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Лице</a>
+      <a data-navlink="" href="../tqlo/" style="white-space: nowrap; font-size: 0.9rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Тяло</a>
+      <a data-navlink="" href="../lazer/" style="white-space: nowrap; font-size: 0.9rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Лазерна епилация</a>
+      <a data-navlink="" href="../intimno-zdrave/" style="white-space: nowrap; font-size: 0.9rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Интимно подмладяване</a>
+      <a data-navlink="" href="../za-maje/" style="white-space: nowrap; font-size: 0.9rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">За мъже</a>
+      <a data-navlink="" href="../za-nas/" style="white-space: nowrap; font-size: 0.9rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">За Denny Divine</a>
+      <a data-navlink="" href="../kontakti/" style="white-space: nowrap; font-size: 0.9rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Контакти</a>
+      <a data-dd-btn="" href="../zapazi-chas/?usluga=lazer" style="display: inline-flex; align-items: center; padding: 0.78rem 1.25rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #F8F4ED; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 14px 30px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-2px); letter-spacing: 0.2em;">Запазете час</a>
     </div>
     <button data-burger="" type="button" aria-label="Меню" onClick="{{ toggleMenu }}" style="display: none; width: 48px; height: 48px; flex: none; border: 1px solid rgba(184,147,79,0.7); background: rgba(184,147,79,0.12); border-radius: 5px; cursor: pointer; padding: 0; align-items: center; justify-content: center;">
       <span data-burger-bar="" style="display: block; width: 20px; height: 1.6px; background: #3B2C21; box-shadow: 0 -6px 0 #3B2C21, 0 6px 0 #3B2C21;"></span>
     </button>
   </nav>
 
-  <div data-mmenu="" style="position: fixed; inset: 0; z-index: 95; display: none; flex-direction: column; justify-content: center; gap: 0.2rem; padding: 5.5rem clamp(1.4rem, 7vw, 3rem) 2.5rem; background: #F8F4ED;">
+  <div data-mmenu="" style="position: fixed; inset: 0; z-index: 95; display: none; flex-direction: column; justify-content: flex-start; gap: 0.2rem; overflow-y: auto; padding: 4.6rem clamp(1.4rem, 7vw, 3rem) 2.5rem; background: #F8F4ED;">
     <button type="button" aria-label="Затвори" onClick="{{ toggleMenu }}" style="position: absolute; top: 1.1rem; right: 1.2rem; width: 48px; height: 48px; border: 1px solid rgba(184,147,79,0.7); background: transparent; color: #3B2C21; font-size: 1.6rem; cursor: pointer;">×</button>
-    <p style="font-size: 0.86rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6B3F;">Лазер</p>
-    <a href="#zoni" onClick="{{ toggleMenu }}" style="padding: 0.85rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2rem; color: #262320;">Зоните в групата</a>
-    <a href="#rezultati" onClick="{{ toggleMenu }}" style="padding: 0.85rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2rem; color: #262320;">Преди и след</a>
-    <a href="#kak" onClick="{{ toggleMenu }}" style="padding: 0.85rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2rem; color: #262320;">Как протича</a>
-    <a href="#vaprosi" onClick="{{ toggleMenu }}" style="padding: 0.85rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2rem; color: #262320;">Въпроси</a>
-    <a href="../" onClick="{{ toggleMenu }}" style="padding: 0.9rem 0; font-size: 1.02rem; color: #8A6B3F;">Всички групи процедури</a>
-    <a href="../kontakti/" onClick="{{ toggleMenu }}" style="padding: 0.9rem 0; font-size: 1.02rem; color: #262320;">Контакти и локация</a>
+    <p style="padding-right: 3.4rem; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: #8A6B3F;">Открийте своето решение</p>
+    <a href="../lice-shiq/" onClick="{{ toggleMenu }}" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.72rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.7rem; color: #262320;">Лице<span style="font-size: 1.5rem; line-height: 1; color: #B8934F;">›</span></a>
+    <a href="../tqlo/" onClick="{{ toggleMenu }}" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.72rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.7rem; color: #262320;">Тяло<span style="font-size: 1.5rem; line-height: 1; color: #B8934F;">›</span></a>
+    <a href="../lazer/" onClick="{{ toggleMenu }}" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.72rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.7rem; color: #262320;">Лазерна епилация<span style="font-size: 1.5rem; line-height: 1; color: #B8934F;">›</span></a>
+    <a href="../intimno-zdrave/" onClick="{{ toggleMenu }}" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.72rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.7rem; color: #262320;">Интимно подмладяване<span style="font-size: 1.5rem; line-height: 1; color: #B8934F;">›</span></a>
+    <a href="../za-maje/" onClick="{{ toggleMenu }}" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.72rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.7rem; color: #262320;">За мъже<span style="font-size: 1.5rem; line-height: 1; color: #B8934F;">›</span></a>
+    <a href="../za-nas/" onClick="{{ toggleMenu }}" style="margin-top: 1.1rem; padding: 0.9rem 0; font-size: 1.02rem; color: #8A6B3F;">За Denny Divine</a>
+    <a href="../kontakti/" onClick="{{ toggleMenu }}" style="padding: 0.9rem 0; font-size: 1.02rem; color: #8A6B3F;">Контакти</a>
     <a data-dd-btn="" href="../zapazi-chas/?usluga=lazer" style="align-self: flex-start; margin-top: 0.8rem; padding: 1rem 1.9rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #F8F4ED; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Запазете час</a>
   </div>
 
@@ -1211,7 +1214,7 @@ class Component extends DCLogic {
     this.layoutHeroCta();
     this.applyPromise();
     this.applyOffsets();
-    const narrow = window.innerWidth <= 1240;
+    const narrow = window.innerWidth <= 1300;
     const burger = document.querySelector('[data-burger]');
     const paths = document.querySelector('[data-navpaths]');
     const menu = document.querySelector('[data-mmenu]');
