@@ -40,6 +40,29 @@
     return null;
   }
 
+
+  /* Същото „Прочети повече“, но за картите на екипа: те не са на релса и
+     затова се връзват сами, а не при дублирането на пътя. */
+  function vurjiEkipa() {
+    document.querySelectorAll('[data-povece]').forEach(function (but) {
+      /* същият капан като при релсата: суровият <x-dc> ще бъде изхвърлен */
+      if (but.dataset.vurzan === '1' || but.closest('x-dc')) return;
+      var karta = but.closest('article') || but.parentElement;
+      var tqlo = karta && karta.querySelector('[data-povece-tqlo]');
+      var senka = karta && karta.querySelector('[data-povece-senka]');
+      if (!tqlo) return;
+      but.dataset.vurzan = '1';
+      var svit = getComputedStyle(tqlo).maxHeight;
+      but.addEventListener('click', function () {
+        var otvoren = tqlo.dataset.open === '1';
+        tqlo.dataset.open = otvoren ? '0' : '1';
+        tqlo.style.maxHeight = otvoren ? svit : 'none';
+        if (senka) senka.style.display = otvoren ? 'block' : 'none';
+        but.textContent = otvoren ? 'Прочети повече' : 'Скрий текста';
+      });
+    });
+  }
+
   function pusni() {
     var patq = nameriPatq();
     if (!patq) return;
@@ -120,29 +143,28 @@
      DOMContentLoaded. Пуснем ли се тогава, релсата или още я няма, или онова,
      което сме пипнали, отива на боклука заедно със стария възел. Затова се
      чака самата релса да се появи. */
-  function debni() {
-    if (nameriPatq()) { pusni(); return; }
-
-    var nabljudatel = new MutationObserver(function () {
-      if (!nameriPatq()) return;
-      nabljudatel.disconnect();
-      clearInterval(chasovnik);
-      pusni();
+  /* Не стига да се хване рендването веднъж: релсата и картите на екипа се
+     появяват в различни моменти, а на страници без релса чакането никога не
+     свършва. Затова се обикаля, докато и двете са готови, и се спира сам. */
+  function vsichkoGotovo() {
+    var ostavat = 0;
+    document.querySelectorAll('[data-povece]').forEach(function (b) {
+      if (!b.closest('x-dc') && b.dataset.vurzan !== '1') ostavat++;
     });
-    nabljudatel.observe(document.documentElement, { childList: true, subtree: true });
+    var patq = nameriPatq();
+    if (ostavat) return false;
+    return !patq || patq.dataset.looped === '1';
+  }
 
-    /* и колан към тирантите, ако наблюдателят пропусне: спира сам след 10 сек */
+  function debni() {
     var opiti = 0;
     var chasovnik = setInterval(function () {
-      if (nameriPatq()) {
-        nabljudatel.disconnect();
-        clearInterval(chasovnik);
-        pusni();
-      } else if (++opiti > 100) {
-        nabljudatel.disconnect();
-        clearInterval(chasovnik);
-      }
+      vurjiEkipa();
+      pusni();
+      if (vsichkoGotovo() || ++opiti > 100) clearInterval(chasovnik);
     }, 100);
+    vurjiEkipa();
+    pusni();
   }
 
   if (document.readyState === 'loading') {
