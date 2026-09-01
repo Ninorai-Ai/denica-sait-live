@@ -25,7 +25,7 @@
       tqlo.dataset.open = otvoren ? '0' : '1';
       tqlo.style.maxHeight = otvoren ? VISOCHINA : 'none';
       if (senka) senka.style.display = otvoren ? 'block' : 'none';
-      but.textContent = otvoren ? 'Прочети повече' : 'Скрий текста';
+      but.textContent = otvoren ? 'Прочетете повече' : 'Скрийте текста';
     });
   }
 
@@ -58,7 +58,7 @@
         tqlo.dataset.open = otvoren ? '0' : '1';
         tqlo.style.maxHeight = otvoren ? svit : 'none';
         if (senka) senka.style.display = otvoren ? 'block' : 'none';
-        but.textContent = otvoren ? 'Прочети повече' : 'Скрий текста';
+        but.textContent = otvoren ? 'Прочетете повече' : 'Скрийте текста';
       });
     });
   }

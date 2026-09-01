@@ -441,13 +441,10 @@
    Друг ритъм от процедурните разтвори: изправен кадър отгоре, после
    името и началото на текста. Разтворите са широки и се застъпват,
    тези стоят събрани, за да има контраст между двете. */
-.ekip {
-  display: grid; grid-template-columns: minmax(0, 0.62fr) minmax(0, 1.38fr);
-  gap: clamp(2rem, 5vw, 4rem); align-items: start;
-}
 .ekip-karti {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
   gap: clamp(1.4rem, 2.6vw, 2.2rem);
+  margin-top: clamp(2rem, 4.5vh, 3rem);
 }
 .ekip-karta {
   display: flex; flex-direction: column; background: #FFFFFF;
@@ -482,6 +479,5 @@
 .ekip-povece:hover { background: #B8934F; color: #F8F4ED; }
 
 @media (max-width: 900px) {
-  .ekip { grid-template-columns: minmax(0, 1fr); }
   .ekip-karti { grid-template-columns: minmax(0, 1fr); }
 }
