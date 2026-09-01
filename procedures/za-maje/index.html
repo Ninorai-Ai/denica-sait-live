@@ -79,9 +79,9 @@
       </div>
       <div data-hero-ba="" style="position: absolute; top: 0; bottom: 0; right: 0; z-index: 2; display: flex; align-items: center; width: min(26rem, 32vw);">
         <div data-ba-stage="" style="position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 5px; background: #DCCBB4; cursor: ew-resize; touch-action: none; box-shadow: 0 20px 48px rgba(160,140,125,0.3);">
-          <img src="../../assets/img/transformacii/pairs/epilaciq-vrat-01-sled.webp" alt="Космите по врата след процедура в Denny Divine" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+          <img src="../../assets/img/transformacii/pairs/tesla-korem-01-sled.webp" alt="Коремът и мускулният релеф след процедура в Denny Divine" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
           <div data-ba-before="" style="position: absolute; inset: 0; clip-path: inset(0 50% 0 0); opacity: 0.95;">
-            <img src="../../assets/img/transformacii/pairs/epilaciq-vrat-01-predi.webp" alt="Космите по врата преди процедурата" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+            <img src="../../assets/img/transformacii/pairs/tesla-korem-01-predi.webp" alt="Коремът и мускулният релеф преди процедурата" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
           </div>
           <span style="position: absolute; top: 1rem; left: 1rem; padding: 0.4rem 0.95rem; background: rgba(38,35,32,0.72); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">Преди</span>
           <span style="position: absolute; top: 1rem; right: 1rem; padding: 0.4rem 0.95rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); color: #F8F4ED; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none;">След</span>
@@ -1443,9 +1443,11 @@ class Component extends DCLogic {
   /* Трансформацията в герото: горе вдясно на голям екран, а на телефон
      влиза в реда между текста и бутоните, точно както е в маркъпа. */
   layoutHeroBa(phone) {
-    const tekst = document.querySelector('[data-hero-tekst]');
-    if (tekst) tekst.style.maxWidth = phone ? 'none' : 'min(34rem, 46vw)';
     const ba = document.querySelector('[data-hero-ba]');
+    const tekst = document.querySelector('[data-hero-tekst]');
+    /* стеснява се само когато вдясно стои кадър. Няма ли го, текстът си
+       взима цялата ширина, иначе стои като изтървана колона в средата. */
+    if (tekst) tekst.style.maxWidth = phone ? 'none' : (ba ? 'min(34rem, 46vw)' : 'min(48rem, 74vw)');
     if (!ba) return;
     if (phone) {
       ba.style.position = 'static';

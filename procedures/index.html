@@ -1262,9 +1262,11 @@ class Component extends DCLogic {
   /* Трансформацията в герото: горе вдясно на голям екран, а на телефон
      влиза в реда между текста и бутоните, точно както е в маркъпа. */
   layoutHeroBa(phone) {
-    const tekst = document.querySelector('[data-hero-tekst]');
-    if (tekst) tekst.style.maxWidth = phone ? 'none' : 'min(34rem, 46vw)';
     const ba = document.querySelector('[data-hero-ba]');
+    const tekst = document.querySelector('[data-hero-tekst]');
+    /* стеснява се само когато вдясно стои кадър. Няма ли го, текстът си
+       взима цялата ширина, иначе стои като изтървана колона в средата. */
+    if (tekst) tekst.style.maxWidth = phone ? 'none' : (ba ? 'min(34rem, 46vw)' : 'min(48rem, 74vw)');
     if (!ba) return;
     if (phone) {
       ba.style.position = 'static';

@@ -71,7 +71,7 @@
     <span data-hero-glow="" style="position: absolute; inset: -8%; z-index: 0; background: linear-gradient(128deg, rgba(184,147,79,0.34), transparent 42%, transparent 58%, rgba(184,147,79,0.34)); clip-path: polygon(0% 0%, 100% 0%, 46% 50%, 100% 100%, 0% 100%, 54% 50%); filter: blur(26px); pointer-events: none;"></span>
     <div data-hero-content="" style="position: absolute; z-index: 2; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; top: clamp(7.5rem, 18vh, 11rem); left: clamp(1.8rem, 6vw, 6rem); right: clamp(1.8rem, 6vw, 6rem); bottom: clamp(3rem, 9vh, 5rem); max-width: none; color: #F8F4ED; pointer-events: none;">
       <span style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.7rem; font-size: 0.84rem; font-weight: 600; letter-spacing: 0.06em; color: rgba(38,35,32,0.6); pointer-events: auto;"><a href="../" style="color: rgba(38,35,32,0.6);" style-hover="color: #8A6B3F;">Процедури</a><span style="display: block; width: 6px; height: 6px; background: #B8934F; transform: rotate(45deg);"></span><span style="color: #8A6B3F;">Интимно здраве</span></span>
-      <div data-hero-tekst="" style="display: flex; flex-direction: column; align-items: flex-start; gap: clamp(1rem, 2.4vh, 1.5rem); margin-top: clamp(1.8rem, 4.5vh, 2.8rem);; max-width: min(34rem, 46vw);">
+      <div data-hero-tekst="" style="display: flex; flex-direction: column; align-items: flex-start; gap: clamp(1rem, 2.4vh, 1.5rem); margin-top: clamp(1.8rem, 4.5vh, 2.8rem);; max-width: min(48rem, 74vw);">
       <span style="display: inline-flex; align-items: center; gap: 0.9rem; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6B3F;"><span style="display: block; width: 2.6rem; height: 2px; background: linear-gradient(90deg, #8A6B3F, rgba(184,147,79,0));"></span>Интимно подмладяване и тазово дъно</span>
       <h1 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 300; font-size: clamp(2.4rem, min(6vw, 7.6vh), 4.6rem); line-height: 1.22; letter-spacing: -0.025em; color: #262320;">Стягане на интимната зона и <em style="font-style: italic; color: #8A6B3F;">тазовото дъно</em></h1>
       <p style="margin: 0; max-width: 100%; font-size: 1.08rem; line-height: 1.72; color: rgba(38,35,32,0.78);">След раждане и при промени, свързани с менопаузата, тонусът на интимната зона и мускулатурата на тазовото дъно може да намалее. Работим с ултразвукова технология и магнитна стимулация, без анестезия и без болка.</p>
@@ -930,9 +930,11 @@ class Component extends DCLogic {
   /* Трансформацията в герото: горе вдясно на голям екран, а на телефон
      влиза в реда между текста и бутоните, точно както е в маркъпа. */
   layoutHeroBa(phone) {
-    const tekst = document.querySelector('[data-hero-tekst]');
-    if (tekst) tekst.style.maxWidth = phone ? 'none' : 'min(34rem, 46vw)';
     const ba = document.querySelector('[data-hero-ba]');
+    const tekst = document.querySelector('[data-hero-tekst]');
+    /* стеснява се само когато вдясно стои кадър. Няма ли го, текстът си
+       взима цялата ширина, иначе стои като изтървана колона в средата. */
+    if (tekst) tekst.style.maxWidth = phone ? 'none' : (ba ? 'min(34rem, 46vw)' : 'min(48rem, 74vw)');
     if (!ba) return;
     if (phone) {
       ba.style.position = 'static';
