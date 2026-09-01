@@ -213,6 +213,20 @@
   }
   .karta-ramka iframe { width: 100%; height: 100%; border: 0; display: block; }
 
+
+  /* Двата салона един до друг: всеки със своя карта и свой бутон за
+     навигация, защото Google вгражда по едно запитване на кадър. */
+  .dva-salona {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 21rem), 1fr));
+    gap: clamp(1.6rem, 3.4vw, 2.6rem); margin-top: clamp(2.2rem, 5vw, 3.2rem);
+  }
+  .dva-salona .karta-ramka { margin-top: 0.85rem; height: clamp(15rem, 34vh, 21rem); }
+  .dva-salona .ime-salon {
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.2em;
+    text-transform: uppercase; color: #8A6B3F;
+  }
+  .dva-salona .adres-salon { display: block; margin-top: 0.9rem; font-size: 1.02rem; color: #262320; }
+
   .karta-butoni { display: flex; flex-wrap: wrap; align-items: center; gap: 0.9rem 1.4rem; margin-top: 1.1rem; }
   /* Отварянето в Google Maps е второстепенно: минава като линк, вместо
      да се състезава по тежест с бутона за навигация до него. */
@@ -317,20 +331,32 @@
 
   <p class="nadslov">Шоурумът и как да го намерите</p>
   <h1>Контакти и <em>локация</em></h1>
-  <p style="margin-top: 1.5rem; max-width: 38rem; font-size: 1.1rem; color: rgba(38,35,32,0.72);">Апаратите стоят на бул. „Свети Наум“ 70А в София и се пробват на живо. Отворете картата, пуснете навигация или се обадете, за да уговорим демонстрация.</p>
+  <p style="margin-top: 1.5rem; max-width: 38rem; font-size: 1.1rem; color: rgba(38,35,32,0.72);">Работим на два адреса в София, а апаратите се пробват на живо в шоурума на бул. „Свети Наум“ 70А. Отворете картата, пуснете навигация или се обадете, за да уговорим демонстрация.</p>
 
-  <div class="karta-ramka">
-    <iframe
-      title="Карта до Denny Divine, бул. Свети Наум 70А, София"
-      src="https://www.google.com/maps?q=%D0%B1%D1%83%D0%BB.%20%D0%A1%D0%B2%D0%B5%D1%82%D0%B8%20%D0%9D%D0%B0%D1%83%D0%BC%2070%D0%90%2C%201421%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F&z=16&hl=bg&output=embed"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      allowfullscreen></iframe>
-  </div>
+  <div class="dva-salona">
+    <div>
+      <span class="ime-salon">Салон „Свети Наум“</span>
+      <div class="karta-ramka">
+        <iframe title="Карта до Denny Divine, бул. „Свети Наум“ 70А, 1421 София" src="https://www.google.com/maps?q=%D0%B1%D1%83%D0%BB.%20%D0%A1%D0%B2%D0%B5%D1%82%D0%B8%20%D0%9D%D0%B0%D1%83%D0%BC%2070%D0%90%2C%201421%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F&z=16&hl=bg&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+      <span class="adres-salon">бул. „Свети Наум“ 70А, 1421 София</span>
+      <div class="karta-butoni">
+        <a data-dd-btn="" href="https://www.google.com/maps/dir/?api=1&destination=%D0%B1%D1%83%D0%BB.%20%D0%A1%D0%B2%D0%B5%D1%82%D0%B8%20%D0%9D%D0%B0%D1%83%D0%BC%2070%D0%90%2C%201421%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F" target="_blank" rel="noopener">Пуснете навигация</a>
+        <a class="vrazka" href="https://www.google.com/maps/search/?api=1&query=Denny%20Divine%20Aesthetic%20Center%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A1%D0%B2%D0%B5%D1%82%D0%B8%20%D0%9D%D0%B0%D1%83%D0%BC%2070%D0%90%2C%201421%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F" target="_blank" rel="noopener">Отворете в Google Maps</a>
+      </div>
+    </div>
 
-  <div class="karta-butoni">
-    <a data-dd-btn="" href="https://www.google.com/maps/dir/?api=1&destination=%D0%B1%D1%83%D0%BB.%20%D0%A1%D0%B2%D0%B5%D1%82%D0%B8%20%D0%9D%D0%B0%D1%83%D0%BC%2070%D0%90%2C%201421%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F" target="_blank" rel="noopener">Пуснете навигация</a>
-    <a class="vrazka" href="https://www.google.com/maps/search/?api=1&query=Denny%20Divine%20Aesthetic%20Center%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A1%D0%B2%D0%B5%D1%82%D0%B8%20%D0%9D%D0%B0%D1%83%D0%BC%2070%D0%90%2C%201421%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F" target="_blank" rel="noopener">Отворете в Google Maps</a>
+    <div>
+      <span class="ime-salon">Салон „Стрелбище“</span>
+      <div class="karta-ramka">
+        <iframe title="Карта до Denny Divine, ж.к. Стрелбище, ул. „Йордан Йовков“ №7, бл. 8, вх. Б, 1408 София" src="https://www.google.com/maps?q=%D1%83%D0%BB.%20%D0%99%D0%BE%D1%80%D0%B4%D0%B0%D0%BD%20%D0%99%D0%BE%D0%B2%D0%BA%D0%BE%D0%B2%207%2C%20%D0%B6.%D0%BA.%20%D0%A1%D1%82%D1%80%D0%B5%D0%BB%D0%B1%D0%B8%D1%89%D0%B5%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F&z=16&hl=bg&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+      <span class="adres-salon">ж.к. Стрелбище, ул. „Йордан Йовков“ №7, бл. 8, вх. Б, 1408 София</span>
+      <div class="karta-butoni">
+        <a data-dd-btn="" href="https://www.google.com/maps/dir/?api=1&destination=%D1%83%D0%BB.%20%D0%99%D0%BE%D1%80%D0%B4%D0%B0%D0%BD%20%D0%99%D0%BE%D0%B2%D0%BA%D0%BE%D0%B2%207%2C%20%D0%B6.%D0%BA.%20%D0%A1%D1%82%D1%80%D0%B5%D0%BB%D0%B1%D0%B8%D1%89%D0%B5%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F" target="_blank" rel="noopener">Пуснете навигация</a>
+        <a class="vrazka" href="https://www.google.com/maps/search/?api=1&query=Denny%20Divine%2C%20%D1%83%D0%BB.%20%D0%99%D0%BE%D1%80%D0%B4%D0%B0%D0%BD%20%D0%99%D0%BE%D0%B2%D0%BA%D0%BE%D0%B2%207%2C%20%D0%B6.%D0%BA.%20%D0%A1%D1%82%D1%80%D0%B5%D0%BB%D0%B1%D0%B8%D1%89%D0%B5%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F" target="_blank" rel="noopener">Отворете в Google Maps</a>
+      </div>
+    </div>
   </div>
 
   <div class="koloni" style="margin-top: clamp(2.4rem, 6vw, 3.6rem);">
@@ -346,7 +372,7 @@
         </div>
         <div class="red">
           <span class="etiket">Адрес</span>
-          <span class="stojnost">бул. „Свети Наум“ 70А, 1421 София</span>
+          <span class="stojnost">бул. „Свети Наум“ 70А, 1421 София<br>ж.к. Стрелбище, ул. „Йордан Йовков“ №7, бл. 8, вх. Б, 1408 София</span>
         </div>
         <div class="red">
           <span class="etiket">Работно време</span>
