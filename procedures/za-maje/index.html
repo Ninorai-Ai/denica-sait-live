@@ -70,14 +70,14 @@
 
   <header id="top" data-hero="" data-screen-label="Херо" style="position: relative; height: 82svh; min-height: 660px; max-height: 840px; overflow: hidden; background: #ECDFCC;">
     <span data-hero-glow="" style="position: absolute; inset: -8%; z-index: 0; background: linear-gradient(128deg, rgba(184,147,79,0.34), transparent 42%, transparent 58%, rgba(184,147,79,0.34)); clip-path: polygon(0% 0%, 100% 0%, 46% 50%, 100% 100%, 0% 100%, 54% 50%); filter: blur(26px); pointer-events: none;"></span>
-    <div data-hero-content="" style="position: absolute; z-index: 2; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; top: clamp(7.5rem, 18vh, 11rem); left: clamp(1.8rem, 6vw, 6rem); right: clamp(1.8rem, 6vw, 6rem); bottom: clamp(3rem, 9vh, 5rem); max-width: none; color: #F8F4ED; pointer-events: none;">
+    <div data-hero-content="" style="position: absolute; z-index: 2; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; top: clamp(7.5rem, 18vh, 11rem); left: clamp(1.8rem, 6vw, 6rem); right: clamp(1.8rem, 6vw, 6rem); bottom: clamp(3rem, 9vh, 5rem); max-width: none; color: #262320; pointer-events: none;">
       <span style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.7rem; font-size: 0.84rem; font-weight: 600; letter-spacing: 0.06em; color: rgba(38,35,32,0.6); pointer-events: auto;"><a href="../" style="color: rgba(38,35,32,0.6);" style-hover="color: #8A6B3F;">Процедури</a><span style="display: block; width: 6px; height: 6px; background: #B8934F; transform: rotate(45deg);"></span><span style="color: #8A6B3F;">За мъже</span></span>
       <div data-hero-tekst="" style="display: flex; flex-direction: column; align-items: flex-start; gap: clamp(1rem, 2.4vh, 1.5rem); margin-top: clamp(1.8rem, 4.5vh, 2.8rem);; max-width: min(34rem, 46vw);">
       <span style="display: inline-flex; align-items: center; gap: 0.9rem; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6B3F;"><span style="display: block; width: 2.6rem; height: 2px; background: linear-gradient(90deg, #8A6B3F, rgba(184,147,79,0));"></span>Процедури за мъже</span>
       <h1 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 300; font-size: clamp(2.4rem, min(6vw, 7.6vh), 4.6rem); line-height: 1.22; letter-spacing: -0.025em; color: #262320;">Пет вида грижа <em style="font-style: italic; color: #8A6B3F;">за мъже</em></h1><p style="margin: 0; max-width: 100%; font-size: 1.08rem; line-height: 1.72; color: rgba(38,35,32,0.78);">Комбинираме лазерна епилация, грижа за кожата, мускулна стимулация и HIFU процедури според зоните и целите ви.</p>
       
       </div>
-      <div data-hero-ba="" style="position: absolute; top: 0; bottom: 0; right: 0; z-index: 2; display: flex; align-items: center; width: min(26rem, 32vw);">
+      <div data-hero-ba="" style="pointer-events: auto; position: absolute; top: 0; bottom: 0; right: 0; z-index: 2; display: flex; align-items: center; width: min(26rem, 32vw);">
         <div data-ba-stage="" style="position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 5px; background: #DCCBB4; cursor: ew-resize; touch-action: none; user-select: none; box-shadow: 0 20px 48px rgba(160,140,125,0.3);">
           <img src="../../assets/img/transformacii/pairs/tesla-korem-01-sled.webp" alt="Коремът и мускулният релеф след процедура в Denny Divine" draggable="false" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; user-select: none; -webkit-user-drag: none;">
           <div data-ba-before="" style="position: absolute; inset: 0; clip-path: inset(0 50% 0 0); opacity: 0.95;">
@@ -1450,6 +1450,7 @@ class Component extends DCLogic {
     if (tekst) tekst.style.maxWidth = phone ? 'none' : (ba ? 'min(34rem, 46vw)' : 'min(48rem, 74vw)');
     if (!ba) return;
     if (phone) {
+      ba.style.pointerEvents = 'auto';
       ba.style.position = 'static';
       ba.style.bottom = 'auto';
       ba.style.display = 'block';
@@ -1460,6 +1461,7 @@ class Component extends DCLogic {
       /* центрирана по височината на текстовата колона. Височината се дава от
          top и bottom, а не от transform: transform-ът тук се пише от анимацията
          на герото и би изял всяко наше преместване. */
+      ba.style.pointerEvents = 'auto';
       ba.style.position = 'absolute';
       ba.style.top = '0';
       ba.style.bottom = '0';

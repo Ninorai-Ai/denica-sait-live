@@ -78,7 +78,7 @@
       <h1 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 300; font-size: clamp(2.4rem, min(6vw, 7.6vh), 4.6rem); line-height: 1.22; letter-spacing: -0.025em; color: #262320;">Изберете <em style="font-style: italic; color: #8A6B3F;">процедура</em></h1>
       <p style="margin: 0; max-width: 100%; font-size: 1.08rem; line-height: 1.72; color: rgba(38,35,32,0.78);">Съвременни технологии за лице и тяло, лазерна епилация, оформяне на силуета и интимна грижа. Неинвазивни решения, създадени за видими резултати и комфорт по време на процедурите.</p>
       </div>
-      <div data-hero-ba="" style="position: absolute; top: 0; bottom: 0; right: 0; z-index: 2; display: flex; align-items: center; width: min(26rem, 32vw);">
+      <div data-hero-ba="" style="pointer-events: auto; position: absolute; top: 0; bottom: 0; right: 0; z-index: 2; display: flex; align-items: center; width: min(26rem, 32vw);">
         <div data-ba-stage="" style="position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 5px; background: #DCCBB4; cursor: ew-resize; touch-action: none; user-select: none; box-shadow: 0 20px 48px rgba(160,140,125,0.3);">
           <img src="../assets/img/transformacii/pairs/lice-01-sled.webp" alt="Кожата около устните след процедура в Denny Divine" draggable="false" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; user-select: none; -webkit-user-drag: none;">
           <div data-ba-before="" style="position: absolute; inset: 0; clip-path: inset(0 50% 0 0); opacity: 0.95;">
@@ -1269,6 +1269,7 @@ class Component extends DCLogic {
     if (tekst) tekst.style.maxWidth = phone ? 'none' : (ba ? 'min(34rem, 46vw)' : 'min(48rem, 74vw)');
     if (!ba) return;
     if (phone) {
+      ba.style.pointerEvents = 'auto';
       ba.style.position = 'static';
       ba.style.bottom = 'auto';
       ba.style.display = 'block';
@@ -1279,6 +1280,7 @@ class Component extends DCLogic {
       /* центрирана по височината на текстовата колона. Височината се дава от
          top и bottom, а не от transform: transform-ът тук се пише от анимацията
          на герото и би изял всяко наше преместване. */
+      ba.style.pointerEvents = 'auto';
       ba.style.position = 'absolute';
       ba.style.top = '0';
       ba.style.bottom = '0';
