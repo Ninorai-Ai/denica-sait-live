@@ -447,6 +447,7 @@
   gap: clamp(1.4rem, 2.6vw, 2.2rem);
   margin-top: clamp(2rem, 4.5vh, 3rem);
 }
+.ekip-karti.dve { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .ekip-karta {
   display: flex; flex-direction: column; background: #FFFFFF;
   border-top: 2px solid #B8934F; border-radius: 5px; overflow: hidden;
@@ -480,5 +481,5 @@
 .ekip-povece:hover { background: #B8934F; color: #F8F4ED; }
 
 @media (max-width: 900px) {
-  .ekip-karti { grid-template-columns: minmax(0, 1fr); }
+  .ekip-karti, .ekip-karti.dve { grid-template-columns: minmax(0, 1fr); }
 }
