@@ -8,7 +8,7 @@
 <link rel="icon" href="../../assets/img/brand/logo-zlato-znak.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:ital,wght@0,400;0,600;0,700;1,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; }
   html { font-size: 19px; scroll-behavior: smooth; }
@@ -26,12 +26,13 @@
   details[open] [data-caret] { transform: translateY(2.8px) rotate(225deg); }
   @media (max-width: 900px) { html { font-size: 18px; } }
 </style>
-<link href="../../assets/css/sait.css?v=5656ae10" rel="stylesheet">
+<link href="../../assets/css/sait.css?v=f7e1fff3" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
 <script src="../../assets/js/image-slot.js"></script>
 <script src="../../assets/js/dc-runtime.js"></script>
+<script src="../../assets/js/otzivi.js" defer></script>
 </head>
 <body>
 <x-dc>
@@ -835,37 +836,282 @@
   </section>
 
 
-  <section id="otzivi" class="otz" data-screen-label="Отзиви">
-    <div class="otz-vatre">
-      <div data-reveal="">
-        <span class="otz-nadpis">Доверие, не обещания</span>
-        <h2>Реални отзиви. <em>Реални</em> резултати.</h2>
-        <p>При нас всичко е проверимо. Отзивите са публични в Google, а всеки апарат идва със сертификат, гаранция и обучение.</p>
-        <ul class="otz-spisak">
-          <li>Работим само със сертифицирани европейски технологии</li>
-          <li>Две години гаранция и безплатна доставка за всеки апарат</li>
-          <li>Обучение и постоянна подкрепа за вашия екип</li>
-          <li>Процедурите се извършват лично от нашите специалисти</li>
-        </ul>
-        <div class="otz-duo">
-          <img src="../../assets/img/hora/otziv-klientka-01.webp" alt="Клиентка на Denny Divine Cosmetology" loading="lazy">
-          <img src="../../assets/img/hora/otziv-klientka-02.webp" alt="Клиентка на Denny Divine Cosmetology" loading="lazy">
-        </div>
+  <section id="otzivi" data-screen-label="Отзиви" style="padding: clamp(3.6rem, 9vh, 6rem) 0; background: #F8F4ED; border-top: 1px solid rgba(184,147,79,0.45); border-bottom: 1px solid rgba(184,147,79,0.45); overflow: hidden;">
+    <div style="max-width: 94rem; margin: 0 auto; padding: 0 clamp(1.8rem, 6vw, 6rem); display: flex; flex-direction: column; gap: 1.1rem;">
+      <span style="display: inline-flex; align-items: center; gap: 0.9rem; font-size: 0.86rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #8A6B3F;"><span style="display: block; width: 2.6rem; height: 2px; background: linear-gradient(90deg, #B8934F, rgba(184,147,79,0));"></span>Отзиви</span>
+      <h2 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 300; font-size: clamp(1.7rem, 5.4vw, 3.1rem); max-width: 40rem;">Лекари, партньори и <em style="font-style: italic; color: #8A6B3F;">клиенти, които се връщат.</em></h2>
+      <div style="display: flex; align-items: center; gap: 0.8rem; margin-top: 0.4rem;">
+        <button type="button" aria-label="Предишен отзив" data-otz-prev="" style="width: 46px; height: 46px; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-size: 1.1rem; cursor: pointer;" style-hover="background: #B8934F; color: #F8F4ED;">‹</button>
+        <button type="button" aria-label="Следващ отзив" data-otz-next="" style="width: 46px; height: 46px; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-size: 1.1rem; cursor: pointer;" style-hover="background: #B8934F; color: #F8F4ED;">›</button>
+        <span style="font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: #A08C7D;">16 отзива</span>
       </div>
-      <div class="otz-stek" data-reveal="">
-        <figure class="otz-karta">
-          <blockquote>„HIFU технологията промени живота ми и ме накара да се чувствам страхотно. Горещо препоръчвам. Тук, в Дубай, жените знаят каква технология да изберат за най-добрия си външен вид.“</blockquote>
-          <figcaption><img src="../../assets/img/hora/otziv-gabriela-todorova.webp" alt="Габриела Тодорова" loading="lazy"><div><b>Габриела Тодорова</b><span>Клиент · Дубай</span></div></figcaption>
-        </figure>
-        <figure class="otz-karta">
-          <blockquote>„Бизнес сътрудничеството с Дени е просто, коректно и професионално. Работим с голямо взаимно доверие и уважение, като партньори в продажбата на HIFU апаратура.“</blockquote>
-          <figcaption><img src="../../assets/img/hora/otziv-kvantum-hifu.webp" alt="Kvantum HIFU by Denny Divine" loading="lazy"><div><b>Kvantum HIFU by Denny Divine</b><span>Партньорски салон · Загреб, Хърватия</span></div></figcaption>
-        </figure>
-        <div class="otz-red">
-          <span>Сред доверилите се на центъра:</span>
-          <div><span class="otz-znak">МК</span><b>Д-р Момчил Керменджиев</b> · хирург, УМБАЛ „Александровска“</div>
-          <div><img src="../../assets/img/hora/otziv-diana-dafova.webp" alt="Диана Дафова" loading="lazy"><b>Диана Дафова</b> · певица и композитор</div>
-        </div>
+    </div>
+
+    <div data-otz-rail="" style="margin-top: clamp(2rem, 4vw, 3rem); padding: 0 clamp(1.8rem, 6vw, 6rem); overflow-x: auto; overflow-y: hidden; scrollbar-width: none; cursor: grab; touch-action: pan-x;">
+      <div data-otz-track="" style="display: flex; align-items: flex-start; gap: 1.5rem; width: max-content;">
+
+        <article data-otz-card="" style="flex: 0 0 min(86vw, 25rem); background: #ECDFCC; border-top: 2px solid #D8BE93; border-radius: 5px; padding: 1.5rem 1.6rem 1.4rem; display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.9rem;">
+            <img src="../../assets/img/otzivi/diana-dafova.webp" alt="Диана Дафова" loading="lazy" decoding="async" style="width: 68px; height: 68px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid #D8BE93;">
+            <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+              <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.4rem; line-height: 1.1;">Диана Дафова</span>
+              <span style="font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8A6B3F;">Певица, композитор и продуцент</span>
+            </div>
+          </div>
+          <div data-otz-body="" style="position: relative; max-height: 11rem; overflow: hidden;">
+            <p style="font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Отличаваща се винаги с елегантно и достолепно излъчване, Диана избра да запази своята хубост и младост чрез процедури HIFU, защото това е неинвазивна терапевтична технология, която помага за събуждане на собствените ресурси на тялото с постигане на пълно удовлетворение от резултата.</p>
+            <p style="margin-top: 0.7rem; font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Музиката й е изпълнявана и разпространена в 25 държави на 4 континента, а текстовете включват 17 езика. Песента й „Аадия“ е селекционирана от НАСА за трансмисия в Космоса със совалката Колумбия. Диана Дафова е носител и на престижната награда „Златно Реми“ за концерта й в Лас Вегас.</p>
+            <div data-otz-fade="" style="position: absolute; left: 0; right: 0; bottom: 0; height: 3.4rem; background: linear-gradient(180deg, rgba(236,223,204,0), #ECDFCC 78%);"></div>
+          </div>
+          <button data-otz-more="" type="button" style="align-self: flex-start; padding: 0.55rem 1.1rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;" style-hover="background: #B8934F; color: #F8F4ED;">Прочети повече</button>
+        </article>
+
+        <article data-otz-card="" style="flex: 0 0 min(86vw, 25rem); background: #ECDFCC; border-top: 2px solid #D8BE93; border-radius: 5px; padding: 1.5rem 1.6rem 1.4rem; display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.9rem;">
+            <img src="../../assets/img/otzivi/veronika-cankova-kermedchieva.webp" alt="Д-р Вероника Цанкова, Кермедчиева" loading="lazy" decoding="async" style="width: 68px; height: 68px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid #D8BE93;">
+            <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+              <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.4rem; line-height: 1.1;">Д-р Вероника Цанкова</span>
+              <span style="font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8A6B3F;">Очен лекар</span>
+            </div>
+          </div>
+          <div data-otz-body="" style="position: relative; max-height: 11rem; overflow: hidden;">
+            <p style="font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">„HIFU е доказана съвременна неинвазивна техника, базирана на използването на ултразвукови вълни и използвана за неоперативен лифтинг на лице и тяло със страхотни резултати, видими още след първата процедура.</p>
+            <p style="margin-top: 0.7rem; font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Ултразвуковите вълни се използват за диагностика в медицината от дълги години, а като терапевтична процедура в естетичната медицина се развиват с големи успехи през последните години. Единствените странични реакции, доказани от проведените до момента клинични проучвания, са краткотраен едем и зачервяване на обработената зона, и то не при всички пациенти. Препоръчвам този метод, тъй като на първо място той е безвреден, а ефектът от него е мигновенен.“</p>
+            <div data-otz-fade="" style="position: absolute; left: 0; right: 0; bottom: 0; height: 3.4rem; background: linear-gradient(180deg, rgba(236,223,204,0), #ECDFCC 78%);"></div>
+          </div>
+          <button data-otz-more="" type="button" style="align-self: flex-start; padding: 0.55rem 1.1rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;" style-hover="background: #B8934F; color: #F8F4ED;">Прочети повече</button>
+        </article>
+
+        <article data-otz-card="" style="flex: 0 0 min(86vw, 25rem); background: #ECDFCC; border-top: 2px solid #D8BE93; border-radius: 5px; padding: 1.5rem 1.6rem 1.4rem; display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.9rem;">
+            <img src="../../assets/img/otzivi/momchil-kermendzhiev.webp" alt="Д-р Момчил Керменджиев" loading="lazy" decoding="async" style="width: 68px; height: 68px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid #D8BE93;">
+            <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+              <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.4rem; line-height: 1.1;">Д-р Момчил Керменджиев</span>
+              <span style="font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8A6B3F;">Хирург, УБ „Александровска“</span>
+            </div>
+          </div>
+          <div data-otz-body="" style="position: relative; max-height: 11rem; overflow: hidden;">
+            <p style="font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">„Хайфу апаратурата е съвременно средство на медицината. 7Д HIFU Ultraformer показва иновация в естетичните процедури и дава възможност за сигурен и безопасен резултат на пациента!“</p>
+            <p style="margin-top: 0.7rem; font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Хирург, част от екипа на Университетска болница „Александровска“. Специализирал в Германия. Работил по in vitro научни проекти към Институт по Невробиология на БАН. Участва в научен екип от Института по Електроника в разработването на апаратура за ранна диагностика на кожни и гастроинтестинални тумори.</p>
+            <div data-otz-fade="" style="position: absolute; left: 0; right: 0; bottom: 0; height: 3.4rem; background: linear-gradient(180deg, rgba(236,223,204,0), #ECDFCC 78%);"></div>
+          </div>
+          <button data-otz-more="" type="button" style="align-self: flex-start; padding: 0.55rem 1.1rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;" style-hover="background: #B8934F; color: #F8F4ED;">Прочети повече</button>
+        </article>
+
+        <article data-otz-card="" style="flex: 0 0 min(86vw, 25rem); background: #ECDFCC; border-top: 2px solid #D8BE93; border-radius: 5px; padding: 1.5rem 1.6rem 1.4rem; display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.9rem;">
+            <img src="../../assets/img/otzivi/gabriela-todorova.webp" alt="Габриела Тодорова" loading="lazy" decoding="async" style="width: 68px; height: 68px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid #D8BE93;">
+            <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+              <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.4rem; line-height: 1.1;">Габриела Тодорова</span>
+              <span style="font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8A6B3F;">Собственик на фирма за имоти, Дубай</span>
+            </div>
+          </div>
+          <div data-otz-body="" style="position: relative; max-height: 11rem; overflow: hidden;">
+            <p style="font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Казвам се Габриела Тодорова. Аз съм собственик на фирма за недвижими имоти в Дубай през последните 10 години. HIFU технологията промени живота ми и ме накара да се чувствам страхотно и с настроение.</p>
+            <p style="margin-top: 0.7rem; font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Горещо препоръчвам. Тук в Дубай жените знаят каква технология да изберат за най-добрия си външен вид!</p>
+            <div data-otz-fade="" style="position: absolute; left: 0; right: 0; bottom: 0; height: 3.4rem; background: linear-gradient(180deg, rgba(236,223,204,0), #ECDFCC 78%);"></div>
+          </div>
+          <button data-otz-more="" type="button" style="align-self: flex-start; padding: 0.55rem 1.1rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;" style-hover="background: #B8934F; color: #F8F4ED;">Прочети повече</button>
+        </article>
+
+        <article data-otz-card="" style="flex: 0 0 min(86vw, 25rem); background: #ECDFCC; border-top: 2px solid #D8BE93; border-radius: 5px; padding: 1.5rem 1.6rem 1.4rem; display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.9rem;">
+            <img src="../../assets/img/otzivi/slavko-matanovic.webp" alt="Славко Матанович" loading="lazy" decoding="async" style="width: 68px; height: 68px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid #D8BE93;">
+            <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+              <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.4rem; line-height: 1.1;">Славко Матанович</span>
+              <span style="font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8A6B3F;">Биотерапевт</span>
+            </div>
+          </div>
+          <div data-otz-body="" style="position: relative; max-height: 11rem; overflow: hidden;">
+            <p style="font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Имах голяма чест и удоволствие да изпробвам Hifu by Denny Divine процедури за красота, подмладяване и други ползи за здравето. Прекрасно преживяване и очевидни промени към по-добро, благодарение на сигурността и професионализма, които са олицетворение на Деница Войнова.</p>
+            <p style="margin-top: 0.7rem; font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Единият резултат е мигновен и почти невероятен. Виждате лицето си преди и след третиране с тази прекрасна технология, на най-високо и модерно ниво. Хората на моята възраст над 55 години са много доволни от промяната, която е ясно видима след лечението.</p>
+            <p style="margin-top: 0.7rem; font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Деница е чудотворец във всеки случай, когато става въпрос за енергия и технологии. Огромни благодарности от мен за Деница, програмата и екипа на HiFu by Denny Divine. Душата и тялото се наслаждават на тази процедура!</p>
+            <div data-otz-fade="" style="position: absolute; left: 0; right: 0; bottom: 0; height: 3.4rem; background: linear-gradient(180deg, rgba(236,223,204,0), #ECDFCC 78%);"></div>
+          </div>
+          <button data-otz-more="" type="button" style="align-self: flex-start; padding: 0.55rem 1.1rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;" style-hover="background: #B8934F; color: #F8F4ED;">Прочети повече</button>
+        </article>
+
+        <article data-otz-card="" style="flex: 0 0 min(86vw, 25rem); background: #ECDFCC; border-top: 2px solid #D8BE93; border-radius: 5px; padding: 1.5rem 1.6rem 1.4rem; display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.9rem;">
+            <img src="../../assets/img/otzivi/petrya-edlinger-zecher.webp" alt="Д-р Петя Едлингер-Зехер" loading="lazy" decoding="async" style="width: 68px; height: 68px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid #D8BE93;">
+            <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+              <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.4rem; line-height: 1.1;">Д-р Петя Едлингер-Зехер</span>
+              <span style="font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8A6B3F;">Юридически съветник</span>
+            </div>
+          </div>
+          <div data-otz-body="" style="position: relative; max-height: 11rem; overflow: hidden;">
+            <p style="font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Познавам Деница от малка. Наистина ценя нейния професионализъм и знания, страст, амбиция и личност! Когато исках да ми бъде направена първа истинска грижа за лицето, отидох при нея, защото й имах доверие.</p>
+            <p style="margin-top: 0.7rem; font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">След две процедури за лице с HIFU, почувствах лицето и кожата си много по-свежи и стегнати само след няколко дни, малките бръчици изчезнаха, а кожата беше като обновена. Не е чудотворна терапия и не е изглаждаща ютия, но прави кожата жизнена, мека, сияйна и свежа.</p>
+            <p style="margin-top: 0.7rem; font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Със сигурност бих повторила лечението с HIFU апарата и то само при Дени, защото й вярвам и съм много доволна от резултатите до момента!</p>
+            <div data-otz-fade="" style="position: absolute; left: 0; right: 0; bottom: 0; height: 3.4rem; background: linear-gradient(180deg, rgba(236,223,204,0), #ECDFCC 78%);"></div>
+          </div>
+          <button data-otz-more="" type="button" style="align-self: flex-start; padding: 0.55rem 1.1rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;" style-hover="background: #B8934F; color: #F8F4ED;">Прочети повече</button>
+        </article>
+
+        <article data-otz-card="" style="flex: 0 0 min(86vw, 25rem); background: #ECDFCC; border-top: 2px solid #D8BE93; border-radius: 5px; padding: 1.5rem 1.6rem 1.4rem; display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.9rem;">
+            <img src="../../assets/img/otzivi/rada-tisheleva.webp" alt="Рада Тишелова, Оура Лов" loading="lazy" decoding="async" style="width: 68px; height: 68px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid #D8BE93;">
+            <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+              <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.4rem; line-height: 1.1;">Рада Тишелова, Оура Лов</span>
+              <span style="font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8A6B3F;">Писател</span>
+            </div>
+          </div>
+          <div data-otz-body="" style="position: relative; max-height: 11rem; overflow: hidden;">
+            <p style="font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Искам да благодаря на Дени за високия професионализъм и вниманието, с което ме обгрижва, и да изразя искреното си възхищение за невероятния резултат от подмладяващата процедура с Hifu by Denny Divine.</p>
+            <p style="margin-top: 0.7rem; font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Още след първата сесия усетих разлика, кожата ми стана по-стегната, сияйна и освежена. Процедурата беше напълно безболезнена и комфортна, а модерната апаратура спестява пари за скъпи операции със същия ефект.</p>
+            <p style="margin-top: 0.7rem; font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Всяка стъпка беше обяснена подробно, а грижата, която получих, ме накара да се връщам отново и отново. Препоръчвам горещо на всеки, който иска да поддържа кожата си здрава, млада и красива!</p>
+            <div data-otz-fade="" style="position: absolute; left: 0; right: 0; bottom: 0; height: 3.4rem; background: linear-gradient(180deg, rgba(236,223,204,0), #ECDFCC 78%);"></div>
+          </div>
+          <button data-otz-more="" type="button" style="align-self: flex-start; padding: 0.55rem 1.1rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;" style-hover="background: #B8934F; color: #F8F4ED;">Прочети повече</button>
+        </article>
+
+        <article data-otz-card="" style="flex: 0 0 min(86vw, 25rem); background: #ECDFCC; border-top: 2px solid #D8BE93; border-radius: 5px; padding: 1.5rem 1.6rem 1.4rem; display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.9rem;">
+            <img src="../../assets/img/otzivi/desislava-trifonova-foxy-eyes.webp" alt="Десислава Трифонова" loading="lazy" decoding="async" style="width: 68px; height: 68px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid #D8BE93;">
+            <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+              <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.4rem; line-height: 1.1;">Десислава Трифонова</span>
+              <span style="font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8A6B3F;">Клиентка, Foxy eyes</span>
+            </div>
+          </div>
+          <div data-otz-body="" style="position: relative; max-height: 11rem; overflow: hidden;">
+            <p style="font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">„Останах изключително доволна от процедурата HIFU by Denny Divine. Още след първата сесия кожата ми изглеждаше по-стегната и свежа, а резултатите след Foxy eyes са впечатляващи.</p>
+            <p style="margin-top: 0.7rem; font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Клепачът ми е повдигнат, веждите са лифтирани, а окото ми изглежда по-отворено. Процедурата беше комфортна. Видях голямо подобрение в контура на лицето си и цялостно подмладен вид, точно това търсех, и го открих тук! Определено ще се върна за още процедури!“</p>
+            <div data-otz-fade="" style="position: absolute; left: 0; right: 0; bottom: 0; height: 3.4rem; background: linear-gradient(180deg, rgba(236,223,204,0), #ECDFCC 78%);"></div>
+          </div>
+          <button data-otz-more="" type="button" style="align-self: flex-start; padding: 0.55rem 1.1rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;" style-hover="background: #B8934F; color: #F8F4ED;">Прочети повече</button>
+        </article>
+
+        <article data-otz-card="" style="flex: 0 0 min(86vw, 25rem); background: #ECDFCC; border-top: 2px solid #D8BE93; border-radius: 5px; padding: 1.5rem 1.6rem 1.4rem; display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.9rem;">
+            <img src="../../assets/img/otzivi/ana-keglovic-horvat.webp" alt="Ана Кеглович Хорват" loading="lazy" decoding="async" style="width: 68px; height: 68px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid #D8BE93;">
+            <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+              <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.4rem; line-height: 1.1;">Ана Кеглович Хорват</span>
+              <span style="font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8A6B3F;">Салон Kvantum HIFU, Загреб</span>
+            </div>
+          </div>
+          <div data-otz-body="" style="position: relative; max-height: 11rem; overflow: hidden;">
+            <p style="font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Бизнес сътрудничеството с Дени е много просто, коректно и професионално. С Denny работим спокойно и с голямо взаимно доверие и уважение като партньори в продажбата и разпространението на HIFU апаратура.</p>
+            <p style="margin-top: 0.7rem; font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Нейният добре разработен бизнес модел и обучение ни насърчиха да купим най-добрия апарат, който се предлага, HIFU Ultraformer 7D, и да отворим HIFU център в Хърватия. Резултатите, които постигнахме, са изключително качествени, а клиентите са много доволни.</p>
+            <p style="margin-top: 0.7rem; font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Деница Войнова е много коректен бизнес сътрудник, винаги готова да помогне, пълна с чудесни идеи и превъзходни познания за работа с HIFU устройства.</p>
+            <div data-otz-fade="" style="position: absolute; left: 0; right: 0; bottom: 0; height: 3.4rem; background: linear-gradient(180deg, rgba(236,223,204,0), #ECDFCC 78%);"></div>
+          </div>
+          <button data-otz-more="" type="button" style="align-self: flex-start; padding: 0.55rem 1.1rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;" style-hover="background: #B8934F; color: #F8F4ED;">Прочети повече</button>
+        </article>
+
+        <article data-otz-card="" style="flex: 0 0 min(86vw, 25rem); background: #ECDFCC; border-top: 2px solid #D8BE93; border-radius: 5px; padding: 1.5rem 1.6rem 1.4rem; display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.9rem;">
+            <img src="../../assets/img/otzivi/nadya-aleksieva-pancheva.webp" alt="Надя Алексиева-Панчева" loading="lazy" decoding="async" style="width: 68px; height: 68px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid #D8BE93;">
+            <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+              <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.4rem; line-height: 1.1;">Надя Алексиева-Панчева</span>
+              <span style="font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8A6B3F;">Миглопластика и микропигментация</span>
+            </div>
+          </div>
+          <div data-otz-body="" style="position: relative; max-height: 11rem; overflow: hidden;">
+            <p style="font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">„Имах възможност в продължение на години да работя и наблюдавам резултатите от работата на HIFU апаратурата и смело мога да кажа, че са впечатляващи и приложими за абсолютно всички зони на тялото и лицето.</p>
+            <p style="margin-top: 0.7rem; font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">От 2 години работя със собствен апарат и резултатите са впечатляващи и трайни. Това кара и клиентите ми да се връщат, както и да препоръчват услугите ми на свои близки и приятели. Деница Войнова е човек, който се е наложил на пазара, като коректен и сигурен партньор, на когото може да се разчита.“</p>
+            <div data-otz-fade="" style="position: absolute; left: 0; right: 0; bottom: 0; height: 3.4rem; background: linear-gradient(180deg, rgba(236,223,204,0), #ECDFCC 78%);"></div>
+          </div>
+          <button data-otz-more="" type="button" style="align-self: flex-start; padding: 0.55rem 1.1rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;" style-hover="background: #B8934F; color: #F8F4ED;">Прочети повече</button>
+        </article>
+
+        <article data-otz-card="" style="flex: 0 0 min(86vw, 25rem); background: #ECDFCC; border-top: 2px solid #D8BE93; border-radius: 5px; padding: 1.5rem 1.6rem 1.4rem; display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.9rem;">
+            <img src="../../assets/img/otzivi/mariana-nikolova-mani.webp" alt="Мариана Николова, Мани" loading="lazy" decoding="async" style="width: 68px; height: 68px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid #D8BE93;">
+            <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+              <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.4rem; line-height: 1.1;">Мариана Николова, Мани</span>
+              <span style="font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8A6B3F;">Мануален терапевт, HIFU 7D</span>
+            </div>
+          </div>
+          <div data-otz-body="" style="position: relative; max-height: 11rem; overflow: hidden;">
+            <p style="font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">„Работя в салон за красота като мануален терапевт повече от 20 години, но през 2024 г. закупих апарат HIFU 7D неоперативен SMAS лифтинг.</p>
+            <p style="margin-top: 0.7rem; font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">С Деница Войнова ме кръщна съдбата в точното време, за да се запозная с този вълшебен апарат, който първо промени удивително мен и моето тяло. За 9 месеца постигнахме уникални резултати, видимо по-стегната и гладка кожа, както и доста свалени сантиметри от трудни за мануални техники места. Аз като жена на почти 55 години, по-хубава и гладка кожа не съм имала от младини.</p>
+            <p style="margin-top: 0.7rem; font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Denny Divine е бранд, с който работим успешно в посока красота и естетика. Щастлива съм, че имам честта да работя с партньори, които ценят красотата, добрите намерения и резултати.“</p>
+            <div data-otz-fade="" style="position: absolute; left: 0; right: 0; bottom: 0; height: 3.4rem; background: linear-gradient(180deg, rgba(236,223,204,0), #ECDFCC 78%);"></div>
+          </div>
+          <button data-otz-more="" type="button" style="align-self: flex-start; padding: 0.55rem 1.1rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;" style-hover="background: #B8934F; color: #F8F4ED;">Прочети повече</button>
+        </article>
+
+        <article data-otz-card="" style="flex: 0 0 min(86vw, 25rem); background: #ECDFCC; border-top: 2px solid #D8BE93; border-radius: 5px; padding: 1.5rem 1.6rem 1.4rem; display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.9rem;">
+            <img src="../../assets/img/otzivi/nina-gizdova.webp" alt="Нина Гиздова" loading="lazy" decoding="async" style="width: 68px; height: 68px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid #D8BE93;">
+            <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+              <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.4rem; line-height: 1.1;">Нина Гиздова</span>
+              <span style="font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8A6B3F;">Козметик, Самоков</span>
+            </div>
+          </div>
+          <div data-otz-body="" style="position: relative; max-height: 11rem; overflow: hidden;">
+            <p style="font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Резултатите след HIFU са невероятни. Забелязват се дори и след първата процедура.</p>
+            <p style="margin-top: 0.7rem; font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Закупих апарата от Деница Войнова и тя ми направи страхотно обучение. Дени е коректна и страхотен професионалист в професията си и съм в процес да закупя още апаратура от нея.</p>
+            <div data-otz-fade="" style="position: absolute; left: 0; right: 0; bottom: 0; height: 3.4rem; background: linear-gradient(180deg, rgba(236,223,204,0), #ECDFCC 78%);"></div>
+          </div>
+          <button data-otz-more="" type="button" style="align-self: flex-start; padding: 0.55rem 1.1rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;" style-hover="background: #B8934F; color: #F8F4ED;">Прочети повече</button>
+        </article>
+
+        <article data-otz-card="" style="flex: 0 0 min(86vw, 25rem); background: #ECDFCC; border-top: 2px solid #D8BE93; border-radius: 5px; padding: 1.5rem 1.6rem 1.4rem; display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.9rem;">
+            <img src="../../assets/img/otzivi/neli-baeva.webp" alt="Нели Баева" loading="lazy" decoding="async" style="width: 68px; height: 68px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid #D8BE93;">
+            <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+              <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.4rem; line-height: 1.1;">Нели Баева</span>
+              <span style="font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8A6B3F;">Козметик, Бургас</span>
+            </div>
+          </div>
+          <div data-otz-body="" style="position: relative; max-height: 11rem; overflow: hidden;">
+            <p style="font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Работя като козметик от 30 г. Като през тези години не съм спирала да надграждам.</p>
+            <p style="margin-top: 0.7rem; font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">С Hifu by Denny Divine работя от 4 г. Обучавала съм се при най-добрият професионалист на HIFU за България, Деница Войнова. В момента работя с 5D и 7D HIFU.</p>
+            <div data-otz-fade="" style="position: absolute; left: 0; right: 0; bottom: 0; height: 3.4rem; background: linear-gradient(180deg, rgba(236,223,204,0), #ECDFCC 78%);"></div>
+          </div>
+          <button data-otz-more="" type="button" style="align-self: flex-start; padding: 0.55rem 1.1rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;" style-hover="background: #B8934F; color: #F8F4ED;">Прочети повече</button>
+        </article>
+
+        <article data-otz-card="" style="flex: 0 0 min(86vw, 25rem); background: #ECDFCC; border-top: 2px solid #D8BE93; border-radius: 5px; padding: 1.5rem 1.6rem 1.4rem; display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.9rem;">
+            <img src="../../assets/img/otzivi/zhenya-zhelyazkova.webp" alt="Женя Желязкова" loading="lazy" decoding="async" style="width: 68px; height: 68px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid #D8BE93;">
+            <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+              <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.4rem; line-height: 1.1;">Женя Желязкова</span>
+              <span style="font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8A6B3F;">Студио EstetiCo, Хасково</span>
+            </div>
+          </div>
+          <div data-otz-body="" style="position: relative; max-height: 11rem; overflow: hidden;">
+            <p style="font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Работя в момента с най-добрите апарати в България закупени от Hifu by Denny Divine.</p>
+            <p style="margin-top: 0.7rem; font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Мой ментор е Деница Войнова, най-доброто обучение, което съм получавала!</p>
+            <div data-otz-fade="" style="position: absolute; left: 0; right: 0; bottom: 0; height: 3.4rem; background: linear-gradient(180deg, rgba(236,223,204,0), #ECDFCC 78%);"></div>
+          </div>
+          <button data-otz-more="" type="button" style="align-self: flex-start; padding: 0.55rem 1.1rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;" style-hover="background: #B8934F; color: #F8F4ED;">Прочети повече</button>
+        </article>
+
+        <article data-otz-card="" style="flex: 0 0 min(86vw, 25rem); background: #ECDFCC; border-top: 2px solid #D8BE93; border-radius: 5px; padding: 1.5rem 1.6rem 1.4rem; display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.9rem;">
+            <img src="../../assets/img/otzivi/martina-dimitrijevic.webp" alt="Мартина Димитриевич" loading="lazy" decoding="async" style="width: 68px; height: 68px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid #D8BE93;">
+            <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+              <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.4rem; line-height: 1.1;">Мартина Димитриевич</span>
+              <span style="font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8A6B3F;">Партньор, обучение с 7D Ultraformer</span>
+            </div>
+          </div>
+          <div data-otz-body="" style="position: relative; max-height: 11rem; overflow: hidden;">
+            <p style="font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Моя Дени, ти си най-добрият учител, който съм имал в живота си. Независимо от езиковите бариери, ти си винаги там и винаги ми обясняваш всичко.</p>
+            <p style="margin-top: 0.7rem; font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Благодарна съм и съм щастлива, че те имам и че се уча от теб.</p>
+            <div data-otz-fade="" style="position: absolute; left: 0; right: 0; bottom: 0; height: 3.4rem; background: linear-gradient(180deg, rgba(236,223,204,0), #ECDFCC 78%);"></div>
+          </div>
+          <button data-otz-more="" type="button" style="align-self: flex-start; padding: 0.55rem 1.1rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;" style-hover="background: #B8934F; color: #F8F4ED;">Прочети повече</button>
+        </article>
+
+        <article data-otz-card="" style="flex: 0 0 min(86vw, 25rem); background: #ECDFCC; border-top: 2px solid #D8BE93; border-radius: 5px; padding: 1.5rem 1.6rem 1.4rem; display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.9rem;">
+            <img src="../../assets/img/otzivi/salon-viktoria-mira.webp" alt="Салон Виктория-Мира, Хасково" loading="lazy" decoding="async" style="width: 68px; height: 68px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid #D8BE93;">
+            <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+              <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.4rem; line-height: 1.1;">Салон Виктория-Мира</span>
+              <span style="font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8A6B3F;">Хасково, 5D HIFU и Estella laser</span>
+            </div>
+          </div>
+          <div data-otz-body="" style="position: relative; max-height: 11rem; overflow: hidden;">
+            <p style="font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">„Изключително съм доволна от резултатите с новите ми апаратури взети от Дени Войнова. С 5D HIFU постигам невероятни резултати за лифтинг на лице, шия и деколте, а също и за стопяване на мазнини и стягане на отпусната кожа по тялото.</p>
+            <p style="margin-top: 0.7rem; font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">Клиентките ми са доволни и ми пращат нови клиенти, което говори добре за работата ми и успеха на апаратурата. А с Estella laser затворих кръга си на работа, защото ми позволява да премахвам стар пигмент от вежди или очна линия и да правя нова микропигментация.</p>
+            <p style="margin-top: 0.7rem; font-size: 0.95rem; line-height: 1.7; color: #3B2C21;">С две думи: не съжалявам за тази инвестиция, понеже ми помага да се развивам, да съм полезна за клиентите си и за себе си. Благодаря ти, Дени.“</p>
+            <div data-otz-fade="" style="position: absolute; left: 0; right: 0; bottom: 0; height: 3.4rem; background: linear-gradient(180deg, rgba(236,223,204,0), #ECDFCC 78%);"></div>
+          </div>
+          <button data-otz-more="" type="button" style="align-self: flex-start; padding: 0.55rem 1.1rem; border: 1px solid #B8934F; border-radius: 5px; background: transparent; color: #3B2C21; font-family: inherit; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;" style-hover="background: #B8934F; color: #F8F4ED;">Прочети повече</button>
+        </article>
+
       </div>
     </div>
   </section>

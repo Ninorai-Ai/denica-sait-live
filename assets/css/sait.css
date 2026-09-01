@@ -430,69 +430,8 @@
 
 
 /* ── Отзиви ─────────────────────────────────────────────────────────
-   Пренесена дословно от мокъпа `hifubg-site-v2`, секцията `.proof`.
-   Мерките са в пиксели, защото мокъпът стои на корен 16px, а сайтът
-   на 19px: в rem същите числа щяха да пораснат с една пета.
-   Представката otz- пази класовете от сблъсък с останалото. */
-.otz {
-  display: flex; align-items: center;
-  padding: 8vh clamp(22.4px, 5vw, 80px);
-  background: #F9BBA1; color: #2B2B2B;
-  font-family: "Inter", "Manrope", "Segoe UI", sans-serif;
-  font-size: 17px; line-height: 1.6;
-}
-.otz-vatre {
-  max-width: 1536px; margin: 0 auto; width: 100%;
-  display: grid; grid-template-columns: 1fr 1.1fr;
-  gap: clamp(32px, 6vw, 96px); align-items: center;
-}
-.otz-nadpis {
-  display: inline-flex; align-items: center; gap: 14.4px;
-  font-style: italic; font-size: 16.8px; letter-spacing: .04em;
-  font-weight: 600; color: #2B2B2B;
-}
-.otz-nadpis::before {
-  content: ""; width: 38.4px; height: 1px; flex: none;
-  background: linear-gradient(90deg, #2B2B2B, transparent);
-}
-.otz h2 {
-  font-size: clamp(33.6px, 4vw, 54.4px); margin: 16px 0 22.4px;
-  font-weight: 600; letter-spacing: -.025em; line-height: 1.08;
-}
-.otz h2 em { font-style: italic; color: #FFFFFF; }
-.otz p { max-width: 480px; margin: 0; font-weight: 400; color: rgba(43,43,43,.78); }
-.otz-spisak { margin: 32px 0 0; padding: 0; list-style: none; }
-.otz-spisak li {
-  display: flex; gap: 16px; padding: 15.2px 0; font-size: 15.2px;
-  border-top: 1px solid rgba(43,43,43,.22);
-}
-.otz-spisak li:last-child { border-bottom: 1px solid rgba(43,43,43,.22); }
-.otz-spisak li::before { content: "\2014"; color: #2B2B2B; font-weight: 700; }
-.otz-duo {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 19.2px;
-  margin-top: 38.4px; max-width: 480px;
-}
-.otz-duo img {
-  display: block; width: 100%; border-radius: 10px;
-  box-shadow: 0 16px 40px rgba(43,43,43,.16);
-}
-.otz-duo img:last-child { transform: translateY(20.8px); }
-.otz-stek { display: grid; gap: 19.2px; }
-.otz-karta {
-  margin: 0; padding: 25.6px 28.8px; background: #FFFFFF; border-radius: 10px;
-  box-shadow: 0 16px 40px rgba(43,43,43,.16);
-}
-.otz-karta blockquote { margin: 0; font-weight: 600; font-size: 20px; line-height: 1.45; color: #2B2B2B; }
-.otz-karta figcaption { display: flex; align-items: center; gap: 14.4px; margin-top: 17.6px; }
-.otz-karta figcaption img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; }
-.otz-karta figcaption b { display: block; font-size: 14.7px; }
-.otz-karta figcaption span { font-size: 12.5px; color: rgba(43,43,43,.42); }
-.otz-red { display: grid; gap: 8px; padding: 6.4px 3.2px 0; font-size: 13.6px; color: rgba(43,43,43,.75); }
-.otz-red div { display: flex; align-items: center; gap: 9.6px; }
-.otz-red img { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; }
-.otz-znak {
-  display: inline-flex; align-items: center; justify-content: center; flex: none;
-  width: 30px; height: 30px; border-radius: 50%; background: #E09943; color: #FFFFFF;
-  font-size: 9.9px; font-weight: 700; letter-spacing: .02em;
-}
-@media (max-width: 900px) { .otz-vatre { grid-template-columns: 1fr; } }
+   Релсата с отзивите, пренесена от `Отзиви секция.dc.html`. Оттам идва
+   и този ред: лентата се влачи с мишка, затова браузърната лента за
+   скрол само шуми под нея. */
+[data-otz-rail] { scrollbar-width: none; }
+[data-otz-rail]::-webkit-scrollbar { display: none; }
