@@ -442,7 +442,8 @@
    името и началото на текста. Разтворите са широки и се застъпват,
    тези стоят събрани, за да има контраст между двете. */
 .ekip-karti {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 19.5rem));
+  justify-content: start;
   gap: clamp(1.4rem, 2.6vw, 2.2rem);
   margin-top: clamp(2rem, 4.5vh, 3rem);
 }
