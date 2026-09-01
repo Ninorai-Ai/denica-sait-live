@@ -1336,8 +1336,6 @@ class Component extends DCLogic {
       content.style.maxWidth = 'none';
       /* трансформацията ляга в реда: между текста и двата бутона */
       this.layoutHeroBa(true);
-      const h1 = content.querySelector('h1');
-      if (h1) h1.style.fontSize = '2.15rem';
       cta.style.flexDirection = 'column'; cta.style.alignItems = 'stretch'; cta.style.width = '100%';
       cta.style.marginTop = '2.2rem'; cta.style.rowGap = '1.4rem';
       if (btn) { btn.style.width = '100%'; btn.style.justifyContent = 'center'; btn.style.textAlign = 'center'; }
@@ -1349,8 +1347,6 @@ class Component extends DCLogic {
          иначе трансформацията няма как да стигне десния край на герото */
       content.style.maxWidth = 'none';
       this.layoutHeroBa(false);
-      const h1d = content.querySelector('h1');
-      if (h1d) h1d.style.fontSize = '';
       cta.style.marginTop = 'clamp(2.4rem, 6vh, 3.4rem)'; cta.style.rowGap = '1.2rem';
       cta.style.flexDirection = 'row'; cta.style.alignItems = 'center'; cta.style.width = 'auto';
       if (btn) { btn.style.width = 'auto'; }
