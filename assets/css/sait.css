@@ -483,3 +483,10 @@
 @media (max-width: 900px) {
   .ekip-karti, .ekip-karti.dve { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Дългите покани в края на всяка група: на телефон заемат целия ред,
+   за да не се чупи една дума на собствен ред. */
+.cta-shiroko { justify-content: center; }
+@media (max-width: 760px) {
+  .cta-shiroko { width: 100%; padding-left: 1rem !important; padding-right: 1rem !important; }
+}
