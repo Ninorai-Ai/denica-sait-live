@@ -28,7 +28,7 @@
   details[open] [data-caret] { transform: translateY(2.8px) rotate(225deg); }
   @media (max-width: 900px) { html { font-size: 18px; } }
 </style>
-<link href="../assets/css/sait.css?v=57b3a229" rel="stylesheet">
+<link href="../assets/css/sait.css?v=27d2ad4c" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
@@ -46,7 +46,7 @@
       <a data-navlink="" href="lice-shiq/" style="white-space: nowrap; font-size: 0.9rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Лице</a>
       <a data-navlink="" href="tqlo/" style="white-space: nowrap; font-size: 0.9rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Тяло</a>
       <a data-navlink="" href="lazer/" style="white-space: nowrap; font-size: 0.9rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Лазерна епилация</a>
-      <a data-navlink="" href="intimno-zdrave/" style="white-space: nowrap; font-size: 0.9rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Интимно подмладяване</a>
+      <a data-navlink="" href="intimno-podmladqvane/" style="white-space: nowrap; font-size: 0.9rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Интимно подмладяване</a>
       <a data-navlink="" href="za-maje/" style="white-space: nowrap; font-size: 0.9rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">За мъже</a>
       <a data-navlink="" href="za-nas/" style="white-space: nowrap; font-size: 0.9rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">За Denny Divine</a>
       <a data-navlink="" href="#kontakti" style="white-space: nowrap; font-size: 0.9rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">Контакти</a>
@@ -63,7 +63,7 @@
     <a href="lice-shiq/" onClick="{{ toggleMenu }}" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.72rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.7rem; color: #262320;">Лице<span style="font-size: 1.5rem; line-height: 1; color: #B8934F;">›</span></a>
     <a href="tqlo/" onClick="{{ toggleMenu }}" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.72rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.7rem; color: #262320;">Тяло<span style="font-size: 1.5rem; line-height: 1; color: #B8934F;">›</span></a>
     <a href="lazer/" onClick="{{ toggleMenu }}" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.72rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.7rem; color: #262320;">Лазерна епилация<span style="font-size: 1.5rem; line-height: 1; color: #B8934F;">›</span></a>
-    <a href="intimno-zdrave/" onClick="{{ toggleMenu }}" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.72rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.7rem; color: #262320;">Интимно подмладяване<span style="font-size: 1.5rem; line-height: 1; color: #B8934F;">›</span></a>
+    <a href="intimno-podmladqvane/" onClick="{{ toggleMenu }}" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.72rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.7rem; color: #262320;">Интимно подмладяване<span style="font-size: 1.5rem; line-height: 1; color: #B8934F;">›</span></a>
     <a href="za-maje/" onClick="{{ toggleMenu }}" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.72rem 0; border-bottom: 1px solid rgba(184,147,79,0.5); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.7rem; color: #262320;">За мъже<span style="font-size: 1.5rem; line-height: 1; color: #B8934F;">›</span></a>
     <a href="za-nas/" onClick="{{ toggleMenu }}" style="margin-top: 1.1rem; padding: 0.9rem 0; font-size: 1.02rem; color: #262320;">За Denny Divine</a>
     <a href="#kontakti" onClick="{{ toggleMenu }}" style="padding: 0.9rem 0; font-size: 1.02rem; color: #262320;">Контакти</a>
@@ -440,7 +440,7 @@
         </div>
       </div>
     </article>
-    <article data-card="" data-spread="" data-flip="1" data-screen-label="Интимно здраве" id="intimno" style="position: relative; display: grid; grid-template-columns: 1.06fr 0.94fr; align-items: start; scroll-margin-top: 104px;">
+    <article data-card="" data-spread="" data-flip="1" data-screen-label="Интимно подмладяване" id="intimno" style="position: relative; display: grid; grid-template-columns: 1.06fr 0.94fr; align-items: start; scroll-margin-top: 104px;">
       <div data-media="" style="position: relative; order: 2; align-self: stretch; min-height: clamp(24rem, 54vh, 40rem); background: #262320; overflow: hidden;">
         <img data-card-img="" data-card-t="" src="../assets/img/baneri/card-intimno-tall.webp" alt="Процедура на тяло в кабинета, дискретен кадър" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1.1s cubic-bezier(.2,.7,.2,1);">
         <img data-card-img="" data-card-w="" src="../assets/img/baneri/card-intimno-wide.webp" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1.1s cubic-bezier(.2,.7,.2,1);">
@@ -483,7 +483,7 @@
           </details>
           </div>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1.3rem; margin-top: 2rem;">
-            <a data-dd-btn="" href="intimno-zdrave/" style="display: inline-flex; align-items: center; padding: 0.98rem 1.9rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Вижте повече</a>
+            <a data-dd-btn="" href="intimno-podmladqvane/" style="display: inline-flex; align-items: center; padding: 0.98rem 1.9rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease;" style-hover="filter: brightness(1.22) saturate(1.08); box-shadow: 0 18px 38px rgba(138,107,63,0.45), inset 0 0 0 2px rgba(59,44,33,0.9); transform: translateY(-3px); letter-spacing: 0.2em;">Вижте повече</a>
           </div>
         </div>
       </div>
@@ -1055,7 +1055,7 @@
                     <button type="button" role="option" data-stojnost="Лице и шия">Лице и шия</button>
                     <button type="button" role="option" data-stojnost="Тяло">Тяло</button>
                     <button type="button" role="option" data-stojnost="Лазерни процедури">Лазерни процедури</button>
-                    <button type="button" role="option" data-stojnost="Интимно здраве">Интимно здраве</button>
+                    <button type="button" role="option" data-stojnost="Интимно подмладяване">Интимно подмладяване</button>
                     <button type="button" role="option" data-stojnost="Процедури за мъже">Процедури за мъже</button>
                     <button type="button" role="option" data-stojnost="Още не знам">Още не знам</button>
                   </div>

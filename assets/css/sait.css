@@ -488,3 +488,30 @@
    защото рендерът пренаписва инлайн стила при всяко натискане. */
 [data-tab]:not(.tab-aktiven) { background: transparent !important; }
 [data-tab].tab-aktiven { background: #B8934F !important; }
+
+/* Мега меню за групите апарати. Отваря се само от CSS, защото рендерът
+   пренаписва инлайн стила, а класовете остават. */
+.mega { position: relative; display: inline-flex; }
+.mega-panel {
+  position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  min-width: 19rem; margin-top: 0.55rem; padding: 0.55rem;
+  display: grid; gap: 0.1rem;
+  background: #F8F4ED; border: 1px solid rgba(184,147,79,0.42); border-radius: 5px;
+  box-shadow: 0 22px 48px rgba(160,140,125,0.3);
+  opacity: 0; visibility: hidden; translate: 0 6px;
+  transition: opacity 0.25s ease, visibility 0.25s ease, translate 0.25s ease;
+  z-index: 96;
+}
+/* мостче, за да не се затваря панелът между връзката и него */
+.mega::after { content: ""; position: absolute; top: 100%; left: 0; right: 0; height: 0.7rem; }
+.mega:hover .mega-panel, .mega:focus-within .mega-panel {
+  opacity: 1; visibility: visible; translate: 0 0;
+}
+.mega-panel a {
+  display: block; padding: 0.55rem 0.75rem; border-radius: 4px;
+  color: #262320; white-space: nowrap; transition: background 0.25s ease;
+}
+.mega-panel a:hover { background: rgba(184,147,79,0.16); }
+.mega-panel b { display: block; font-size: 0.94rem; font-weight: 600; color: #262320; }
+.mega-panel span { display: block; font-size: 0.78rem; color: rgba(38,35,32,0.62); }
+@media (max-width: 1100px) { .mega-panel { display: none; } }
