@@ -298,6 +298,33 @@
   /* Звездичката казва кое поле е задължително. Без нея полето е по желание,
      затова такъв надпис няма: знакът е достатъчен и е познат. */
   .zvezda { color: #B8934F; }
+
+  /* Мега меню за групите апарати. Отваря се само от CSS, защото рендерът
+     пренаписва инлайн стила, а класовете остават. */
+  .mega { position: relative; display: inline-flex; }
+  .mega-panel {
+    position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+    min-width: 19rem; margin-top: 0.55rem; padding: 0.55rem;
+    display: grid; gap: 0.1rem;
+    background: #F8F4ED; border: 1px solid rgba(184,147,79,0.42); border-radius: 5px;
+    box-shadow: 0 22px 48px rgba(160,140,125,0.3);
+    opacity: 0; visibility: hidden; translate: 0 6px;
+    transition: opacity 0.25s ease, visibility 0.25s ease, translate 0.25s ease;
+    z-index: 96;
+  }
+  /* мостче, за да не се затваря панелът между връзката и него */
+  .mega::after { content: ""; position: absolute; top: 100%; left: 0; right: 0; height: 0.7rem; }
+  .mega:hover .mega-panel, .mega:focus-within .mega-panel {
+    opacity: 1; visibility: visible; translate: 0 0;
+  }
+  .mega-panel a {
+    display: block; padding: 0.55rem 0.75rem; border-radius: 4px;
+    color: #262320; white-space: nowrap; transition: background 0.25s ease;
+  }
+  .mega-panel a:hover { background: rgba(184,147,79,0.16); }
+  .mega-panel b { display: block; font-size: 0.94rem; font-weight: 600; color: #262320; }
+  .mega-panel span { display: block; font-size: 0.78rem; color: rgba(38,35,32,0.62); }
+  @media (max-width: 1100px) { .mega-panel { display: none; } }
 </style>
 </head>
 <body>
@@ -308,8 +335,7 @@
       <span class="mega"><a href="../#hifu-13d">HIFU апарати</a><div class="mega-panel"><a href="../hifu-7d/"><b>HIFU Ultraformer 7D</b><span>флагманът в програмата</span></a><a href="../hifu-13d/"><b>HIFU 13D Ultraformer</b><span>ново поколение, девет касети</span></a><a href="../hifu-5d/"><b>HIFU 5D</b><span>две в едно, лице и тяло</span></a><a href="../hifu-3d/"><b>HIFU 3D</b><span>първата стъпка към HIFU</span></a></div></span>
       <span class="mega"><a href="../#tesla-15">Тяло и мускули</a><div class="mega-panel"><a href="../tesla-15-emslim/"><b>Tesla 15 EMSLIM RF</b><span>електромагнитни импулси и радиочестота</span></a><a href="../tesla-21-chair/"><b>Tesla 21 EMSLIM Chair</b><span>оригинална Tesla технология</span></a></div></span>
       <span class="mega"><a href="../#maxlipo-13d">Лазери</a><div class="mega-panel"><a href="../soprano-diode/"><b>Soprano Diode Laser</b><span>две технологии в един апарат</span></a><a href="../maxlipo-13d/"><b>13D MaxLipo Laser</b><span>студен зелен лазер</span></a><a href="../estella/"><b>Estella Laser</b><span>американска ксенонова технология</span></a></div></span>
-    <p style="margin-top: 1rem; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #8A6B3F;">Анализ на кожата</p>
-    <a href="../aisia/" onClick="{{ toggleMenu }}" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.6rem 0; border-bottom: 1px solid rgba(184,147,79,0.32); font-size: 1.02rem; color: #3B2C21;">AISIA, AI анализатор<span style="font-size: 1.2rem; line-height: 1; color: #B8934F;">›</span></a>
+      <a href="../aisia/">Анализ на кожата</a>
       <a href="../za-nas/">За Denny Divine</a>
       <a href="./">Контакти</a>
     <a data-dd-btn="" href="tel:+359888998556" style="display: inline-flex; align-items: center; padding: 0.78rem 1.25rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap; transition: filter 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease, letter-spacing 0.35s ease; color: #241A12">Обадете се</a>
@@ -332,7 +358,8 @@
     <a href="../soprano-diode/" data-zatvori style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.6rem 0; border-bottom: 1px solid rgba(184,147,79,0.32); font-size: 1.02rem; color: #3B2C21;">Soprano Diode Laser<span style="font-size: 1.2rem; line-height: 1; color: #B8934F;">›</span></a>
     <a href="../maxlipo-13d/" data-zatvori style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.6rem 0; border-bottom: 1px solid rgba(184,147,79,0.32); font-size: 1.02rem; color: #3B2C21;">13D MaxLipo Laser<span style="font-size: 1.2rem; line-height: 1; color: #B8934F;">›</span></a>
     <a href="../estella/" data-zatvori style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.6rem 0; border-bottom: 1px solid rgba(184,147,79,0.32); font-size: 1.02rem; color: #3B2C21;">Estella Laser<span style="font-size: 1.2rem; line-height: 1; color: #B8934F;">›</span></a>
-    <a href="../aisia/" data-zatvori style="display: flex; align-items: center; justify-content: space-between; gap: 1rem;">Анализ на кожата<span style="font-size: 1.5rem; line-height: 1; color: #B8934F;">›</span></a>
+    <p style="margin-top: 1rem; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #8A6B3F;">Анализ на кожата</p>
+    <a href="../aisia/" data-zatvori style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.6rem 0; border-bottom: 1px solid rgba(184,147,79,0.32); font-size: 1.02rem; color: #3B2C21;">AISIA, AI анализатор<span style="font-size: 1.2rem; line-height: 1; color: #B8934F;">›</span></a>
     <a href="../za-nas/" data-zatvori style="margin-top: 1.1rem; padding: 0.9rem 0; border-bottom: none; font-family: Manrope, sans-serif; font-size: 1.02rem; color: #262320;">За Denny Divine</a>
     <a href="./" data-zatvori style="padding: 0.9rem 0; border-bottom: none; font-family: Manrope, sans-serif; font-size: 1.02rem; color: #262320;">Контакти</a>
   <a data-dd-btn="" href="tel:+359888998556" style="align-self: flex-start; margin-top: 0.8rem; padding: 1rem 1.9rem; background: linear-gradient(135deg, #E4C98F 0%, #B8934F 52%, #8A6B3F 100%); border-radius: 5px; color: #241A12; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; align-self: stretch; display: flex; justify-content: center; text-align: center; color: #241A12">Обадете се</a>
