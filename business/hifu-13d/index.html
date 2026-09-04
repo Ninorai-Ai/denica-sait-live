@@ -26,7 +26,7 @@
   @keyframes pulseGlow { 0%, 100% { opacity: 0.7; transform: scale(1); } 50% { opacity: 1; transform: scale(1.06); } }
   @keyframes zoomSoft { 0% { transform: scale(1); } 100% { transform: scale(1.06); } }
 </style>
-<link href="../../assets/css/sait.css?v=27d2ad4c" rel="stylesheet">
+<link href="../../assets/css/sait.css?v=6c599b9a" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
@@ -38,7 +38,7 @@
 <x-dc>
 <div style="position: relative; width: 100%; overflow-x: clip; background: #F8F4ED;">
 
-  <nav data-nav="" style="position: fixed; top: 0; left: 0; right: 0; z-index: 90; display: flex; align-items: center; justify-content: space-between; gap: 1.2rem; padding: 0.9rem max(clamp(1.2rem, 4vw, 3.6rem), calc((100% - 1200px) / 2)); background: #F8F4ED; border-bottom: 1px solid rgba(184,147,79,0.3); transition: background 0.45s, border-color 0.45s, box-shadow 0.45s;">
+  <nav data-nav="" style="position: fixed; top: 0; left: 0; right: 0; z-index: 90; display: flex; align-items: center; justify-content: space-between; gap: 1.2rem; padding: 0.9rem max(clamp(1.2rem, 4vw, 3.6rem), calc((100% - 1200px) / 2)); background: #FFFFFF; border-bottom: 1px solid rgba(184,147,79,0.3); transition: background 0.45s, border-color 0.45s, box-shadow 0.45s;">
     <a href="../" style="display: block; flex: none;"><img data-logo="" src="../../assets/img/logo.webp" alt="HIFU by Denny Divine" style="height: 44px; width: auto;"></a>
     <div data-navpaths="" style="display: flex; align-items: center; gap: 0.85rem;">
       <span class="mega"><a data-navlink="" href="../#hifu-13d" style="white-space: nowrap; font-size: 0.9rem; font-weight: 500; color: #3B2C21; transition: color 0.35s ease;" style-hover="color: #8A6B3F;">HIFU апарати</a><div class="mega-panel"><a href="../hifu-7d/"><b>HIFU Ultraformer 7D</b><span>флагманът в програмата</span></a><a href="../hifu-13d/"><b>HIFU 13D Ultraformer</b><span>ново поколение, девет касети</span></a><a href="../hifu-5d/"><b>HIFU 5D</b><span>две в едно, лице и тяло</span></a><a href="../hifu-3d/"><b>HIFU 3D</b><span>първата стъпка към HIFU</span></a></div></span>
@@ -54,7 +54,7 @@
     </button>
   </nav>
 
-  <div data-mmenu="" style="position: fixed; inset: 0; z-index: 95; display: none; flex-direction: column; justify-content: flex-start; gap: 0.2rem; overflow-y: auto; padding: 4.6rem clamp(1.4rem, 7vw, 3rem) 2.5rem; background: #F8F4ED;">
+  <div data-mmenu="" style="position: fixed; inset: 0; z-index: 95; display: none; flex-direction: column; justify-content: flex-start; gap: 0.2rem; overflow-y: auto; padding: 4.6rem clamp(1.4rem, 7vw, 3rem) 2.5rem; background: #FFFFFF;">
     <button type="button" aria-label="Затвори" onClick="{{ toggleMenu }}" style="position: absolute; top: 1.1rem; right: 1.2rem; width: 48px; height: 48px; border: 1px solid rgba(184,147,79,0.7); background: transparent; color: #3B2C21; font-size: 1.6rem; cursor: pointer;">×</button>
     <p style="padding-right: 3.4rem; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: #8A6B3F;">Открийте своето решение</p>
     <p style="margin-top: 1rem; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #8A6B3F;">HIFU апарати</p>
@@ -930,7 +930,7 @@ class Component extends DCLogic {
     const solid = window.scrollY > 80;
     if (this._navSolid === solid) return;
     this._navSolid = solid;
-    nav.style.background = '#F8F4ED';
+    nav.style.background = '#FFFFFF';
     nav.style.boxShadow = solid ? '0 4px 18px rgba(59,44,33,0.08)' : 'none';
     nav.style.borderBottom = solid ? '1px solid rgba(184,147,79,0.55)' : '1px solid rgba(184,147,79,0.3)';
     const logo = document.querySelector('[data-logo]');

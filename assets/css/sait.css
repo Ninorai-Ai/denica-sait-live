@@ -496,7 +496,7 @@
   position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
   min-width: 19rem; margin-top: 0.55rem; padding: 0.55rem;
   display: grid; gap: 0.1rem;
-  background: #F8F4ED; border: 1px solid rgba(184,147,79,0.42); border-radius: 5px;
+  background: #FFFFFF; border: 1px solid rgba(184,147,79,0.42); border-radius: 5px;
   box-shadow: 0 22px 48px rgba(160,140,125,0.3);
   opacity: 0; visibility: hidden; translate: 0 6px;
   transition: opacity 0.25s ease, visibility 0.25s ease, translate 0.25s ease;
